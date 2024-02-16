@@ -1,0 +1,78 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Nos réalisations - Réalisation de visites immersives à 360° {% endblock %}
+
+{% block stylesheets %}
+
+<link rel="stylesheet" href="{{ asset('css/style.css') }}">
+<link rel="icon" type="image/png" href="{{ asset('img/inoca.png') }}">
+
+{% endblock %}
+
+{% block body %}
+
+<script src="{{ asset('js/tata.js') }}"></script>
+
+
+    {% for flash_message in app.session.flashbag.get('success') %}
+        <script>
+            tata.success("", "{{ flash_message }}", {
+                duration: 3000,
+                closeBtn: false,
+                animate: "slide",    
+            });
+        </script>
+    {% endfor %}
+
+
+    {% for flash_message in app.session.flashbag.get('failed') %}
+        <script>
+            tata.error("", "{{ flash_message }}", {
+                duration: 3000,
+                closeBtn: false,
+                animate: "slide",       
+            });
+        </script>
+    {% endfor %}
+
+
+<link rel="stylesheet" href="https://cdn.pannellum.org/2.5/pannellum.css"/>
+<script type="text/javascript" src="https://cdn.pannellum.org/2.5/pannellum.js"></script>
+
+<link href="https://vjs.zencdn.net/7.1.0/video-js.css" rel="stylesheet" type="text/css">
+<script src="https://vjs.zencdn.net/7.1.0/video.js"></script>
+ 
+
+<section class='Body-Section-White'>
+    {% include 'tools/navbar.html.twig' %}
+
+    <section class='Cadre'>
+        <div class='Partie-Exemples-5'>
+            <h1 class="h1-titre-page">Découvrez nos visites immersives précédemment réalisées</h1>
+            <div class="visite-container-realisation" style="text-align: center; margin-top: 20px;">
+                
+                <div class="line-exemple-real">
+                    <div class="image" onclick="window.open('https://visite.lookaround.fr/32890391/', '_blank');">
+                        <iframe class="image__img" src="https://visite.lookaround.fr/32890391/" scrolling="no" height="100%" frameborder="0" allowfullscreen></iframe>
+                        <div class="image__overlay image__overlay--primary">
+                            <div class="image__title">La Maison des Konate</div>
+                            <p class="image__description">
+                                75 avenue Cléber 92140 Clamart
+                            </p>
+                        </div>
+                    </div>
+
+                
+                </div>
+
+        </div>
+    </div>
+
+</section>
+    {% include 'tools/footer.html.twig' %}
+</section>
+
+
+
+
+{% endblock %}

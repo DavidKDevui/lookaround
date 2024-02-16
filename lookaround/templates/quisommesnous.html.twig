@@ -1,0 +1,82 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Qui sommes-nous ? - Réalisation de visites immersives à 360° {% endblock %}
+
+{% block stylesheets %}
+
+<link rel="stylesheet" href="{{ asset('css/style.css') }}">
+<link rel="icon" type="image/png" href="{{ asset('img/inoca.png') }}">
+
+{% endblock %}
+
+{% block body %}
+
+<script src="{{ asset('js/tata.js') }}"></script>
+
+
+    {% for flash_message in app.session.flashbag.get('success') %}
+        <script>
+            tata.success("", "{{ flash_message }}", {
+                duration: 3000,
+                closeBtn: false,
+                animate: "slide",    
+            });
+        </script>
+    {% endfor %}
+
+
+    {% for flash_message in app.session.flashbag.get('failed') %}
+        <script>
+            tata.error("", "{{ flash_message }}", {
+                duration: 3000,
+                closeBtn: false,
+                animate: "slide",       
+            });
+        </script>
+    {% endfor %}
+
+
+<link rel="stylesheet" href="https://cdn.pannellum.org/2.5/pannellum.css"/>
+<script type="text/javascript" src="https://cdn.pannellum.org/2.5/pannellum.js"></script>
+
+<link href="https://vjs.zencdn.net/7.1.0/video-js.css" rel="stylesheet" type="text/css">
+<script src="https://vjs.zencdn.net/7.1.0/video.js"></script>
+ 
+
+<section class='Body-Section-White'>
+    {% include 'tools/navbar.html.twig' %}
+
+    <section class='Cadre'>
+
+        <div class='Partie-Exemples-5'>
+
+            <h1 class="h1-titre-page">L'histoire de look<span style="font-weight : 500; color: #219988;">around®</span></h1>
+
+            <p style="margin-top: 25px; text-align: left">
+                Fondée en 2023, lookaround est une société spécialisée dans la réalisation de visites immersives en France métropolitaine, en Belgique et dans le canton de Genève.
+
+                A l'aide de caméras 360°, appareils de pointe spécialement conçus pour capturer des images panoramiques de la plus haute qualité, nous offrons des expériences immersives qui permettront à vos clients de découvrir des lieux sans quitter le confort de leur domicile ou de leur bureau. 
+                
+                Grâce à cette technologie, nous sommes en mesure de créer des visites immersives interactives qui vous plongent au cœur de chaque lieu que vous explorez.
+
+                <br><br>Que ce soit pour des biens immobiliers, des musées, des restaurants, des hôtels ou des sites touristiques, nous offrons une solution complète pour présenter votre établissement de manière captivante. Nos visites immersives vous permettent de vous déplacer librement dans l'espace et d'obtenir une vision réaliste et immersive de chaque endroit.
+
+                Notre équipe est dévouée à fournir un rendu de haute qualité, offrant des détails précis et une expérience utilisateur fluide. Nous travaillons en étroite collaboration avec nos clients pour comprendre leurs besoins spécifiques et offrir des solutions personnalisées qui mettent en valeur les caractéristiques uniques de chaque lieu.
+
+                <br><br>Chez lookaround, nous sommes fiers de notre engagement envers l'innovation technologique et la qualité de nos services. Nous restons constamment à la pointe des dernières avancées en matière de visites immersives et nous nous efforçons de fournir une expérience exceptionnelle à chaque client. Notre réputation repose sur notre expertise, notre intégrité et notre engagement à offrir des résultats qui dépassent les attentes.
+
+                Explorez notre site pour en savoir plus sur nos services de visites immersives et découvrez comment lookaround peut vous aider à présenter vos espaces de manière immersive et attrayante.
+                
+                <br><br>Contactez-nous dès aujourd'hui pour discuter de votre projet et laissez-nous vous montrer comment lookaround peut faire la différence.
+            </p>
+        </div>
+
+    </section>
+
+    {% include 'tools/footer.html.twig' %}
+</section>
+
+
+
+
+{% endblock %}

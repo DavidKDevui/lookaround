@@ -1,0 +1,5 @@
+framework:
+  mailer:
+    # dsn: "%env(MAILER_DSN)%"
+    # dsn: "smtp://smtp.hostinger.com:465?encryption=tls&auth_mode=login&username=contact&password=iventhesquernation754@YES"
+    dsn: "smtp://%env(MAILER_USERNAME)%:iventhesquernation754%2AYES@smtp.hostinger.com:587?encryption=tls&auth_mode=login"

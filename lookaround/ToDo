@@ -1,0 +1,11 @@
+Statut:
+  - EN ATTENTE D'UN CRÉNEAU
+  - EN ATTENTE DU PAIEMENT
+  - EN COURS
+  - EN LIVRAISON
+  - TERMINÉ
+  - ANNULÉ / REMBOURSEMENTMENT EN COURS
+  - EXPIRÉ
+
+APRES LE FORM:
+  - Nous avons bien reçu votre demande et nous sommes ravis de constater votre interet pour nos services. Nous vous contacterons sous peu par {} afin de convenir ensemble d'un créneau de rendez-vous.

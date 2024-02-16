@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Réinitialisation du mot de passe - Réalisation de visites immersives à 360° {% endblock %}
+
+{% block stylesheets %}
+
+<link rel="stylesheet" href="{{ asset('css/style.css') }}">
+<link rel="icon" type="image/png" href="{{ asset('img/inoca.png') }}">
+
+{% endblock %}
+
+{% block body %}
+
+    <script src="{{ asset('js/tata.js') }}"></script>
+
+
+    <section class='Body-Section-White'>
+        {% include 'tools/navbar.html.twig' %}
+        <section class='Cadre'>
+
+        <div class='Partie-Exemples-1'>
+    <br>
+    <h1 class="h1-titre-page">Réinitialisation du mot de passe</h1>
+    <br>
+    <form method="post" style="text-align: center; margin-top: 45px; margin-bottom: 120px">
+        <input type="password" id="nouveau_mot_de_passe" name="nouveau_mot_de_passe"  class="gros-input" placeholder="Nouveau mot de passe" required>
+        <br><br><input type="password" id="confirmer_mot_de_passe" name="confirmer_mot_de_passe"  class="gros-input" placeholder="Confirmation mot de passe"  required>
+        <button type="submit"  class="reserver-creneau-btn3"  style="width: 285px;">Réinitialiser le mot de passe</button>
+    </form>
+
+    </div>
+</section>
+    {% include 'tools/footer.html.twig' %}
+</section>
+
+
+
+{% for flash_message in app.session.flashbag.get('error') %}
+
+    <script>
+            tata.error("", "{{flash_message}}", {
+                duration: 3000,
+                closeBtn: false,
+                animate: "slide",       
+            });
+    </script
+
+{% endfor %}
+
+
+{% endblock %}

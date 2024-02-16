@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Accueil - lookaround {% endblock %}
+
+{% block stylesheets %}<link rel="stylesheet" href="{{ asset('css/style.css') }}">{% endblock %}
+
+{% block content %}
+
+{% include 'tools/navbar.html.twig' %}
+
+    <h1>Page not found</h1>
+    <p>The requested page could not be found.</p>
+
+    <h2>Salut ici </h2>
+
+{% endblock %}

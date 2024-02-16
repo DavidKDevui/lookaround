@@ -1,0 +1,106 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Politique de confidentialité - Réalisation de visites immersives à 360° {% endblock %}
+
+{% block stylesheets %}
+
+<link rel="stylesheet" href="{{ asset('css/style.css') }}">
+<link rel="icon" type="image/png" href="{{ asset('img/inoca.png') }}">
+
+{% endblock %}
+
+{% block body %}
+
+<script src="{{ asset('js/tata.js') }}"></script>
+
+
+    {% for flash_message in app.session.flashbag.get('success') %}
+        <script>
+            tata.success("", "{{ flash_message }}", {
+                duration: 3000,
+                closeBtn: false,
+                animate: "slide",    
+            });
+        </script>
+    {% endfor %}
+
+
+    {% for flash_message in app.session.flashbag.get('failed') %}
+        <script>
+            tata.error("", "{{ flash_message }}", {
+                duration: 3000,
+                closeBtn: false,
+                animate: "slide",       
+            });
+        </script>
+    {% endfor %}
+
+
+<link rel="stylesheet" href="https://cdn.pannellum.org/2.5/pannellum.css"/>
+<script type="text/javascript" src="https://cdn.pannellum.org/2.5/pannellum.js"></script>
+
+<link href="https://vjs.zencdn.net/7.1.0/video-js.css" rel="stylesheet" type="text/css">
+<script src="https://vjs.zencdn.net/7.1.0/video.js"></script>
+ 
+
+<section class='Body-Section-White'>
+    {% include 'tools/navbar.html.twig' %}
+
+    <section class='Cadre'>
+
+        <div class='Partie-Exemples-5'  style="text-align: left">
+
+            <h1 class="h1-titre-page">Politique de confidentialité</h1>
+
+    <h3 style="margin-top: 60px; font-size: 15px;text-align: left; padding: 0px 55px;">1. Introduction</h3>
+    <p style="text-align: left">Nous prenons très au sérieux la protection de vos données personnelles et nous nous engageons à respecter la législation en vigueur en matière de protection des données. Cette politique de confidentialité a pour objectif de vous informer sur la manière dont nous collectons, traitons et utilisons vos données personnelles.</p>
+
+    <h3 style="margin-top: 30px; font-size: 15px;text-align: left; padding: 0px 55px;">2. Données personnelles collectées</h3>
+    <p style="text-align: left">Nous collectons les données personnelles suivantes :</p>
+    <ul style="margin-top: 8px; font-size: 14px;text-align: left; padding: 0px 75px; font-weight: 300">
+        <li class="li-text">Nom de société</li>
+        <li class="li-text">Adresse e-mail</li>
+        <li class="li-text">Adresses postale</li>
+        <li class="li-text">Numéro de téléphone</li>
+    </ul>
+
+    <h3 style="margin-top: 30px; font-size: 15px;text-align: left; padding: 0px 55px;">3. Finalités de la collecte de données</h3>
+    <p style="text-align: left">Nous collectons vos données personnelles pour les finalités suivantes :</p>
+    <ul style="margin-top: 8px; font-size: 14px;text-align: left; padding: 0px 75px; font-weight: 300">
+        <li class="li-text">Traitement des commandes : nous avons besoin de vos données personnelles pour traiter et livrer votre commande.</li>
+        <li class="li-text">Marketing : si vous avez donné votre consentement, nous utilisons vos données personnelles pour vous envoyer des newsletters et des offres promotionnelles.</li>
+        <li class="li-text">Amélioration de nos services : nous utilisons vos données personnelles pour améliorer nos services et mieux répondre à vos besoins.</li>
+    </ul>
+
+    <h3 style="margin-top: 30px; font-size: 15px;text-align: left; padding: 0px 55px;">4. Consentement</h3>
+    <p style="text-align: left">En utilisant notre site web, vous acceptez que nous collections, traitions et utilisions vos données personnelles conformément à cette politique de confidentialité. Vous avez le droit de retirer votre consentement à tout moment en nous contactant <a href='{{ path('app_index_scroll')}}'>ici</a>.</p>
+
+    <h3 style="margin-top: 30px; font-size: 15px;text-align: left; padding: 0px 55px;">5. Durée de conservation des données</h3>
+    <p style="text-align: left">Nous conservons vos données personnelles pendant la durée nécessaire à la réalisation des finalités pour lesquelles elles ont été collectées, sauf si une durée de conservation plus longue est exigée ou autorisée par la loi.</p>
+
+    <h3 style="margin-top: 30px; font-size: 15px;text-align: left; padding: 0px 55px;">6. Sécurité des données</h3>
+    <p style="text-align: left">Nous avons mis en place des mesures de sécurité techniques et organisationnelles appropriées pour protéger vos données personnelles contre toute perte, destruction, altération ou divulgation non autorisée.</p>
+
+    <h3 style="margin-top: 30px; font-size: 15px;text-align: left; padding: 0px 55px;">7. Partage des données</h3>
+    <p style="text-align: left">Nous ne partageons pas vos données personnelles avec des tiers, sauf si cela est nécessaire pour la réalisation des finalités pour lesquelles elles ont été collectées, ou si nous sommes tenus de le faire par la loi.</p>
+
+    <h3 style="margin-top: 30px; font-size: 15px;text-align: left; padding: 0px 55px;">8. Droits des personnes concernées</h3>
+    <p style="text-align: left">Vous avez le droit de demander l'accès, la rectification ou la suppression de vos données personnelles. Vous avez également le droit de demander la limitation du traitement de vos données personnelles ou de vous opposer à leur traitement. Pour exercer vos droits, vous pouvez nous contacter <a href='{{ path('app_index_scroll')}}'>ici</a>.</p>
+
+    <h3 style="margin-top: 30px; font-size: 15px;text-align: left; padding: 0px 55px;">9. Modification de la politique de confidentialité</h3>
+    <p style="text-align: left">Nous nous réservons le droit de modifier cette politique de confidentialité à tout moment. Nous vous recommandons de consulter régulièrement cette politique pour être informé des éventuelles modifications.</p>
+
+    <h3 style="margin-top: 30px; font-size: 15px;text-align: left; padding: 0px 55px;">10. Contact</h3>
+    <p style="text-align: left">Si vous avez des questions ou des préoccupations concernant cette politique de confidentialité, vous pouvez nous contacter  <a href='{{ path('app_index_scroll')}}'>ici</a></p>
+
+        </div>
+
+    </section>
+
+    {% include 'tools/footer.html.twig' %}
+</section>
+
+
+
+
+{% endblock %}

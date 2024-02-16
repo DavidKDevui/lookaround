@@ -1,0 +1,100 @@
+﻿<krpano version="1.21" title="">
+
+	<include url="skin/vtourskin.xml" />
+
+	<!--
+	    For an alternative skin design either change the <skin_settings> values 
+	    from above or optionally include one of the predefined designs from below.
+	-->
+	<!-- <include url="skin/vtourskin_design_flat_light.xml"  /> -->
+	<!-- <include url="skin/vtourskin_design_glass.xml"       /> -->
+	<!-- <include url="skin/vtourskin_design_ultra_light.xml" /> -->
+	<!-- <include url="skin/vtourskin_design_117.xml"         /> -->
+	<!-- <include url="skin/vtourskin_design_117round.xml"    /> -->
+	<!-- <include url="skin/vtourskin_design_black.xml"       /> -->
+	
+
+	
+	<scene name="scene_1B" title="1B" onstart="" thumburl="panos/1B.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="159.020" vlookat="3.589" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/1B.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/1B.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1536,3136" />
+		</image>
+
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="107.830" atv="9.879" linkedscene="scene_2b" linkedscene_hoffset="-25.39" use3dtransition="true" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-154.044" atv="2.796" linkedscene="scene_4b" linkedscene_hoffset="299.47" use3dtransition="true" />
+		
+
+	</scene>
+
+	<scene name="scene_2B" title="2B" onstart="" thumburl="panos/2B.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/2B.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/2B.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1536,3136" />
+		</image>
+
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-97.565" atv="8.220" linkedscene="scene_1b" linkedscene_hoffset="385.39" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_3B" title="3B" onstart="" thumburl="panos/3B.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/3B.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/3B.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1536,3136" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_4B" title="4B" onstart="" thumburl="panos/4B.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/4B.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/4B.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1536,3136" />
+		</image>
+
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="-34.570" atv="3.081" linkedscene="scene_1b" linkedscene_hoffset="60.53" use3dtransition="true" />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="69.484" atv="5.282" linkedscene="scene_5b" linkedscene_hoffset="43.82" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_5B" title="5B" onstart="" thumburl="panos/5B.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/5B.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/5B.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1536,3136" />
+		</image>
+
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-66.698" atv="3.253" linkedscene="scene_4b" linkedscene_hoffset="316.18" use3dtransition="true" />
+
+	</scene>
+
+
+</krpano>

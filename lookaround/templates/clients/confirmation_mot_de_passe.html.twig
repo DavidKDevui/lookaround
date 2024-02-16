@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %} Lien de reinitialisation envoyé - Réalisation de visites immersives à 360° {% endblock %}
+
+{% block stylesheets %}
+
+<link rel="stylesheet" href="{{ asset('css/style.css') }}">
+<link rel="icon" type="image/png" href="{{ asset('img/inoca.png') }}">
+
+{% endblock %}
+
+{% block body %}
+
+<script src="{{ asset('js/tata.js') }}"></script>
+
+
+<section class='Body-Section-White'>
+    {% include 'tools/navbar.html.twig' %}
+    <section class='Cadre'>
+
+    <div class='Partie-Exemples-1'>
+<br>
+    <h1 class="h1-titre-page">Lien de reinitialisation envoyé</h1>
+    <br>
+    <p class="p-confirmail" style="  padding: 0px 30px;text-align: center;">Un e-mail de réinitialisation du mot de passe vous a été envoyé. Veuillez consulter votre boîte de réception pour les instructions supplémentaires.</p>
+
+
+</div>
+</section>
+    {% include 'tools/footer.html.twig' %}
+</section>
+
+    <script>
+            
+        setTimeout(function() {
+            window.location.href = "{{path('index')}}"
+        }, 5000);
+
+    </script>
+
+
+{% endblock %}

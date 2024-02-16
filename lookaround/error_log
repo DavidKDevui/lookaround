@@ -1,0 +1,1 @@
+[16-Feb-2024 22:02:14 UTC] 2024-02-16T22:02:14+00:00 [info] User Deprecated: Since symfony/console 6.1: Relying on the static property "$defaultName" for setting a command name is deprecated. Add the "Symfony\Component\Console\Attribute\AsCommand" attribute to the "App\Command\CreateAdminUserCommand" class instead.
