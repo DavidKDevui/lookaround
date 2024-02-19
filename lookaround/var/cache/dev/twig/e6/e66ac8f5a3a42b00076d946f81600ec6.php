@@ -116,7 +116,7 @@ class __TwigTemplate_9c95aefb66408a3c81edcdd53b61728b extends \Twig\Template
         // line 46
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("../img/paquet.png"), "html", null, true);
         echo "\" class=\"icon-trois-protein\"/>
-            <a>Livraison dans les 48h après notre rendez-vous</a>
+            <a>Livraison dans les 48h après les prises de vue</a>
         </div>
     </div>
 </div>
@@ -216,7 +216,7 @@ class __TwigTemplate_9c95aefb66408a3c81edcdd53b61728b extends \Twig\Template
 
         <div style=\"display: flex; margin: 0 auto;\">
             <img src=\"{{asset('../img/paquet.png')}}\" class=\"icon-trois-protein\"/>
-            <a>Livraison dans les 48h après notre rendez-vous</a>
+            <a>Livraison dans les 48h après les prises de vue</a>
         </div>
     </div>
 </div>

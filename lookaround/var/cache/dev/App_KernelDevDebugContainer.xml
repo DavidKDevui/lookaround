@@ -479,7 +479,6 @@
     <service id="App\Security\ClientsAuthenticator" class="App\Security\ClientsAuthenticator" autowire="true" autoconfigure="true">
       <argument type="service" id="router.default"/>
     </service>
-    <service id="App\Services\Pushover" class="App\Services\Pushover" autowire="true" autoconfigure="true"/>
     <service id="argument_metadata_factory" class="Symfony\Component\HttpKernel\ControllerMetadata\ArgumentMetadataFactory"/>
     <service id="response_listener" class="Symfony\Component\HttpKernel\EventListener\ResponseListener">
       <tag name="kernel.event_subscriber"/>
@@ -7056,20 +7055,20 @@
         <argument key="entityManager" type="service_closure" id="doctrine.orm.default_entity_manager"/>
       </argument>
     </service>
-    <service id=".service_locator.QQ1lptr" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
-        <argument key="authenticationUtils" type="service_closure" id="security.authentication_utils"/>
-        <argument key="entityManager" type="service_closure" id="doctrine.orm.default_entity_manager"/>
-        <argument key="requestStack" type="service_closure" id="request_stack"/>
-      </argument>
-    </service>
     <service id=".service_locator.aVCBKxN" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="authenticationUtils" type="service_closure" id="security.authentication_utils"/>
         <argument key="entityManager" type="service_closure" id="doctrine.orm.default_entity_manager"/>
         <argument key="passwordHasher" type="service_closure" id="security.user_password_hasher"/>
+        <argument key="requestStack" type="service_closure" id="request_stack"/>
+      </argument>
+    </service>
+    <service id=".service_locator.QQ1lptr" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="authenticationUtils" type="service_closure" id="security.authentication_utils"/>
+        <argument key="entityManager" type="service_closure" id="doctrine.orm.default_entity_manager"/>
         <argument key="requestStack" type="service_closure" id="request_stack"/>
       </argument>
     </service>
@@ -7113,7 +7112,7 @@
         <argument key="authenticationUtils" type="service_closure" id="security.authentication_utils"/>
       </argument>
     </service>
-    <service id=".service_locator.bKHcHPU" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.6SEV67o" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\AdminController::adminChoixCreneau" type="service_closure" id=".service_locator.CsMkqUa"/>
@@ -7124,14 +7123,11 @@
         <argument key="App\Controller\AdminController::dashBoard" type="service_closure" id=".service_locator.CsMkqUa"/>
         <argument key="App\Controller\ClientController::confirmationMotDePasse" type="service_closure" id=".service_locator.QQ1lptr"/>
         <argument key="App\Controller\ClientController::envoyerEmail" type="service_closure" id=".service_locator.CsMkqUa"/>
-        <argument key="App\Controller\ClientController::getFacture" type="service_closure" id=".service_locator.CsMkqUa"/>
         <argument key="App\Controller\ClientController::getMailList" type="service_closure" id=".service_locator.CsMkqUa"/>
         <argument key="App\Controller\ClientController::isPhotosExiste" type="service_closure" id=".service_locator.CsMkqUa"/>
         <argument key="App\Controller\ClientController::isVisiteExiste" type="service_closure" id=".service_locator.CsMkqUa"/>
-        <argument key="App\Controller\ClientController::motDePasseOublie" type="service_closure" id=".service_locator.QQ1lptr"/>
         <argument key="App\Controller\ClientController::motDePasseReinitialise" type="service_closure" id=".service_locator.QQ1lptr"/>
         <argument key="App\Controller\ClientController::reinitialiserMotDePasse" type="service_closure" id=".service_locator.aVCBKxN"/>
-        <argument key="App\Controller\ClientController::rendezVousSoonMail" type="service_closure" id=".service_locator.CsMkqUa"/>
         <argument key="App\Controller\DropboxController::showPageVues" type="service_closure" id=".service_locator.q2tClvC"/>
         <argument key="App\Controller\DropboxController::showPageVuesId" type="service_closure" id=".service_locator.0drJxaP"/>
         <argument key="App\Controller\IndexController::app_conditionsgenerales" type="service_closure" id=".service_locator.eFQiehW"/>
@@ -7143,11 +7139,6 @@
         <argument key="App\Controller\IndexController::quisommesnous" type="service_closure" id=".service_locator.eFQiehW"/>
         <argument key="App\Controller\IndexController::realisations" type="service_closure" id=".service_locator.eFQiehW"/>
         <argument key="App\Controller\IndexController::tarifs" type="service_closure" id=".service_locator.eFQiehW"/>
-        <argument key="App\Controller\RegistrationController::deleteCommande" type="service_closure" id=".service_locator.CsMkqUa"/>
-        <argument key="App\Controller\RegistrationController::getCreneauxDispo" type="service_closure" id=".service_locator.CsMkqUa"/>
-        <argument key="App\Controller\RegistrationController::rembourserCommande" type="service_closure" id=".service_locator.CsMkqUa"/>
-        <argument key="App\Controller\RegistrationController::reprendreCommande" type="service_closure" id=".service_locator.CsMkqUa"/>
-        <argument key="App\Controller\RegistrationController::updateCommande" type="service_closure" id=".service_locator.CsMkqUa"/>
         <argument key="App\Controller\SecurityController::login" type="service_closure" id=".service_locator.rSTd.nA"/>
         <argument key="App\Kernel::loadRoutes" type="service_closure" id=".service_locator.y4_Zrx."/>
         <argument key="App\Kernel::registerContainerConfiguration" type="service_closure" id=".service_locator.y4_Zrx."/>
@@ -7161,14 +7152,11 @@
         <argument key="App\Controller\AdminController:dashBoard" type="service_closure" id=".service_locator.CsMkqUa"/>
         <argument key="App\Controller\ClientController:confirmationMotDePasse" type="service_closure" id=".service_locator.QQ1lptr"/>
         <argument key="App\Controller\ClientController:envoyerEmail" type="service_closure" id=".service_locator.CsMkqUa"/>
-        <argument key="App\Controller\ClientController:getFacture" type="service_closure" id=".service_locator.CsMkqUa"/>
         <argument key="App\Controller\ClientController:getMailList" type="service_closure" id=".service_locator.CsMkqUa"/>
         <argument key="App\Controller\ClientController:isPhotosExiste" type="service_closure" id=".service_locator.CsMkqUa"/>
         <argument key="App\Controller\ClientController:isVisiteExiste" type="service_closure" id=".service_locator.CsMkqUa"/>
-        <argument key="App\Controller\ClientController:motDePasseOublie" type="service_closure" id=".service_locator.QQ1lptr"/>
         <argument key="App\Controller\ClientController:motDePasseReinitialise" type="service_closure" id=".service_locator.QQ1lptr"/>
         <argument key="App\Controller\ClientController:reinitialiserMotDePasse" type="service_closure" id=".service_locator.aVCBKxN"/>
-        <argument key="App\Controller\ClientController:rendezVousSoonMail" type="service_closure" id=".service_locator.CsMkqUa"/>
         <argument key="App\Controller\DropboxController:showPageVues" type="service_closure" id=".service_locator.q2tClvC"/>
         <argument key="App\Controller\DropboxController:showPageVuesId" type="service_closure" id=".service_locator.0drJxaP"/>
         <argument key="App\Controller\IndexController:app_conditionsgenerales" type="service_closure" id=".service_locator.eFQiehW"/>
@@ -7180,11 +7168,6 @@
         <argument key="App\Controller\IndexController:quisommesnous" type="service_closure" id=".service_locator.eFQiehW"/>
         <argument key="App\Controller\IndexController:realisations" type="service_closure" id=".service_locator.eFQiehW"/>
         <argument key="App\Controller\IndexController:tarifs" type="service_closure" id=".service_locator.eFQiehW"/>
-        <argument key="App\Controller\RegistrationController:deleteCommande" type="service_closure" id=".service_locator.CsMkqUa"/>
-        <argument key="App\Controller\RegistrationController:getCreneauxDispo" type="service_closure" id=".service_locator.CsMkqUa"/>
-        <argument key="App\Controller\RegistrationController:rembourserCommande" type="service_closure" id=".service_locator.CsMkqUa"/>
-        <argument key="App\Controller\RegistrationController:reprendreCommande" type="service_closure" id=".service_locator.CsMkqUa"/>
-        <argument key="App\Controller\RegistrationController:updateCommande" type="service_closure" id=".service_locator.CsMkqUa"/>
         <argument key="App\Controller\SecurityController:login" type="service_closure" id=".service_locator.rSTd.nA"/>
         <argument key="kernel:loadRoutes" type="service_closure" id=".service_locator.y4_Zrx."/>
         <argument key="kernel:registerContainerConfiguration" type="service_closure" id=".service_locator.y4_Zrx."/>
@@ -8076,12 +8059,12 @@
     <service id="debug.argument_resolver.request.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\RequestValueResolver"/>
     <service id="debug.argument_resolver.session.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\SessionValueResolver"/>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator.bKHcHPU"/>
+      <argument type="service" id=".service_locator.6SEV67o"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator.bKHcHPU"/>
+      <argument type="service" id=".service_locator.6SEV67o"/>
     </service>
     <service id="debug.traced.messenger.bus.default.inner" class="Symfony\Component\Messenger\MessageBus">
       <argument type="iterator">
@@ -9054,7 +9037,7 @@
     <service id="Endroid\QrCode\Builder\BuilderInterface $defaultQrCodeBuilder" alias="endroid_qr_code.default_builder"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.7nzbL4K" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.bKHcHPU"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.6SEV67o"/>
     <service id="doctrine.id_generator_locator" alias=".service_locator.QebYf8E"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
@@ -9076,13 +9059,13 @@
     <service id=".service_locator.80edgLI" alias="messenger.receiver_locator"/>
     <service id=".service_locator.h8Jkkd2" alias="messenger.retry_strategy_locator"/>
     <service id=".service_locator.o.uf2zi" alias=".service_locator.7nzbL4K"/>
-    <service id=".service_locator.._3MRnC" alias=".service_locator.QQ1lptr"/>
     <service id=".service_locator.SmcO53g" alias=".service_locator.aVCBKxN"/>
+    <service id=".service_locator.._3MRnC" alias=".service_locator.QQ1lptr"/>
     <service id=".service_locator.oku_pKx" alias=".service_locator.0drJxaP"/>
     <service id=".service_locator.7QUOfvk" alias=".service_locator.q2tClvC"/>
     <service id=".service_locator.RBii1kJ" alias=".service_locator.t0izpSA"/>
     <service id=".service_locator.5CT.pAY" alias=".service_locator.eFQiehW"/>
-    <service id=".service_locator.PX56MPf" alias=".service_locator.bKHcHPU"/>
+    <service id=".service_locator.hLr8dEY" alias=".service_locator.6SEV67o"/>
     <service id=".service_locator.9XMoc9I" alias=".service_locator.kzegaci"/>
     <service id=".service_locator.KtRYd7a" alias=".service_locator.Bam4_WQ"/>
     <service id=".service_locator.XW18Svm" alias=".service_locator.TcKhdzh"/>
@@ -9134,8 +9117,8 @@
     <service id="doctrine.orm.default_metadata_driver" alias=".doctrine.orm.default_metadata_driver"/>
     <service id=".service_locator.gFlme_s" alias=".service_locator.y4_Zrx."/>
     <service id=".service_locator.9e2t_lq" alias=".service_locator.CsMkqUa"/>
-    <service id=".service_locator.FW44l67" alias=".service_locator.QQ1lptr"/>
     <service id=".service_locator.TDDzUGm" alias=".service_locator.aVCBKxN"/>
+    <service id=".service_locator.FW44l67" alias=".service_locator.QQ1lptr"/>
     <service id=".service_locator.gcjlrIe" alias=".service_locator.0drJxaP"/>
     <service id=".service_locator.XNDmgPA" alias=".service_locator.q2tClvC"/>
     <service id=".service_locator.vl9ay0b" alias=".service_locator.t0izpSA"/>

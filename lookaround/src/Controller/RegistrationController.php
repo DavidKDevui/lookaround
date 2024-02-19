@@ -23,7 +23,7 @@ use Symfony\Component\Security\Http\Authentication\UserAuthenticatorInterface;
 
 class RegistrationController extends AbstractController
 {
-
+/*
     #[Route('/updateCreneau', name: 'app_updateCreneau', methods: ['POST'])]
     public function updateCommande(Request $request, EntityManagerInterface $entityManager)
     {
@@ -146,4 +146,5 @@ class RegistrationController extends AbstractController
         }
         return $this->redirectToRoute('pageMonCompte');
     }
+    */
 }

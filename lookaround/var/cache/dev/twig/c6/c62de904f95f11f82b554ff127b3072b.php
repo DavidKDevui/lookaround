@@ -52,8 +52,8 @@ class __TwigTemplate_9823d5a7754871d230a2f1e9e9104584 extends \Twig\Template
         // line 5
         $this->displayBlock('title', $context, $blocks);
         echo "</title>
-        <meta name=\"description\" content=\"Réalisation de visites immersives à 360°\">
-        <meta name=\"keywords\" content=\"visite virtuelle, immersion, expérience interactive, entreprise, produits, visite immersive, 3D, metaverse, immersif, logement, appartement, salle de sport, musée, université\">
+        <meta name=\"description\" content=\"Réalisation de visites virtuelles à 360°\">
+        <meta name=\"keywords\" content=\"visite virtuelle, immersion, expérience interactive, entreprise, produits, visite virtuelles, 3D, metaverse, immersif, logement, appartement, salle de sport, musée, université\">
         <meta name=\"robots\" content=\"index,follow\">
         <link rel=\"icon\" href=\"data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>\">
         ";
@@ -185,8 +185,8 @@ class __TwigTemplate_9823d5a7754871d230a2f1e9e9104584 extends \Twig\Template
     <head>
         <meta charset=\"UTF-8\">
         <title>{% block title %}Welcome!{% endblock %}</title>
-        <meta name=\"description\" content=\"Réalisation de visites immersives à 360°\">
-        <meta name=\"keywords\" content=\"visite virtuelle, immersion, expérience interactive, entreprise, produits, visite immersive, 3D, metaverse, immersif, logement, appartement, salle de sport, musée, université\">
+        <meta name=\"description\" content=\"Réalisation de visites virtuelles à 360°\">
+        <meta name=\"keywords\" content=\"visite virtuelle, immersion, expérience interactive, entreprise, produits, visite virtuelles, 3D, metaverse, immersif, logement, appartement, salle de sport, musée, université\">
         <meta name=\"robots\" content=\"index,follow\">
         <link rel=\"icon\" href=\"data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>\">
         {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}

@@ -43,9 +43,6 @@ connexionClient:
   path: "/getPhotoForm"
   controller: App\Controller\ClientController::connexionClient
 
-#pageMonCompte:
-#  path: "/mes-commandes"
-#  controller: App\Controller\ClientController::pageMonCompte
 
 dropbox_auth_start:
   path: /dropbox-auth-start

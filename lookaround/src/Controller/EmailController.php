@@ -37,7 +37,7 @@ class EmailController extends AbstractController
     //Mails envoyés à l'utilisateur---------------------------------------------------------------------------------------------------------
     public function demandePriseEnCompteMail($idcommande, $email, $preference_contact)
     {
-        $mail = new PHPMailer(true); // Pass true to enable exceptions
+        $mail = new PHPMailer(true); 
 
         try {
             // Configuration du serveur SMTP
@@ -98,139 +98,10 @@ class EmailController extends AbstractController
         }
     }
 
-    public function procederAuPaiementMail($idcommande, $email, $creneau)
-    {
-        $mail = new PHPMailer(true); // Pass true to enable exceptions
-
-
-        $joursSemaine = [
-            'Monday' => 'Lundi',
-            'Tuesday' => 'Mardi',
-            'Wednesday' => 'Mercredi',
-            'Thursday' => 'Jeudi',
-            'Friday' => 'Vendredi',
-            'Saturday' => 'Samedi',
-            'Sunday' => 'Dimanche'
-        ];
-
-        $moisAnnee = [
-            'January' => 'Janvier',
-            'February' => 'Février',
-            'March' => 'Mars',
-            'April' => 'Avril',
-            'May' => 'Mai',
-            'June' => 'Juin',
-            'July' => 'Juillet',
-            'August' => 'Août',
-            'September' => 'Septembre',
-            'October' => 'Octobre',
-            'November' => 'Novembre',
-            'December' => 'Décembre'
-        ];
-
-
-        try {
-            // Configuration du serveur SMTP
-            $mail->isSMTP();
-            $mail->Host = 'smtp.hostinger.com';
-            $mail->SMTPAuth = true;
-            $mail->Username = 'no-reply@lookaround.fr';
-            $mail->Password = 'iventhesquernation754*YES';
-            $mail->SMTPSecure = 'tls';
-            $mail->Port = 587;
-
-            // Configuration de l'e-mail
-            $mail->setFrom('no-reply@lookaround.fr', 'lookaround®');
-            $mail->addAddress($email);
-            $mail->Subject = 'Vous pouvez dès maintenant procéder au paiement !';
-            $mail->CharSet = 'UTF-8';
-
-            $mail->isHTML(true);
-
-            $mail->Body = '
-            <html>
-            <head>
-            </head>
-            <body>
-            <section style="width: 100%; height: 100%; background-color: #f7f7f7;">
-            <div style="width: 70%; height: 100%; margin: 0 auto; padding: 10px 30px 18px 30px; background: white">
-                <h1 class="logo-LA" style="font-size: 27px; font-size: 31px; font-family: \'Google Sans\',Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
-                font-weight: 300;
-                padding: 5px 5px;
-                cursor: pointer;
-                width: min-content;
-                margin: 0 auto;
-                color: #606060;
-                display: flex;
-                user-select: none;
-                -webkit-user-select: none;
-                -moz-user-select: none;
-                -ms-user-select: none;">look<span style="font-weight: 500; color: #219988;">around®</span></h1>
-                <br><h3 style="font-weight: 500; font-size: 18px; color: black; margin-bottom:15x;">Vous pouvez dès maintenant procéder au paiement !</h3>
-
-                <p style="font-size: 13.5px; font-weight: 300;  color: black; font-family: \'Google Sans\',Roboto,RobotoDraft,Helvetica,Arial,sans-serif;">Nous venons de convenir ensemble d\'un rendez-vous le :</p>
-                
-                <p style="font-size: 17px;
-                color: black;
-                font-weight: 500;
-                text-align: center;
-                padding: 20px;
-                width: fit-content;
-                margin: 0 auto;
-                background: #fdfdfd;">' . $joursSemaine[$creneau->format('l')] . " " . $creneau->format('d') .   " " . $moisAnnee[$creneau->format('F')]    . " " . $creneau->format('\à H\hi') .  '</p>
-
-
-                <p style="font-size: 13.5px; font-weight: 300;  color: black; font-family: \'Google Sans\',Roboto,RobotoDraft,Helvetica,Arial,sans-serif;">Vous trouverez toutes les informations relatives à votre commande sur votre compte. Veuillez noter que vous disposez d\'un délai de 24 heures pour procéder au paiement et ainsi valider définitivement votre rendez-vous. Ce paiement confirmera officiellement votre réservation.</p>
-                
-                
-                <br>
-                <br>
-                <a href="https://lookaround.fr/mes-commandes" style="z-index: 1; cursor: pointer !important;
-        
-                    font-size: 13px;
-                    background-color: #219988;
-                    border: 0px solid;
-                    border-top-color: currentcolor;
-                    border-right-color: currentcolor;
-                    border-bottom-color: currentcolor;
-                    border-bottom-style: solid;
-                    border-bottom-width: 0px;
-                    border-left-color: currentcolor;
-                    color: rgb(255, 255, 255);
-                    border-radius: 3px;
-                    padding: 3px 15px;
-                    font-weight: 400;
-                    text-align: end;
-                    text-decoration: none;
-                    box-shadow: 0 2px 1px 0 #ccc;
-                    border-bottom: 2px solid;
-                    font-family: \'Poppins\', sans-serif;
-                    border-bottom-color: currentcolor;
-                    font-family: \'Google Sans\',Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
-                    border-color: #032420;">Procéder au paiement</a>
-
-                    <p style="font-size: 11px; color: black;  font-family: \'Poppins\', sans-serif; padding-top: 20px;
-                    text-align: end;">N° de commande : ' . $idcommande . '</p>
-
-                    </div>
-                </section>
-            </body>
-            </html>
-            ';
-            $mail->send();
-            return new Response();
-        } catch (Exception $e) {
-            echo 'Une erreur est survenue lors de l\'envoi de l\'e-mail : ' . $mail->ErrorInfo;
-        }
-    }
 
     #[Route('/rdvPrisEnCompteMail', name: 'app_rdvPrisEnCompteMail', methods: ['POST'])]
     public function rdvPrisEnCompteMail($email, $idcommande, $creneau, $date_rdv)
     {
-     /*   $email = $request->request->get('email');
-        $idcommande = $request->request->get('idCommande');
-        $creneau = DateTimeImmutable::createFromFormat('Y-m-d H:i', $request->request->get('creneau'));
-*/
 
         $joursSemaine = [
             'Monday' => 'Lundi',

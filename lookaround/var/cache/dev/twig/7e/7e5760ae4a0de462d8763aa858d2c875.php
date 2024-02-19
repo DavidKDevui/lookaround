@@ -198,7 +198,7 @@ class __TwigTemplate_5fe55d02fc554caf02780ffadb199dfe extends \Twig\Template
                 <div class=\"video-container-subcontent1\">
                     <h1></h1>
                     <h1 id='LeTitre' class='video-container-content-titre'>Réalisation de visites virtuelles à 360°</h1>
-                    <h2 class='video-container-content-text'>Offrez à vos clients une expérience unique qui les transportera directement dans vos locaux, où qu'ils se trouvent. Il s'agit de l'outil idéal pour promouvoir votre entreprise et générer des conversions.</h2>
+                    <h2 class='video-container-content-text'>Offrez à vos clients une expérience unique qui les transportera directement dans vos espaces, où qu'ils se trouvent. Il s'agit de l'outil idéal pour promouvoir votre entreprise et générer des conversions.</h2>
                     <div class=\"reserver-creneau\">
                         <input onclick=\"smoothScroll('Partie-Exemples-4')\" type='button' value='Prendre rendez-vous' class='reserver-creneau-btn1'/>
                          <form method='post' action=\"";
@@ -991,7 +991,7 @@ function changeVideoSource(sens) {
                 <div class=\"video-container-subcontent1\">
                     <h1></h1>
                     <h1 id='LeTitre' class='video-container-content-titre'>Réalisation de visites virtuelles à 360°</h1>
-                    <h2 class='video-container-content-text'>Offrez à vos clients une expérience unique qui les transportera directement dans vos locaux, où qu'ils se trouvent. Il s'agit de l'outil idéal pour promouvoir votre entreprise et générer des conversions.</h2>
+                    <h2 class='video-container-content-text'>Offrez à vos clients une expérience unique qui les transportera directement dans vos espaces, où qu'ils se trouvent. Il s'agit de l'outil idéal pour promouvoir votre entreprise et générer des conversions.</h2>
                     <div class=\"reserver-creneau\">
                         <input onclick=\"smoothScroll('Partie-Exemples-4')\" type='button' value='Prendre rendez-vous' class='reserver-creneau-btn1'/>
                          <form method='post' action=\"{{ path('app_tarifs') }}\" style=\"width: min-content;\">

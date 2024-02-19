@@ -271,7 +271,7 @@ class ClientController extends AbstractController
         return new Response("");
     }
 */
-
+/*
     #[Route('/getFacture', name: 'app_getFacture', methods: ['POST'])]
     public function getFacture(Request $request, EntityManagerInterface $entityManager)
     {
@@ -282,7 +282,7 @@ class ClientController extends AbstractController
             return $this->render('invoice.html.twig', ["commande" => $commande, "client" => $this->getUser(), "formules" => $formules]);
         }
     }
-
+*/
 
     #[Route('/getMailList', name: 'app_getMailList', methods: ['GET'])]
     public function getMailList(Request $request, EntityManagerInterface $entityManager)
@@ -373,7 +373,7 @@ class ClientController extends AbstractController
     }
 */
 
-
+/*
     #[Route('/rendezVousSoonMail', name: 'app_rendezVousSoonMail', methods: ['POST'])]
     public function rendezVousSoonMail(Request $request, EntityManagerInterface $entityManager)
     {
@@ -398,8 +398,8 @@ class ClientController extends AbstractController
         $email = $data["email"];
         $password = $data["password"];
     }
-
-
+*/
+/*
     #[Route('/mot-de-passe-oublie', name: 'mot_de_passe_oublie')]
 
     public function motDePasseOublie(Request $request, EntityManagerInterface $entityManager,  AuthenticationUtils $authenticationUtils, RequestStack $requestStack)
@@ -421,7 +421,7 @@ class ClientController extends AbstractController
             "client" => $this->getUser(),
         ]);
     }
-
+*/
     #[Route('/envoyer-email', name: 'envoyer_email', methods: ["POST"])]
     public function envoyerEmail(Request $request, EntityManagerInterface $entityManager)
     {
