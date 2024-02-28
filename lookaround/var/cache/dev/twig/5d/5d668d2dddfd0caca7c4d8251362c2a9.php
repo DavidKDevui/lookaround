@@ -95,6 +95,10 @@ class __TwigTemplate_41b1dd4e45ee93f382e5b8a862df403f extends \Twig\Template
         // line 8
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/inoca.png"), "html", null, true);
         echo "\">
+<script src=\"";
+        // line 9
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/tata.js"), "html", null, true);
+        echo "\"></script>
 
 ";
         
@@ -105,7 +109,7 @@ class __TwigTemplate_41b1dd4e45ee93f382e5b8a862df403f extends \Twig\Template
 
     }
 
-    // line 12
+    // line 13
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -115,23 +119,23 @@ class __TwigTemplate_41b1dd4e45ee93f382e5b8a862df403f extends \Twig\Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 13
+        // line 14
         echo "
 <script src=\"";
-        // line 14
+        // line 15
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/tata.js"), "html", null, true);
         echo "\"></script>
 
 
     ";
-        // line 17
+        // line 18
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 17, $this->source); })()), "session", [], "any", false, false, false, 17), "flashbag", [], "any", false, false, false, 17), "get", [0 => "success"], "method", false, false, false, 17));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 18, $this->source); })()), "session", [], "any", false, false, false, 18), "flashbag", [], "any", false, false, false, 18), "get", [0 => "success"], "method", false, false, false, 18));
         foreach ($context['_seq'] as $context["_key"] => $context["flash_message"]) {
-            // line 18
+            // line 19
             echo "        <script>
             tata.success(\"\", \"";
-            // line 19
+            // line 20
             echo twig_escape_filter($this->env, $context["flash_message"], "html", null, true);
             echo "\", {
                 duration: 3000,
@@ -144,18 +148,18 @@ class __TwigTemplate_41b1dd4e45ee93f382e5b8a862df403f extends \Twig\Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['flash_message'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 26
+        // line 27
         echo "
 
     ";
-        // line 28
+        // line 29
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 28, $this->source); })()), "session", [], "any", false, false, false, 28), "flashbag", [], "any", false, false, false, 28), "get", [0 => "failed"], "method", false, false, false, 28));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 29, $this->source); })()), "session", [], "any", false, false, false, 29), "flashbag", [], "any", false, false, false, 29), "get", [0 => "failed"], "method", false, false, false, 29));
         foreach ($context['_seq'] as $context["_key"] => $context["flash_message"]) {
-            // line 29
+            // line 30
             echo "        <script>
             tata.error(\"\", \"";
-            // line 30
+            // line 31
             echo twig_escape_filter($this->env, $context["flash_message"], "html", null, true);
             echo "\", {
                 duration: 3000,
@@ -168,7 +172,7 @@ class __TwigTemplate_41b1dd4e45ee93f382e5b8a862df403f extends \Twig\Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['flash_message'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 37
+        // line 38
         echo "
 
 <link rel=\"stylesheet\" href=\"https://cdn.pannellum.org/2.5/pannellum.css\"/>
@@ -180,9 +184,9 @@ class __TwigTemplate_41b1dd4e45ee93f382e5b8a862df403f extends \Twig\Template
 
 <section class='Body-Section-White'>
     ";
-        // line 47
-        $this->loadTemplate("tools/navbar.html.twig", "politiqueconfidentialite.html.twig", 47)->display($context);
         // line 48
+        $this->loadTemplate("tools/navbar.html.twig", "politiqueconfidentialite.html.twig", 48)->display($context);
+        // line 49
         echo "
     <section class='Cadre'>
 
@@ -219,13 +223,13 @@ class __TwigTemplate_41b1dd4e45ee93f382e5b8a862df403f extends \Twig\Template
 
     <h3 style=\"margin-top: 30px; font-size: 15px;text-align: left; padding: 0px 55px;\">7. Droits des personnes concernées</h3>
     <p style=\"text-align: left\">Vous avez le droit de demander l'accès, la rectification ou la suppression de vos données personnelles. Vous avez également le droit de demander la limitation du traitement de vos données personnelles ou de vous opposer à leur traitement. Pour exercer vos droits, vous pouvez nous contacter <a href='";
-        // line 83
+        // line 84
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_index_scroll");
         echo "'>ici</a>.</p>
 
     <h3 style=\"margin-top: 30px; font-size: 15px;text-align: left; padding: 0px 55px;\">8. Contact</h3>
     <p style=\"text-align: left\">Si vous avez des questions ou des préoccupations concernant cette politique de confidentialité, vous pouvez nous contacter  <a href='";
-        // line 86
+        // line 87
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_index_scroll");
         echo "'>ici</a></p>
 
@@ -234,9 +238,9 @@ class __TwigTemplate_41b1dd4e45ee93f382e5b8a862df403f extends \Twig\Template
     </section>
 
     ";
-        // line 92
-        $this->loadTemplate("tools/footer.html.twig", "politiqueconfidentialite.html.twig", 92)->display($context);
         // line 93
+        $this->loadTemplate("tools/footer.html.twig", "politiqueconfidentialite.html.twig", 93)->display($context);
+        // line 94
         echo "</section>
 
 
@@ -263,7 +267,7 @@ class __TwigTemplate_41b1dd4e45ee93f382e5b8a862df403f extends \Twig\Template
 
     public function getDebugInfo()
     {
-        return array (  240 => 93,  238 => 92,  229 => 86,  223 => 83,  186 => 48,  184 => 47,  172 => 37,  159 => 30,  156 => 29,  152 => 28,  148 => 26,  135 => 19,  132 => 18,  128 => 17,  122 => 14,  119 => 13,  109 => 12,  96 => 8,  92 => 7,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
+        return array (  244 => 94,  242 => 93,  233 => 87,  227 => 84,  190 => 49,  188 => 48,  176 => 38,  163 => 31,  160 => 30,  156 => 29,  152 => 27,  139 => 20,  136 => 19,  132 => 18,  126 => 15,  123 => 14,  113 => 13,  100 => 9,  96 => 8,  92 => 7,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -276,6 +280,7 @@ class __TwigTemplate_41b1dd4e45ee93f382e5b8a862df403f extends \Twig\Template
 
 <link rel=\"stylesheet\" href=\"{{ asset('css/style.css') }}\">
 <link rel=\"icon\" type=\"image/png\" href=\"{{ asset('img/inoca.png') }}\">
+<script src=\"{{ asset('js/tata.js') }}\"></script>
 
 {% endblock %}
 
