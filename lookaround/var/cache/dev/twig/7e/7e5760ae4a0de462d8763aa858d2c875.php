@@ -472,7 +472,22 @@ class __TwigTemplate_5fe55d02fc554caf02780ffadb199dfe extends \Twig\Template
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 269, $this->source); })()), "preference_contact", [], "any", false, false, false, 269), 'row');
         echo "
         </div>
-         <br> 
+
+
+        <div class=\"wrapper\">
+            <div class=\"captcha-area\">
+                <div class=\"captcha-img\">
+                    <span class=\"captcha\"></span>
+                </div>
+                <button class=\"reload-btn\"><p class=\"fas fa-redo-alt\">⟳</p></button>
+            </div>
+
+            <div class=\"input-area\">
+                <input class=\"input_form_inscription\" type=\"text\" placeholder=\"Entrez le captcha\" maxlength=\"6\">
+            </div>
+        </div>
+
+
             <p class=\"text-error\" id=\"text-error\"></p>
 
              <br> 
@@ -481,11 +496,11 @@ class __TwigTemplate_5fe55d02fc554caf02780ffadb199dfe extends \Twig\Template
             <button type=\"button\" id='go-submit-form' class=\"reserver-creneau-btn1\">Valider</button>
 
             ";
-        // line 280
+        // line 295
         echo "                
             ";
-        // line 281
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 281, $this->source); })()), 'form_end');
+        // line 296
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 296, $this->source); })()), 'form_end');
         echo "
     </div>
  </div>
@@ -498,14 +513,13 @@ class __TwigTemplate_5fe55d02fc554caf02780ffadb199dfe extends \Twig\Template
 </div>
 </section>
     ";
-        // line 292
-        $this->loadTemplate("tools/footer.html.twig", "index.html.twig", 292)->display($context);
-        // line 293
+        // line 307
+        $this->loadTemplate("tools/footer.html.twig", "index.html.twig", 307)->display($context);
+        // line 308
         echo "</section>
 
 
 <script>    
-
 
     const userStatusElement = document.getElementById('user-status');
     const isConnected = userStatusElement.dataset.isConnected;
@@ -520,24 +534,11 @@ class __TwigTemplate_5fe55d02fc554caf02780ffadb199dfe extends \Twig\Template
 
         var formPrefCreneau = myForm.querySelector('textarea[name=\"registration_form[preference_creneau]\"]')
 
-/*
-        async function getMailList() {
-            const response = await fetch('/getMailList', {
-                method: 'GET',
-                headers: {
-                    'Content-Type': 'application/json'
-                }
-            });
-            console.log(response)
-            return response;
-            const data = await response.json();
-            return data;
-        }
-*/
         btnValidForm.addEventListener('click', onClickHandler);
 
         const textError = document.getElementById('text-error');
         textError.style.display = \"block\";
+
 
         async function onClickHandler() {
             
@@ -545,25 +546,19 @@ class __TwigTemplate_5fe55d02fc554caf02780ffadb199dfe extends \Twig\Template
 
             if (formNom.value.length < 3)
                 textError.innerHTML = \"Le nom choisi est trop court\"
-                
-            /*else if (emailList.includes(formEmail.value)) 
-                textError.innerHTML = \"Cet adresse mail est déja utilisée\"
-            */
 
             else if (!validateEmail(formEmail.value))
                 textError.innerHTML = \"Adresse mail incorrecte\"
             
             else if (formNumero.value.length !== 14)
                 textError.innerHTML = \"Numéro de téléphone incorrect\"
-/*
-            else if (formMotDePasse.value.length < 6)
-                textError.innerHTML = \"Mot de passe trop court\"
 
-            else if (formMotDePasse.value !== formMotDePasseConfirm.value)
-                textError.innerHTML = \"Les mots de passe ne correspondent pas\"
-*/
             else if (formPrefCreneau.value.length < 3)
                 textError.innerHTML = \"Description trop courte\"
+
+            else if (!isCaptchaCorrect()) {
+                textError.innerHTML = \"Captcha incorrect\"
+            }
 
             else {
                 textError.style.display = \"none\";
@@ -604,7 +599,7 @@ var video = document.getElementById(\"video-element\");
 video.disablePictureInPicture = true;
 
 var arrayVideoLinks = [\"";
-        // line 395
+        // line 390
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("videos/look.mp4"), "html", null, true);
         echo "\", \"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("videos/coffee.mp4"), "html", null, true);
@@ -706,6 +701,62 @@ function changeVideoSource(sens) {
 </script>
 
 
+<script>
+const captcha = document.querySelector(\".captcha\")
+reloadBtn = document.querySelector(\".reload-btn\")
+inputField = document.querySelector(\".input-area input\")
+
+inputField.addEventListener(\"keypress\", function(event) {
+  if (event.key === \"Enter\") {
+    event.preventDefault(); 
+  }
+});
+
+
+//storing all captcha characters in array
+let allCharacters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O',
+                     'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd',
+                     'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
+                     't', 'u', 'v', 'w', 'x', 'y', 'z', 0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+function getCaptcha(){
+  for (let i = 0; i < 6; i++) { //getting 6 random characters from the array
+    let randomCharacter = allCharacters[Math.floor(Math.random() * allCharacters.length)];
+    captcha.innerText += ` \${randomCharacter}`; //passing 6 random characters inside captcha innerText
+  }
+}
+getCaptcha(); //calling getCaptcha when the page open
+//calling getCaptcha & removeContent on the reload btn click
+reloadBtn.addEventListener(\"click\", (event)=>{
+  event.preventDefault(); 
+  removeContent();
+  getCaptcha();
+});
+
+function isCaptchaCorrect(){
+  let inputVal = inputField.value.split('').join(' ');
+  
+  return inputVal == captcha.innerText;
+  /*
+  if(inputVal == captcha.innerText){ //if captcha matched
+    statusTxt.style.color = \"#4db2ec\";
+    statusTxt.innerText = \"Nice! You don't appear to be a robot.\";
+    setTimeout(()=>{
+      removeContent();
+      getCaptcha();
+    }, 2000);
+  }else{
+    statusTxt.style.color = \"#ff0000\";
+    statusTxt.innerText = \"Captcha not matched. Please try again!\";
+  }
+  */
+};
+
+function removeContent(){
+ inputField.value = \"\";
+ captcha.innerText = \"\";
+}
+</script>
+
 
 <script>
 
@@ -723,7 +774,7 @@ function changeVideoSource(sens) {
     var maxItemCarouselTuto = descriptionTutoArray.length;
 
     var arrayImageTutos = [\"";
-        // line 507
+        // line 558
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/tuto11.jpg"), "html", null, true);
         echo "\", \"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/tuto2.jpg"), "html", null, true);
@@ -821,11 +872,11 @@ function changeVideoSource(sens) {
 </script>
 
     ";
-        // line 594
+        // line 645
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 594, $this->source); })()), "session", [], "any", false, false, false, 594), "flashbag", [], "any", false, false, false, 594), "get", [0 => "smoothScroll"], "method", false, false, false, 594));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 645, $this->source); })()), "session", [], "any", false, false, false, 645), "flashbag", [], "any", false, false, false, 645), "get", [0 => "smoothScroll"], "method", false, false, false, 645));
         foreach ($context['_seq'] as $context["_key"] => $context["flash_message"]) {
-            // line 595
+            // line 646
             echo "        <script>
             document.addEventListener('DOMContentLoaded', function() {
                 smoothScroll('Partie-Exemples-4')
@@ -836,15 +887,15 @@ function changeVideoSource(sens) {
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['flash_message'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 601
+        // line 652
         echo "
 
         ";
-        // line 603
+        // line 654
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 603, $this->source); })()), "session", [], "any", false, false, false, 603), "flashbag", [], "any", false, false, false, 603), "get", [0 => "smoothScroll2"], "method", false, false, false, 603));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 654, $this->source); })()), "session", [], "any", false, false, false, 654), "flashbag", [], "any", false, false, false, 654), "get", [0 => "smoothScroll2"], "method", false, false, false, 654));
         foreach ($context['_seq'] as $context["_key"] => $context["flash_message"]) {
-            // line 604
+            // line 655
             echo "        <script>
             document.addEventListener('DOMContentLoaded', function() {
                 smoothScroll('div-aide')
@@ -855,16 +906,16 @@ function changeVideoSource(sens) {
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['flash_message'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 610
+        // line 661
         echo "
 
     
 ";
-        // line 613
+        // line 664
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 613, $this->source); })()), "session", [], "any", false, false, false, 613), "flashbag", [], "any", false, false, false, 613), "get", [0 => "connexionGo"], "method", false, false, false, 613));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 664, $this->source); })()), "session", [], "any", false, false, false, 664), "flashbag", [], "any", false, false, false, 664), "get", [0 => "connexionGo"], "method", false, false, false, 664));
         foreach ($context['_seq'] as $context["_key"] => $context["flash_message"]) {
-            // line 614
+            // line 665
             echo "
     <script>
         setTimeout(function() {
@@ -877,15 +928,15 @@ function changeVideoSource(sens) {
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['flash_message'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 622
+        // line 673
         echo "
 
 ";
-        // line 624
+        // line 675
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 624, $this->source); })()), "session", [], "any", false, false, false, 624), "flashbag", [], "any", false, false, false, 624), "get", [0 => "mdpReinit"], "method", false, false, false, 624));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 675, $this->source); })()), "session", [], "any", false, false, false, 675), "flashbag", [], "any", false, false, false, 675), "get", [0 => "mdpReinit"], "method", false, false, false, 675));
         foreach ($context['_seq'] as $context["_key"] => $context["flash_message"]) {
-            // line 625
+            // line 676
             echo "
     <script>
         tata.success(\"\", \"Mot de passe réinitialisé avec succès !\", {
@@ -900,7 +951,7 @@ function changeVideoSource(sens) {
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['flash_message'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 635
+        // line 686
         echo "
 
 <script>
@@ -930,7 +981,7 @@ function changeVideoSource(sens) {
 
     public function getDebugInfo()
     {
-        return array (  904 => 635,  889 => 625,  885 => 624,  881 => 622,  868 => 614,  864 => 613,  859 => 610,  848 => 604,  844 => 603,  840 => 601,  829 => 595,  825 => 594,  727 => 507,  608 => 395,  504 => 293,  502 => 292,  488 => 281,  485 => 280,  472 => 269,  465 => 265,  459 => 262,  455 => 261,  448 => 257,  442 => 254,  425 => 240,  417 => 235,  407 => 228,  399 => 223,  334 => 161,  312 => 142,  295 => 128,  285 => 121,  275 => 114,  265 => 107,  255 => 100,  245 => 93,  228 => 79,  206 => 60,  193 => 50,  184 => 44,  180 => 42,  178 => 41,  172 => 37,  159 => 30,  156 => 29,  152 => 28,  148 => 26,  135 => 19,  132 => 18,  128 => 17,  122 => 14,  119 => 13,  109 => 12,  96 => 8,  92 => 7,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
+        return array (  955 => 686,  940 => 676,  936 => 675,  932 => 673,  919 => 665,  915 => 664,  910 => 661,  899 => 655,  895 => 654,  891 => 652,  880 => 646,  876 => 645,  778 => 558,  603 => 390,  519 => 308,  517 => 307,  503 => 296,  500 => 295,  472 => 269,  465 => 265,  459 => 262,  455 => 261,  448 => 257,  442 => 254,  425 => 240,  417 => 235,  407 => 228,  399 => 223,  334 => 161,  312 => 142,  295 => 128,  285 => 121,  275 => 114,  265 => 107,  255 => 100,  245 => 93,  228 => 79,  206 => 60,  193 => 50,  184 => 44,  180 => 42,  178 => 41,  172 => 37,  159 => 30,  156 => 29,  152 => 28,  148 => 26,  135 => 19,  132 => 18,  128 => 17,  122 => 14,  119 => 13,  109 => 12,  96 => 8,  92 => 7,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -1205,7 +1256,22 @@ function changeVideoSource(sens) {
             <p style=\"font-size : 14px;\">Préference de contact :</p>
             {{ form_row(registrationForm.preference_contact)}}
         </div>
-         <br> 
+
+
+        <div class=\"wrapper\">
+            <div class=\"captcha-area\">
+                <div class=\"captcha-img\">
+                    <span class=\"captcha\"></span>
+                </div>
+                <button class=\"reload-btn\"><p class=\"fas fa-redo-alt\">⟳</p></button>
+            </div>
+
+            <div class=\"input-area\">
+                <input class=\"input_form_inscription\" type=\"text\" placeholder=\"Entrez le captcha\" maxlength=\"6\">
+            </div>
+        </div>
+
+
             <p class=\"text-error\" id=\"text-error\"></p>
 
              <br> 
@@ -1232,7 +1298,6 @@ function changeVideoSource(sens) {
 
 <script>    
 
-
     const userStatusElement = document.getElementById('user-status');
     const isConnected = userStatusElement.dataset.isConnected;
 
@@ -1246,24 +1311,11 @@ function changeVideoSource(sens) {
 
         var formPrefCreneau = myForm.querySelector('textarea[name=\"registration_form[preference_creneau]\"]')
 
-/*
-        async function getMailList() {
-            const response = await fetch('/getMailList', {
-                method: 'GET',
-                headers: {
-                    'Content-Type': 'application/json'
-                }
-            });
-            console.log(response)
-            return response;
-            const data = await response.json();
-            return data;
-        }
-*/
         btnValidForm.addEventListener('click', onClickHandler);
 
         const textError = document.getElementById('text-error');
         textError.style.display = \"block\";
+
 
         async function onClickHandler() {
             
@@ -1271,25 +1323,19 @@ function changeVideoSource(sens) {
 
             if (formNom.value.length < 3)
                 textError.innerHTML = \"Le nom choisi est trop court\"
-                
-            /*else if (emailList.includes(formEmail.value)) 
-                textError.innerHTML = \"Cet adresse mail est déja utilisée\"
-            */
 
             else if (!validateEmail(formEmail.value))
                 textError.innerHTML = \"Adresse mail incorrecte\"
             
             else if (formNumero.value.length !== 14)
                 textError.innerHTML = \"Numéro de téléphone incorrect\"
-/*
-            else if (formMotDePasse.value.length < 6)
-                textError.innerHTML = \"Mot de passe trop court\"
 
-            else if (formMotDePasse.value !== formMotDePasseConfirm.value)
-                textError.innerHTML = \"Les mots de passe ne correspondent pas\"
-*/
             else if (formPrefCreneau.value.length < 3)
                 textError.innerHTML = \"Description trop courte\"
+
+            else if (!isCaptchaCorrect()) {
+                textError.innerHTML = \"Captcha incorrect\"
+            }
 
             else {
                 textError.style.display = \"none\";
@@ -1424,6 +1470,62 @@ function changeVideoSource(sens) {
 
 </script>
 
+
+<script>
+const captcha = document.querySelector(\".captcha\")
+reloadBtn = document.querySelector(\".reload-btn\")
+inputField = document.querySelector(\".input-area input\")
+
+inputField.addEventListener(\"keypress\", function(event) {
+  if (event.key === \"Enter\") {
+    event.preventDefault(); 
+  }
+});
+
+
+//storing all captcha characters in array
+let allCharacters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O',
+                     'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd',
+                     'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
+                     't', 'u', 'v', 'w', 'x', 'y', 'z', 0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+function getCaptcha(){
+  for (let i = 0; i < 6; i++) { //getting 6 random characters from the array
+    let randomCharacter = allCharacters[Math.floor(Math.random() * allCharacters.length)];
+    captcha.innerText += ` \${randomCharacter}`; //passing 6 random characters inside captcha innerText
+  }
+}
+getCaptcha(); //calling getCaptcha when the page open
+//calling getCaptcha & removeContent on the reload btn click
+reloadBtn.addEventListener(\"click\", (event)=>{
+  event.preventDefault(); 
+  removeContent();
+  getCaptcha();
+});
+
+function isCaptchaCorrect(){
+  let inputVal = inputField.value.split('').join(' ');
+  
+  return inputVal == captcha.innerText;
+  /*
+  if(inputVal == captcha.innerText){ //if captcha matched
+    statusTxt.style.color = \"#4db2ec\";
+    statusTxt.innerText = \"Nice! You don't appear to be a robot.\";
+    setTimeout(()=>{
+      removeContent();
+      getCaptcha();
+    }, 2000);
+  }else{
+    statusTxt.style.color = \"#ff0000\";
+    statusTxt.innerText = \"Captcha not matched. Please try again!\";
+  }
+  */
+};
+
+function removeContent(){
+ inputField.value = \"\";
+ captcha.innerText = \"\";
+}
+</script>
 
 
 <script>

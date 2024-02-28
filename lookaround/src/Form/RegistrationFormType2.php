@@ -50,7 +50,7 @@ class RegistrationFormType2 extends AbstractType
                 'required' => true,
                 'label' => false,
                 'attr' => ['class' => "input_form_inscription",  'placeholder' => 'Adresse de rendez-vous']
-            ])*/
+            ])
             ->add('preference_contact', ChoiceType::class, [
                 'mapped' => false,
                 'required' => true,
@@ -61,7 +61,7 @@ class RegistrationFormType2 extends AbstractType
                     'Appel téléphonique' => 'appel téléphonique',
                 ]
             ])
-
+*/
             ////->add('email', EmailType::class, ['attr' => ['class' => "input_form_inscription",  'placeholder' => 'Adresse mail'], 'label' => false])////
             //->add('adresse_facturation', TextType::class, ['attr' => ['class' => "input_form_inscription",  'placeholder' => 'Adresse postale de facturation'], 'label' => false])
             ////->add('nom', TextType::class, ['attr' => ['class' => "input_form_inscription",  'placeholder' => 'Nom de votre société'], 'label' => false])
