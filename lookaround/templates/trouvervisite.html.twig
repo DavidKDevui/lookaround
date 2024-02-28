@@ -8,13 +8,11 @@
 <link rel="icon" type="image/png" href="{{ asset('img/inoca.png') }}">
 <script src="{{ asset('js/tata.js') }}"></script>
 
-
 {% endblock %}
 
 {% block body %}
 
 {% set listKeys = {} %}
-
 
 {% if  photos is defined %}
     {% for key, value in photos %}
@@ -23,13 +21,14 @@
 {% endif %}
 
 
-{% include 'tools/navbar.html.twig' %}
 
 <section class='Body-Section-White'>
+
+{% include 'tools/navbar.html.twig' %}
+
 <section class='Cadre'>
 
 <div class='Partie-Exemples-5'>
-
 
 <h1 class="h1-titre-page">Recherchez une visite à l'aide d'un numéro de référence</h1>
 
