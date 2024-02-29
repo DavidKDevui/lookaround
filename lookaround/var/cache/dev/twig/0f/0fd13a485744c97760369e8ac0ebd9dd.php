@@ -95,7 +95,11 @@ class __TwigTemplate_e6ecf6a1ca0b35444c8df5273524bd5f extends \Twig\Template
         // line 9
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/inoca.png"), "html", null, true);
         echo "\"/>
+<link rel=\"stylesheet\" href=\"https://cdn.pannellum.org/2.5/pannellum.css\"/>
+<script type=\"text/javascript\" src=\"https://cdn.pannellum.org/2.5/pannellum.js\"></script>
 
+<link href=\"https://vjs.zencdn.net/7.1.0/video-js.css\" rel=\"stylesheet\" type=\"text/css\">
+<script src=\"https://vjs.zencdn.net/7.1.0/video.js\"></script>
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -105,7 +109,7 @@ class __TwigTemplate_e6ecf6a1ca0b35444c8df5273524bd5f extends \Twig\Template
 
     }
 
-    // line 15
+    // line 19
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -115,23 +119,23 @@ class __TwigTemplate_e6ecf6a1ca0b35444c8df5273524bd5f extends \Twig\Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 16
+        // line 20
         echo "
 <script src=\"";
-        // line 17
+        // line 21
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/tata.js"), "html", null, true);
         echo "\"></script>
 
 
     ";
-        // line 20
+        // line 24
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 20, $this->source); })()), "session", [], "any", false, false, false, 20), "flashbag", [], "any", false, false, false, 20), "get", [0 => "success"], "method", false, false, false, 20));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 24, $this->source); })()), "session", [], "any", false, false, false, 24), "flashbag", [], "any", false, false, false, 24), "get", [0 => "success"], "method", false, false, false, 24));
         foreach ($context['_seq'] as $context["_key"] => $context["flash_message"]) {
-            // line 21
+            // line 25
             echo "        <script>
             tata.success(\"\", \"";
-            // line 22
+            // line 26
             echo twig_escape_filter($this->env, $context["flash_message"], "html", null, true);
             echo "\", {
                 duration: 3000,
@@ -144,18 +148,18 @@ class __TwigTemplate_e6ecf6a1ca0b35444c8df5273524bd5f extends \Twig\Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['flash_message'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 29
+        // line 33
         echo "
 
     ";
-        // line 31
+        // line 35
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 31, $this->source); })()), "session", [], "any", false, false, false, 31), "flashbag", [], "any", false, false, false, 31), "get", [0 => "failed"], "method", false, false, false, 31));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 35, $this->source); })()), "session", [], "any", false, false, false, 35), "flashbag", [], "any", false, false, false, 35), "get", [0 => "failed"], "method", false, false, false, 35));
         foreach ($context['_seq'] as $context["_key"] => $context["flash_message"]) {
-            // line 32
+            // line 36
             echo "        <script>
             tata.error(\"\", \"";
-            // line 33
+            // line 37
             echo twig_escape_filter($this->env, $context["flash_message"], "html", null, true);
             echo "\", {
                 duration: 3000,
@@ -168,14 +172,10 @@ class __TwigTemplate_e6ecf6a1ca0b35444c8df5273524bd5f extends \Twig\Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['flash_message'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 40
+        // line 44
         echo "
 
-<link rel=\"stylesheet\" href=\"https://cdn.pannellum.org/2.5/pannellum.css\"/>
-<script type=\"text/javascript\" src=\"https://cdn.pannellum.org/2.5/pannellum.js\"></script>
 
-<link href=\"https://vjs.zencdn.net/7.1.0/video-js.css\" rel=\"stylesheet\" type=\"text/css\">
-<script src=\"https://vjs.zencdn.net/7.1.0/video.js\"></script>
  
 
 <section class='Body-Section-White'>
@@ -249,7 +249,7 @@ class __TwigTemplate_e6ecf6a1ca0b35444c8df5273524bd5f extends \Twig\Template
 
     public function getDebugInfo()
     {
-        return array (  226 => 88,  224 => 87,  186 => 51,  184 => 50,  172 => 40,  159 => 33,  156 => 32,  152 => 31,  148 => 29,  135 => 22,  132 => 21,  128 => 20,  122 => 17,  119 => 16,  109 => 15,  96 => 9,  92 => 8,  89 => 7,  79 => 6,  60 => 3,  37 => 1,);
+        return array (  226 => 88,  224 => 87,  186 => 51,  184 => 50,  176 => 44,  163 => 37,  160 => 36,  156 => 35,  152 => 33,  139 => 26,  136 => 25,  132 => 24,  126 => 21,  123 => 20,  113 => 19,  96 => 9,  92 => 8,  89 => 7,  79 => 6,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -263,7 +263,11 @@ class __TwigTemplate_e6ecf6a1ca0b35444c8df5273524bd5f extends \Twig\Template
 
 <link rel=\"stylesheet\" href=\"{{ asset('css/style.css') }}\"/>
 <link rel=\"icon\" type=\"image/png\" href=\"{{ asset('img/inoca.png') }}\"/>
+<link rel=\"stylesheet\" href=\"https://cdn.pannellum.org/2.5/pannellum.css\"/>
+<script type=\"text/javascript\" src=\"https://cdn.pannellum.org/2.5/pannellum.js\"></script>
 
+<link href=\"https://vjs.zencdn.net/7.1.0/video-js.css\" rel=\"stylesheet\" type=\"text/css\">
+<script src=\"https://vjs.zencdn.net/7.1.0/video.js\"></script>
 {% endblock %}
 
 
@@ -295,11 +299,7 @@ class __TwigTemplate_e6ecf6a1ca0b35444c8df5273524bd5f extends \Twig\Template
     {% endfor %}
 
 
-<link rel=\"stylesheet\" href=\"https://cdn.pannellum.org/2.5/pannellum.css\"/>
-<script type=\"text/javascript\" src=\"https://cdn.pannellum.org/2.5/pannellum.js\"></script>
 
-<link href=\"https://vjs.zencdn.net/7.1.0/video-js.css\" rel=\"stylesheet\" type=\"text/css\">
-<script src=\"https://vjs.zencdn.net/7.1.0/video.js\"></script>
  
 
 <section class='Body-Section-White'>
