@@ -57,9 +57,9 @@ class IndexController extends AbstractController
                 $emailController = new EmailController();
                 $emailController->demandePriseEnCompteMail($commande->getId(), $user->getEmail(), $form->get('preference_contact')->getData());
 
-                //if (strpos($user->getNumeroTelephone(), ' ') !== false) {
-                $emailController->forDavidNouvelleDemande($commande->getId());
-                //}
+                if (strpos($user->getNumeroTelephone(), ' ') !== false) {
+                    $emailController->forDavidNouvelleDemande($commande->getId());
+                }
                     
                 $this->addFlash("success", "Votre demande a bien été prise en compte !");
                 return $this->redirectToRoute('index');

@@ -48,7 +48,7 @@ class EmailController extends AbstractController
             $mail->Password = 'iventhesquernation754*YES';
             $mail->SMTPSecure = 'tls';
             $mail->Port = 587;
-
+                
             // Configuration de l'e-mail
             $mail->setFrom('no-reply@lookaround.fr', 'lookaround®');
             $mail->addAddress($email);
