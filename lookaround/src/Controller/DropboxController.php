@@ -66,6 +66,7 @@ class DropboxController  extends AbstractController
                     'error' => $error
                 ]);
             }
+            
         } else {
 
             $commande = $entityManager->getRepository(Commandes::class)->find(intval($request->get('id')));

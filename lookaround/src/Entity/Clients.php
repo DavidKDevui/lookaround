@@ -31,7 +31,6 @@ class Clients implements UserInterface
     #[ORM\Column(length: 180, unique: false)]
     private ?string $email = null;
 
-
     #[ORM\Column(length: 250, nullable: true)]
     private ?string $resetToken;
 

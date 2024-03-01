@@ -88,6 +88,32 @@ class AdminController extends AbstractController
     }
 
 
+    /*
+    #[Route('/listClients', name: 'listClients')]
+
+    public function listClients(EntityManagerInterface $entityManager)
+    {
+        $commande = $entityManager->getRepository(Commandes::class)->find(intval($request->get('id')));
+        $client = $entityManager->getRepository(Clients::class)->find($commande->getClientId());
+
+        if ($request->get('statut') == "EN COURS" || $request->get('statut') == "EN ATTENTE DU PAIEMENT") {
+            $commande->setCreneau(new \DateTimeImmutable($request->get('creneau')));
+            $commande->setAdresseRdv($request->get('adresse_rdv'));
+            $commande->setPrix($request->get('prix'));
+            $commande->setLocalisationCommande($request->get('localisation_commande'));
+            $commande->setNbPhotosCommande($request->get('nb_photos_commande'));
+            $commande->setAideIntegrationCommande($request->get('aide_integration_commande'));
+            $entityManager->flush();
+            $emailController = new EmailController();
+            $emailController->commandeModifieMail($commande->getId(), $client->getEmail());
+        }
+
+        return $this->redirectToRoute('app_dashBoard');
+    }
+
+
+
+*/
 
     #[Route('/adminRembourserCommande', name: 'app_adminSupprimerCommande', methods: ['POST'])]
 

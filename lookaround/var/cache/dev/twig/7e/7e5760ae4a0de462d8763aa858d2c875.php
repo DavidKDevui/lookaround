@@ -487,11 +487,7 @@ class __TwigTemplate_5fe55d02fc554caf02780ffadb199dfe extends \Twig\Template
             
 -->
 
-            <div class=\"g-recaptcha\" data-callback=\"testCaptcha\"  data-sitekey=\"6LffU4YpAAAAAIQvvsIfNNiejIpl3yI_tHLzIEuI\"></div>
-
-            <div class=\"input-area\">
-                <input class=\"input_form_inscription\" type=\"text\" placeholder=\"Entrez le captcha\" maxlength=\"6\">
-            </div>
+            <div class=\"g-recaptcha\" data-callback=\"setCaptchaValide\"  data-sitekey=\"6LffU4YpAAAAAIQvvsIfNNiejIpl3yI_tHLzIEuI\"></div>
         </div>
 
 
@@ -505,11 +501,16 @@ class __TwigTemplate_5fe55d02fc554caf02780ffadb199dfe extends \Twig\Template
             <button type=\"button\" id='go-submit-form' class=\"reserver-creneau-btn1\">Valider</button>
 
             ";
-        // line 304
-        echo "                
+        // line 300
+        echo "
+             ";
+        // line 301
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 301, $this->source); })()), "_token", [], "any", false, false, false, 301), 'form_end');
+        echo "
+                
             ";
-        // line 305
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 305, $this->source); })()), 'form_end');
+        // line 303
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 303, $this->source); })()), 'form_end');
         echo "
     </div>
  </div>
@@ -522,17 +523,13 @@ class __TwigTemplate_5fe55d02fc554caf02780ffadb199dfe extends \Twig\Template
 </div>
 </section>
     ";
-        // line 316
-        $this->loadTemplate("tools/footer.html.twig", "index.html.twig", 316)->display($context);
-        // line 317
+        // line 314
+        $this->loadTemplate("tools/footer.html.twig", "index.html.twig", 314)->display($context);
+        // line 315
         echo "</section>
 
 
 <script>    
-
-function testCaptcha(){
-    alert(\"yes mam\");
-}
 
     var isCaptchaValidated = false;
 
@@ -618,7 +615,7 @@ var video = document.getElementById(\"video-element\");
 video.disablePictureInPicture = true;
 
 var arrayVideoLinks = [\"";
-        // line 409
+        // line 403
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("videos/look.mp4"), "html", null, true);
         echo "\", \"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("videos/coffee.mp4"), "html", null, true);
@@ -793,7 +790,7 @@ function removeContent(){
     var maxItemCarouselTuto = descriptionTutoArray.length;
 
     var arrayImageTutos = [\"";
-        // line 577
+        // line 571
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/tuto11.jpg"), "html", null, true);
         echo "\", \"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/tuto2.jpg"), "html", null, true);
@@ -891,11 +888,11 @@ function removeContent(){
 </script>
 
     ";
-        // line 664
+        // line 658
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 664, $this->source); })()), "session", [], "any", false, false, false, 664), "flashbag", [], "any", false, false, false, 664), "get", [0 => "smoothScroll"], "method", false, false, false, 664));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 658, $this->source); })()), "session", [], "any", false, false, false, 658), "flashbag", [], "any", false, false, false, 658), "get", [0 => "smoothScroll"], "method", false, false, false, 658));
         foreach ($context['_seq'] as $context["_key"] => $context["flash_message"]) {
-            // line 665
+            // line 659
             echo "        <script>
             document.addEventListener('DOMContentLoaded', function() {
                 smoothScroll('Partie-Exemples-4')
@@ -906,15 +903,15 @@ function removeContent(){
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['flash_message'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 671
+        // line 665
         echo "
 
         ";
-        // line 673
+        // line 667
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 673, $this->source); })()), "session", [], "any", false, false, false, 673), "flashbag", [], "any", false, false, false, 673), "get", [0 => "smoothScroll2"], "method", false, false, false, 673));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 667, $this->source); })()), "session", [], "any", false, false, false, 667), "flashbag", [], "any", false, false, false, 667), "get", [0 => "smoothScroll2"], "method", false, false, false, 667));
         foreach ($context['_seq'] as $context["_key"] => $context["flash_message"]) {
-            // line 674
+            // line 668
             echo "        <script>
             document.addEventListener('DOMContentLoaded', function() {
                 smoothScroll('div-aide')
@@ -925,16 +922,16 @@ function removeContent(){
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['flash_message'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 680
+        // line 674
         echo "
 
     
 ";
-        // line 683
+        // line 677
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 683, $this->source); })()), "session", [], "any", false, false, false, 683), "flashbag", [], "any", false, false, false, 683), "get", [0 => "connexionGo"], "method", false, false, false, 683));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 677, $this->source); })()), "session", [], "any", false, false, false, 677), "flashbag", [], "any", false, false, false, 677), "get", [0 => "connexionGo"], "method", false, false, false, 677));
         foreach ($context['_seq'] as $context["_key"] => $context["flash_message"]) {
-            // line 684
+            // line 678
             echo "
     <script>
         setTimeout(function() {
@@ -947,15 +944,15 @@ function removeContent(){
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['flash_message'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 692
+        // line 686
         echo "
 
 ";
-        // line 694
+        // line 688
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 694, $this->source); })()), "session", [], "any", false, false, false, 694), "flashbag", [], "any", false, false, false, 694), "get", [0 => "mdpReinit"], "method", false, false, false, 694));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 688, $this->source); })()), "session", [], "any", false, false, false, 688), "flashbag", [], "any", false, false, false, 688), "get", [0 => "mdpReinit"], "method", false, false, false, 688));
         foreach ($context['_seq'] as $context["_key"] => $context["flash_message"]) {
-            // line 695
+            // line 689
             echo "
     <script>
         tata.success(\"\", \"Mot de passe réinitialisé avec succès !\", {
@@ -970,7 +967,7 @@ function removeContent(){
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['flash_message'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 705
+        // line 699
         echo "
 
 <script>
@@ -1000,7 +997,7 @@ function removeContent(){
 
     public function getDebugInfo()
     {
-        return array (  974 => 705,  959 => 695,  955 => 694,  951 => 692,  938 => 684,  934 => 683,  929 => 680,  918 => 674,  914 => 673,  910 => 671,  899 => 665,  895 => 664,  797 => 577,  622 => 409,  528 => 317,  526 => 316,  512 => 305,  509 => 304,  473 => 270,  466 => 266,  460 => 263,  456 => 262,  449 => 258,  443 => 255,  426 => 241,  418 => 236,  408 => 229,  400 => 224,  335 => 162,  313 => 143,  296 => 129,  286 => 122,  276 => 115,  266 => 108,  256 => 101,  246 => 94,  229 => 80,  207 => 61,  194 => 51,  185 => 45,  181 => 43,  179 => 42,  173 => 38,  160 => 31,  157 => 30,  153 => 29,  149 => 27,  136 => 20,  133 => 19,  129 => 18,  123 => 15,  120 => 14,  110 => 13,  96 => 8,  92 => 7,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
+        return array (  971 => 699,  956 => 689,  952 => 688,  948 => 686,  935 => 678,  931 => 677,  926 => 674,  915 => 668,  911 => 667,  907 => 665,  896 => 659,  892 => 658,  794 => 571,  619 => 403,  529 => 315,  527 => 314,  513 => 303,  508 => 301,  505 => 300,  473 => 270,  466 => 266,  460 => 263,  456 => 262,  449 => 258,  443 => 255,  426 => 241,  418 => 236,  408 => 229,  400 => 224,  335 => 162,  313 => 143,  296 => 129,  286 => 122,  276 => 115,  266 => 108,  256 => 101,  246 => 94,  229 => 80,  207 => 61,  194 => 51,  185 => 45,  181 => 43,  179 => 42,  173 => 38,  160 => 31,  157 => 30,  153 => 29,  149 => 27,  136 => 20,  133 => 19,  129 => 18,  123 => 15,  120 => 14,  110 => 13,  96 => 8,  92 => 7,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -1290,11 +1287,7 @@ function removeContent(){
             
 -->
 
-            <div class=\"g-recaptcha\" data-callback=\"testCaptcha\"  data-sitekey=\"6LffU4YpAAAAAIQvvsIfNNiejIpl3yI_tHLzIEuI\"></div>
-
-            <div class=\"input-area\">
-                <input class=\"input_form_inscription\" type=\"text\" placeholder=\"Entrez le captcha\" maxlength=\"6\">
-            </div>
+            <div class=\"g-recaptcha\" data-callback=\"setCaptchaValide\"  data-sitekey=\"6LffU4YpAAAAAIQvvsIfNNiejIpl3yI_tHLzIEuI\"></div>
         </div>
 
 
@@ -1308,6 +1301,8 @@ function removeContent(){
             <button type=\"button\" id='go-submit-form' class=\"reserver-creneau-btn1\">Valider</button>
 
             {#registrationForm.adresse_facturation#}
+
+             {{ form_end(registrationForm._token) }}
                 
             {{ form_end(registrationForm) }}
     </div>
@@ -1325,10 +1320,6 @@ function removeContent(){
 
 
 <script>    
-
-function testCaptcha(){
-    alert(\"yes mam\");
-}
 
     var isCaptchaValidated = false;
 
