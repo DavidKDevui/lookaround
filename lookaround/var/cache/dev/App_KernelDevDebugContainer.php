@@ -16,6 +16,6 @@ if (!\class_exists(App_KernelDevDebugContainer::class, false)) {
 
 return new \ContainerF9WFuty\App_KernelDevDebugContainer([
     'container.build_hash' => 'F9WFuty',
-    'container.build_id' => 'b8234a2c',
-    'container.build_time' => 1709329354,
+    'container.build_id' => '89b132fa',
+    'container.build_time' => 1709331161,
 ], __DIR__.\DIRECTORY_SEPARATOR.'ContainerF9WFuty');

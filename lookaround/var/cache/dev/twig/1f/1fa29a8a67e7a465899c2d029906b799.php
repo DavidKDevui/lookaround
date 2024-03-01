@@ -125,6 +125,14 @@ class __TwigTemplate_35cc5f9504ee0fc4b177951d54ee85a3 extends \Twig\Template
 
 <h1 class=\"h1-titre-page\"> Admin DashBoard</h1>
 
+<script src=\"https://www.google.com/recaptcha/api.js\" async defer></script>
+
+    <form action=\"?\" method=\"POST\">
+      <div class=\"g-recaptcha\" data-sitekey=\"6LeDSIYpAAAAAAS_lfWUkH69nFF_GU1ui9b7vOiU\"></div>
+      <br/>
+      <input type=\"submit\" value=\"Submit\">
+    </form>
+
 
 <h3 class='admin-titre-sections'>Toutes les commandes</h3>
 
@@ -150,310 +158,310 @@ class __TwigTemplate_35cc5f9504ee0fc4b177951d54ee85a3 extends \Twig\Template
   <tbody>
 
 ";
-        // line 43
-        $context["commandes"] = twig_sort_filter($this->env, (isset($context["commandes"]) || array_key_exists("commandes", $context) ? $context["commandes"] : (function () { throw new RuntimeError('Variable "commandes" does not exist.', 43, $this->source); })()), function ($__a__, $__b__) use ($context, $macros) { $context["a"] = $__a__; $context["b"] = $__b__; return (twig_get_attribute($this->env, $this->source, (isset($context["b"]) || array_key_exists("b", $context) ? $context["b"] : (function () { throw new RuntimeError('Variable "b" does not exist.', 43, $this->source); })()), "datecommande", [], "any", false, false, false, 43) <=> twig_get_attribute($this->env, $this->source, (isset($context["a"]) || array_key_exists("a", $context) ? $context["a"] : (function () { throw new RuntimeError('Variable "a" does not exist.', 43, $this->source); })()), "datecommande", [], "any", false, false, false, 43)); });
-        // line 44
+        // line 51
+        $context["commandes"] = twig_sort_filter($this->env, (isset($context["commandes"]) || array_key_exists("commandes", $context) ? $context["commandes"] : (function () { throw new RuntimeError('Variable "commandes" does not exist.', 51, $this->source); })()), function ($__a__, $__b__) use ($context, $macros) { $context["a"] = $__a__; $context["b"] = $__b__; return (twig_get_attribute($this->env, $this->source, (isset($context["b"]) || array_key_exists("b", $context) ? $context["b"] : (function () { throw new RuntimeError('Variable "b" does not exist.', 51, $this->source); })()), "datecommande", [], "any", false, false, false, 51) <=> twig_get_attribute($this->env, $this->source, (isset($context["a"]) || array_key_exists("a", $context) ? $context["a"] : (function () { throw new RuntimeError('Variable "a" does not exist.', 51, $this->source); })()), "datecommande", [], "any", false, false, false, 51)); });
+        // line 52
         echo "
   ";
-        // line 45
+        // line 53
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["commandes"]) || array_key_exists("commandes", $context) ? $context["commandes"] : (function () { throw new RuntimeError('Variable "commandes" does not exist.', 45, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["commandes"]) || array_key_exists("commandes", $context) ? $context["commandes"] : (function () { throw new RuntimeError('Variable "commandes" does not exist.', 53, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["commande"]) {
-            // line 46
+            // line 54
             echo "  
     <tr>
     <form method=\"post\"  onsubmit=\"return confirmSubmit(event);\">
       <td>";
-            // line 49
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["commande"], "getId", [], "method", false, false, false, 49), "html", null, true);
+            // line 57
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["commande"], "getId", [], "method", false, false, false, 57), "html", null, true);
             echo " <input type=\"text\" name=\"id\" value=\"";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["commande"], "getId", [], "method", false, false, false, 49), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["commande"], "getId", [], "method", false, false, false, 57), "html", null, true);
             echo "\" class=\"setInvisible\"/></td>
 
 
     ";
-            // line 52
-            if ((null === twig_get_attribute($this->env, $this->source, $context["commande"], "getFormuleId", [], "method", false, false, false, 52))) {
-                // line 53
+            // line 60
+            if ((null === twig_get_attribute($this->env, $this->source, $context["commande"], "getFormuleId", [], "method", false, false, false, 60))) {
+                // line 61
                 echo "      <td><input type=\"text\" name=\"formule_id\" value=\"\" style='width: 40px; background-color: yellow' required/></td>
     ";
             } else {
-                // line 55
+                // line 63
                 echo "      ";
-                if (((((twig_get_attribute($this->env, $this->source, $context["commande"], "getStatut", [], "method", false, false, false, 55) == "EN COURS") || (twig_get_attribute($this->env, $this->source, $context["commande"], "getStatut", [], "method", false, false, false, 55) == "ANNULÉ - REMBOURSEMENT")) || (twig_get_attribute($this->env, $this->source, $context["commande"], "getStatut", [], "method", false, false, false, 55) == "EN LIVRAISON")) || (twig_get_attribute($this->env, $this->source, $context["commande"], "getStatut", [], "method", false, false, false, 55) == "TERMINÉ"))) {
-                    // line 56
+                if (((((twig_get_attribute($this->env, $this->source, $context["commande"], "getStatut", [], "method", false, false, false, 63) == "EN COURS") || (twig_get_attribute($this->env, $this->source, $context["commande"], "getStatut", [], "method", false, false, false, 63) == "ANNULÉ - REMBOURSEMENT")) || (twig_get_attribute($this->env, $this->source, $context["commande"], "getStatut", [], "method", false, false, false, 63) == "EN LIVRAISON")) || (twig_get_attribute($this->env, $this->source, $context["commande"], "getStatut", [], "method", false, false, false, 63) == "TERMINÉ"))) {
+                    // line 64
                     echo "        <td>";
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["commande"], "getFormuleId", [], "method", false, false, false, 56), "html", null, true);
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["commande"], "getFormuleId", [], "method", false, false, false, 64), "html", null, true);
                     echo "</td>
       ";
                 } else {
-                    // line 58
+                    // line 66
                     echo "        <td><input type=\"text\" name='formule_id'  value=\"";
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["commande"], "getFormuleId", [], "method", false, false, false, 58), "html", null, true);
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["commande"], "getFormuleId", [], "method", false, false, false, 66), "html", null, true);
                     echo "\" style='width: 40px;' required></td>
       ";
                 }
-                // line 60
+                // line 68
                 echo "    ";
             }
-            // line 61
+            // line 69
             echo "
       ";
-            // line 62
-            if ((null === twig_get_attribute($this->env, $this->source, $context["commande"], "getPrix", [], "method", false, false, false, 62))) {
+            // line 70
+            if ((null === twig_get_attribute($this->env, $this->source, $context["commande"], "getPrix", [], "method", false, false, false, 70))) {
                 echo " 
         <td><input type=\"text\" name=\"prix\" value=\"\" style='width: 40px; background-color: yellow;' required/></td>
       ";
             } else {
-                // line 65
+                // line 73
                 echo "        <td><input type=\"text\" name=\"prix\" value=\"";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["commande"], "getPrix", [], "method", false, false, false, 65), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["commande"], "getPrix", [], "method", false, false, false, 73), "html", null, true);
                 echo "\" style='width: 45px; font-size : 12px' required/></td>
       ";
             }
-            // line 67
+            // line 75
             echo "
       <td>";
-            // line 68
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["commande"], "getStatut", [], "method", false, false, false, 68), "html", null, true);
+            // line 76
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["commande"], "getStatut", [], "method", false, false, false, 76), "html", null, true);
             echo " <input type=\"text\" name=\"statut\" value=\"";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["commande"], "getStatut", [], "method", false, false, false, 68), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["commande"], "getStatut", [], "method", false, false, false, 76), "html", null, true);
             echo "\" style='width: 40px; font-size : 12px' class=\"setInvisible\"/></td>
 
       <td>";
-            // line 70
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["commande"], "getDateCommande", [], "method", false, false, false, 70), "Y-m-d H:i:s"), "html", null, true);
+            // line 78
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["commande"], "getDateCommande", [], "method", false, false, false, 78), "Y-m-d H:i:s"), "html", null, true);
             echo "</td>
 
         ";
-            // line 72
-            if ((null === twig_get_attribute($this->env, $this->source, $context["commande"], "getCreneau", [], "method", false, false, false, 72))) {
-                // line 73
+            // line 80
+            if ((null === twig_get_attribute($this->env, $this->source, $context["commande"], "getCreneau", [], "method", false, false, false, 80))) {
+                // line 81
                 echo "            <td><input type=\"text\" name='creneau' value=\"\" style='background-color: yellow;width: 130px; font-size : 12px'  pattern=\"[0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}:[0-9]{2}\" required></td>
         ";
             } else {
-                // line 75
+                // line 83
                 echo "            <td><input type=\"text\" name='creneau'  style='width: 130px; font-size : 12px'   value=\"";
-                echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["commande"], "getCreneau", [], "method", false, false, false, 75), "Y-m-d H:i:s"), "html", null, true);
+                echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["commande"], "getCreneau", [], "method", false, false, false, 83), "Y-m-d H:i:s"), "html", null, true);
                 echo "\" pattern=\"[0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}:[0-9]{2}\" required></td>
         ";
             }
-            // line 77
+            // line 85
             echo "
       <td>";
-            // line 78
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["commande"], "getPreferenceCreneau", [], "method", false, false, false, 78), "html", null, true);
+            // line 86
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["commande"], "getPreferenceCreneau", [], "method", false, false, false, 86), "html", null, true);
             echo "</td>
 
       ";
-            // line 80
-            if ((null === twig_get_attribute($this->env, $this->source, $context["commande"], "getAdresseRdv", [], "method", false, false, false, 80))) {
-                // line 81
+            // line 88
+            if ((null === twig_get_attribute($this->env, $this->source, $context["commande"], "getAdresseRdv", [], "method", false, false, false, 88))) {
+                // line 89
                 echo "        <td><input type='text' name=\"adresse_rdv\"  value=\"\"  style='background-color: yellow; width: 100px;'  required/></td>
       ";
             } else {
-                // line 83
+                // line 91
                 echo "        <td><input type='text' name=\"adresse_rdv\"  style='width: 150px; font-size : 12px; width: 100px;' value=\"";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["commande"], "getAdresseRdv", [], "method", false, false, false, 83), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["commande"], "getAdresseRdv", [], "method", false, false, false, 91), "html", null, true);
                 echo "\"  required/></td>
       ";
             }
-            // line 85
+            // line 93
             echo "
 
       ";
-            // line 87
-            if ((null === twig_get_attribute($this->env, $this->source, $context["commande"], "getLocalisationCommande", [], "method", false, false, false, 87))) {
-                // line 88
+            // line 95
+            if ((null === twig_get_attribute($this->env, $this->source, $context["commande"], "getLocalisationCommande", [], "method", false, false, false, 95))) {
+                // line 96
                 echo "        <td><input type='text' name=\"localisation_commande\"  value=\"\"  style='background-color: yellow;  font-size : 12px; width: 70px'  required/></td>
       ";
             } else {
-                // line 90
+                // line 98
                 echo "        <td><input type='text' name=\"localisation_commande\"  value=\"";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["commande"], "getLocalisationCommande", [], "method", false, false, false, 90), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["commande"], "getLocalisationCommande", [], "method", false, false, false, 98), "html", null, true);
                 echo "\"  style='font-size : 12px; width: 70px'  required/></td>
       ";
             }
-            // line 92
+            // line 100
             echo "
       ";
-            // line 93
-            if ((null === twig_get_attribute($this->env, $this->source, $context["commande"], "getNbPhotosCommande", [], "method", false, false, false, 93))) {
-                // line 94
+            // line 101
+            if ((null === twig_get_attribute($this->env, $this->source, $context["commande"], "getNbPhotosCommande", [], "method", false, false, false, 101))) {
+                // line 102
                 echo "        <td><input type='text' name=\"nb_photos_commande\"  value=\"\"  style='background-color: yellow;  font-size : 12px; width: 70px'  required/></td>
       ";
             } else {
-                // line 96
+                // line 104
                 echo "        <td><input type='text' name=\"nb_photos_commande\"  style='font-size : 12px; width: 70px' value=\"";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["commande"], "getNbPhotosCommande", [], "method", false, false, false, 96), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["commande"], "getNbPhotosCommande", [], "method", false, false, false, 104), "html", null, true);
                 echo "\"  required/></td>
       ";
             }
-            // line 98
+            // line 106
             echo "
       ";
-            // line 99
-            if ((null === twig_get_attribute($this->env, $this->source, $context["commande"], "getAideIntegrationCommande", [], "method", false, false, false, 99))) {
-                // line 100
+            // line 107
+            if ((null === twig_get_attribute($this->env, $this->source, $context["commande"], "getAideIntegrationCommande", [], "method", false, false, false, 107))) {
+                // line 108
                 echo "        <td><input type='text' name=\"aide_integration_commande\"  value=\"\"  style='background-color: yellow; width: 40px'  required/></td>
       ";
             } else {
-                // line 102
+                // line 110
                 echo "        <td><input type='text' name=\"aide_integration_commande\"  style='width: 40px' value=\"";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["commande"], "getAideIntegrationCommande", [], "method", false, false, false, 102), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["commande"], "getAideIntegrationCommande", [], "method", false, false, false, 110), "html", null, true);
                 echo "\"  required/></td>
       ";
-            }
-            // line 104
-            echo "
-
-
-      ";
-            // line 107
-            if ((null === twig_get_attribute($this->env, $this->source, $context["commande"], "getDatePaiement", [], "method", false, false, false, 107))) {
-                // line 108
-                echo "            <td></td>
-        ";
-            } else {
-                // line 110
-                echo "            <td>";
-                echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["commande"], "getDatePaiement", [], "method", false, false, false, 110), "Y-m-d H:i:s"), "html", null, true);
-                echo "</td>
-        ";
             }
             // line 112
             echo "
 
+
       ";
-            // line 114
-            if ((null === twig_get_attribute($this->env, $this->source, $context["commande"], "getDateOuverturePaiement", [], "method", false, false, false, 114))) {
-                // line 115
+            // line 115
+            if ((null === twig_get_attribute($this->env, $this->source, $context["commande"], "getDatePaiement", [], "method", false, false, false, 115))) {
+                // line 116
                 echo "            <td></td>
         ";
             } else {
-                // line 117
+                // line 118
                 echo "            <td>";
-                echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["commande"], "getDateOuverturePaiement", [], "method", false, false, false, 117), "Y-m-d H:i:s"), "html", null, true);
+                echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["commande"], "getDatePaiement", [], "method", false, false, false, 118), "Y-m-d H:i:s"), "html", null, true);
                 echo "</td>
         ";
             }
-            // line 119
+            // line 120
+            echo "
+
+      ";
+            // line 122
+            if ((null === twig_get_attribute($this->env, $this->source, $context["commande"], "getDateOuverturePaiement", [], "method", false, false, false, 122))) {
+                // line 123
+                echo "            <td></td>
+        ";
+            } else {
+                // line 125
+                echo "            <td>";
+                echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["commande"], "getDateOuverturePaiement", [], "method", false, false, false, 125), "Y-m-d H:i:s"), "html", null, true);
+                echo "</td>
+        ";
+            }
+            // line 127
             echo "
 
       <td>
         ";
-            // line 122
-            if ((twig_get_attribute($this->env, $this->source, $context["commande"], "getStatut", [], "method", false, false, false, 122) == "EN ATTENTE D'UN CRÉNEAU")) {
-                // line 123
+            // line 130
+            if ((twig_get_attribute($this->env, $this->source, $context["commande"], "getStatut", [], "method", false, false, false, 130) == "EN ATTENTE D'UN CRÉNEAU")) {
+                // line 131
                 echo "            <p>- Contacter client par ";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["commande"], "getPreferenceContact", [], "method", false, false, false, 123), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["commande"], "getPreferenceContact", [], "method", false, false, false, 131), "html", null, true);
                 echo " <br>- Renseigner un créneau, un lieu de rdv et une formule</p>
         ";
-            } elseif ((twig_get_attribute($this->env, $this->source,             // line 124
-$context["commande"], "getStatut", [], "method", false, false, false, 124) == "EN ATTENTE DU PAIEMENT")) {
-                // line 125
+            } elseif ((twig_get_attribute($this->env, $this->source,             // line 132
+$context["commande"], "getStatut", [], "method", false, false, false, 132) == "EN ATTENTE DU PAIEMENT")) {
+                // line 133
                 echo "            <p>- Attente du paiement du client</p>
         ";
-            } elseif ((twig_get_attribute($this->env, $this->source,             // line 126
-$context["commande"], "getStatut", [], "method", false, false, false, 126) == "EN COURS")) {
-                // line 127
+            } elseif ((twig_get_attribute($this->env, $this->source,             // line 134
+$context["commande"], "getStatut", [], "method", false, false, false, 134) == "EN COURS")) {
+                // line 135
                 echo "            <p>- Réaliser la prestation</p>
         ";
-            } elseif ((twig_get_attribute($this->env, $this->source,             // line 128
-$context["commande"], "getStatut", [], "method", false, false, false, 128) == "EN LIVRAISON")) {
-                // line 129
+            } elseif ((twig_get_attribute($this->env, $this->source,             // line 136
+$context["commande"], "getStatut", [], "method", false, false, false, 136) == "EN LIVRAISON")) {
+                // line 137
                 echo "            <p>- Livrer le produit</p>
         ";
-            } elseif ((twig_get_attribute($this->env, $this->source,             // line 130
-$context["commande"], "getStatut", [], "method", false, false, false, 130) == "TERMINÉ")) {
-                // line 131
+            } elseif ((twig_get_attribute($this->env, $this->source,             // line 138
+$context["commande"], "getStatut", [], "method", false, false, false, 138) == "TERMINÉ")) {
+                // line 139
                 echo "            <p>- Fin de la commande</p>
         ";
-            } elseif ((twig_get_attribute($this->env, $this->source,             // line 132
-$context["commande"], "getStatut", [], "method", false, false, false, 132) == "EXPIRÉ")) {
-                // line 133
+            } elseif ((twig_get_attribute($this->env, $this->source,             // line 140
+$context["commande"], "getStatut", [], "method", false, false, false, 140) == "EXPIRÉ")) {
+                // line 141
                 echo "            <p>- Le client n'a pas payé à temps</p>
         ";
             }
-            // line 135
+            // line 143
             echo "      </td>
 
         ";
-            // line 137
-            if ((twig_get_attribute($this->env, $this->source, $context["commande"], "getStatut", [], "method", false, false, false, 137) == "EN ATTENTE D'UN CRÉNEAU")) {
-                // line 138
+            // line 145
+            if ((twig_get_attribute($this->env, $this->source, $context["commande"], "getStatut", [], "method", false, false, false, 145) == "EN ATTENTE D'UN CRÉNEAU")) {
+                // line 146
                 echo "          <td><input type=\"submit\" style=\"font-size: 12px;\" value=\"Valider le creneau\" formaction=\"";
                 echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_adminChoixCreneau");
                 echo "\"/></td>
         ";
-            } elseif ((twig_get_attribute($this->env, $this->source,             // line 139
-$context["commande"], "getStatut", [], "method", false, false, false, 139) == "EN ATTENTE DU PAIEMENT")) {
-                // line 140
+            } elseif ((twig_get_attribute($this->env, $this->source,             // line 147
+$context["commande"], "getStatut", [], "method", false, false, false, 147) == "EN ATTENTE DU PAIEMENT")) {
+                // line 148
                 echo "          <td><input type=\"submit\" style=\"font-size: 12px;\" value=\"Modifier la commande\"  formaction=\"";
                 echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_adminModifierCommande");
                 echo "\" /></td>
         ";
-            } elseif ((twig_get_attribute($this->env, $this->source,             // line 141
-$context["commande"], "getStatut", [], "method", false, false, false, 141) == "EN COURS")) {
-                // line 142
+            } elseif ((twig_get_attribute($this->env, $this->source,             // line 149
+$context["commande"], "getStatut", [], "method", false, false, false, 149) == "EN COURS")) {
+                // line 150
                 echo "          <td><input type=\"submit\" style=\"font-size: 12px;\" style=\"font-size: 12px;\" value=\"J'ai réalisé la prestation\"  formaction=\"";
                 echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_adminPrestationRealise");
                 echo "\"/>
           <input type=\"submit\" style=\"font-size: 12px;\" value=\"Notifier que le rdv est soon\"  formaction=\"";
-                // line 143
+                // line 151
                 echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_rendezVousSoonMail");
                 echo "\" />
           <input type=\"submit\" style=\"font-size: 12px;\" value=\"Modifier la commande\"  formaction=\"";
-                // line 144
+                // line 152
                 echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_adminModifierCommande");
                 echo "\" />
         <!-- <input type=\"submit\" value=\"Déclancher remboursement\"  formaction=\"";
-                // line 145
+                // line 153
                 echo "\" /></td>-->
         ";
-            } elseif ((twig_get_attribute($this->env, $this->source,             // line 146
-$context["commande"], "getStatut", [], "method", false, false, false, 146) == "EN LIVRAISON")) {
-                // line 147
+            } elseif ((twig_get_attribute($this->env, $this->source,             // line 154
+$context["commande"], "getStatut", [], "method", false, false, false, 154) == "EN LIVRAISON")) {
+                // line 155
                 echo "          <input type='hidden' name=\"idCommande\" value=\"";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["commande"], "id", [], "any", false, false, false, 147), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["commande"], "id", [], "any", false, false, false, 155), "html", null, true);
                 echo "\" />
           <input type='hidden' name=\"email\" value=\"";
-                // line 148
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["commande"], "getClientId", [], "method", false, false, false, 148), "email", [], "any", false, false, false, 148), "html", null, true);
+                // line 156
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["commande"], "getClientId", [], "method", false, false, false, 156), "email", [], "any", false, false, false, 156), "html", null, true);
                 echo "\" />
 
       
           <td><input type=\"submit\" style=\"font-size: 12px;\" value=\"J'ai livré la prestation\"  formaction=\"";
-                // line 151
+                // line 159
                 echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_adminProduitLivre");
                 echo "\" /></td>
         ";
-            } elseif ((twig_get_attribute($this->env, $this->source,             // line 152
-$context["commande"], "getStatut", [], "method", false, false, false, 152) == "TERMINÉ")) {
-                // line 153
+            } elseif ((twig_get_attribute($this->env, $this->source,             // line 160
+$context["commande"], "getStatut", [], "method", false, false, false, 160) == "TERMINÉ")) {
+                // line 161
                 echo "          <input type='hidden' name=\"idCommande\" value=\"";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["commande"], "id", [], "any", false, false, false, 153), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["commande"], "id", [], "any", false, false, false, 161), "html", null, true);
                 echo "\" />
           <input type='hidden' name=\"email\" value=\"";
-                // line 154
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["commande"], "getClientId", [], "method", false, false, false, 154), "email", [], "any", false, false, false, 154), "html", null, true);
+                // line 162
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["commande"], "getClientId", [], "method", false, false, false, 162), "email", [], "any", false, false, false, 162), "html", null, true);
                 echo "\" />
           ";
-                // line 155
-                if ((null === twig_get_attribute($this->env, $this->source, $context["commande"], "getNote", [], "method", false, false, false, 155))) {
-                    // line 156
+                // line 163
+                if ((null === twig_get_attribute($this->env, $this->source, $context["commande"], "getNote", [], "method", false, false, false, 163))) {
+                    // line 164
                     echo "            <td><input type=\"submit\" style=\"font-size: 12px;\" value=\"Demander un avis\"  formaction=\"";
                     echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_demandeDeNoteeMail");
                     echo "\" /></td>
           ";
                 }
-                // line 158
+                // line 166
                 echo "        ";
-            } elseif ((twig_get_attribute($this->env, $this->source, $context["commande"], "getStatut", [], "method", false, false, false, 158) == "EXPIRÉ")) {
-                // line 159
+            } elseif ((twig_get_attribute($this->env, $this->source, $context["commande"], "getStatut", [], "method", false, false, false, 166) == "EXPIRÉ")) {
+                // line 167
                 echo "        ";
             }
-            // line 160
+            // line 168
             echo "    </form>
       <tr>
   ";
@@ -461,7 +469,7 @@ $context["commande"], "getStatut", [], "method", false, false, false, 152) == "T
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['commande'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 163
+        // line 171
         echo "</tbody>
 
 </table>
@@ -484,63 +492,63 @@ $context["commande"], "getStatut", [], "method", false, false, false, 152) == "T
   <tbody>
 
   ";
-        // line 184
+        // line 192
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["clients"]) || array_key_exists("clients", $context) ? $context["clients"] : (function () { throw new RuntimeError('Variable "clients" does not exist.', 184, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["clients"]) || array_key_exists("clients", $context) ? $context["clients"] : (function () { throw new RuntimeError('Variable "clients" does not exist.', 192, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["client"]) {
-            // line 185
+            // line 193
             echo "    ";
             $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["client"], "commandes", [], "any", false, false, false, 185));
+            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["client"], "commandes", [], "any", false, false, false, 193));
             foreach ($context['_seq'] as $context["_key"] => $context["commande"]) {
-                // line 186
+                // line 194
                 echo "      ";
-                if (((twig_get_attribute($this->env, $this->source, $context["commande"], "statut", [], "any", false, false, false, 186) == "EN COURS") || (twig_get_attribute($this->env, $this->source, $context["commande"], "statut", [], "any", false, false, false, 186) == "EN LIVRAISON"))) {
-                    // line 187
+                if (((twig_get_attribute($this->env, $this->source, $context["commande"], "statut", [], "any", false, false, false, 194) == "EN COURS") || (twig_get_attribute($this->env, $this->source, $context["commande"], "statut", [], "any", false, false, false, 194) == "EN LIVRAISON"))) {
+                    // line 195
                     echo "      <tr>
         <td>";
-                    // line 188
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["commande"], "id", [], "any", false, false, false, 188), "html", null, true);
+                    // line 196
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["commande"], "id", [], "any", false, false, false, 196), "html", null, true);
                     echo "</td>
         <td>";
-                    // line 189
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["client"], "nom", [], "any", false, false, false, 189), "html", null, true);
+                    // line 197
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["client"], "nom", [], "any", false, false, false, 197), "html", null, true);
                     echo "</td>
         <td>";
-                    // line 190
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["commande"], "adresseRdv", [], "any", false, false, false, 190), "html", null, true);
+                    // line 198
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["commande"], "adresseRdv", [], "any", false, false, false, 198), "html", null, true);
                     echo "</td>
         <td>";
-                    // line 191
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["client"], "numeroTelephone", [], "any", false, false, false, 191), "html", null, true);
+                    // line 199
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["client"], "numeroTelephone", [], "any", false, false, false, 199), "html", null, true);
                     echo "</td>
         <td>";
-                    // line 192
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["client"], "email", [], "any", false, false, false, 192), "html", null, true);
+                    // line 200
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["client"], "email", [], "any", false, false, false, 200), "html", null, true);
                     echo "</td>
         <td>";
-                    // line 193
-                    echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["commande"], "creneau", [], "any", false, false, false, 193), "l j F à H:i"), "html", null, true);
+                    // line 201
+                    echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["commande"], "creneau", [], "any", false, false, false, 201), "l j F à H:i"), "html", null, true);
                     echo "</td>
 
       <td>
         ";
-                    // line 196
-                    if ((twig_get_attribute($this->env, $this->source, $context["commande"], "statut", [], "any", false, false, false, 196) == "EN COURS")) {
-                        // line 197
+                    // line 204
+                    if ((twig_get_attribute($this->env, $this->source, $context["commande"], "statut", [], "any", false, false, false, 204) == "EN COURS")) {
+                        // line 205
                         echo "          A faire
         ";
-                    } elseif ((twig_get_attribute($this->env, $this->source,                     // line 198
-$context["commande"], "statut", [], "any", false, false, false, 198) == "EN LIVRAISON")) {
-                        // line 199
+                    } elseif ((twig_get_attribute($this->env, $this->source,                     // line 206
+$context["commande"], "statut", [], "any", false, false, false, 206) == "EN LIVRAISON")) {
+                        // line 207
                         echo "         A livrer
         ";
                     }
-                    // line 201
+                    // line 209
                     echo "      <tr>
     ";
                 }
-                // line 203
+                // line 211
                 echo "  ";
             }
             $_parent = $context['_parent'];
@@ -550,7 +558,7 @@ $context["commande"], "statut", [], "any", false, false, false, 198) == "EN LIVR
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['client'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 205
+        // line 213
         echo "</tbody>
 
 </table>
@@ -571,26 +579,26 @@ $context["commande"], "statut", [], "any", false, false, false, 198) == "EN LIVR
 
 
 ";
-        // line 224
+        // line 232
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["commandes"]) || array_key_exists("commandes", $context) ? $context["commandes"] : (function () { throw new RuntimeError('Variable "commandes" does not exist.', 224, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["commandes"]) || array_key_exists("commandes", $context) ? $context["commandes"] : (function () { throw new RuntimeError('Variable "commandes" does not exist.', 232, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["commande"]) {
-            // line 225
+            // line 233
             echo "  ";
-            if ( !(null === twig_get_attribute($this->env, $this->source, $context["commande"], "note", [], "any", false, false, false, 225))) {
-                // line 226
+            if ( !(null === twig_get_attribute($this->env, $this->source, $context["commande"], "note", [], "any", false, false, false, 233))) {
+                // line 234
                 echo "    <tr>
       <td>";
-                // line 227
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["commande"], "note", [], "any", false, false, false, 227), "note", [], "any", false, false, false, 227), "html", null, true);
+                // line 235
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["commande"], "note", [], "any", false, false, false, 235), "note", [], "any", false, false, false, 235), "html", null, true);
                 echo " / 5</td>
       <td>";
-                // line 228
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["commande"], "note", [], "any", false, false, false, 228), "commentaire", [], "any", false, false, false, 228), "html", null, true);
+                // line 236
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["commande"], "note", [], "any", false, false, false, 236), "commentaire", [], "any", false, false, false, 236), "html", null, true);
                 echo "</td>
       <td>";
-                // line 229
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["commande"], "id", [], "any", false, false, false, 229), "html", null, true);
+                // line 237
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["commande"], "id", [], "any", false, false, false, 237), "html", null, true);
                 echo "</td>
     </tr>
 
@@ -600,7 +608,7 @@ $context["commande"], "statut", [], "any", false, false, false, 198) == "EN LIVR
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['commande'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 234
+        // line 242
         echo "
 </tbody>
 
@@ -662,7 +670,7 @@ function confirmSubmit(event) {
 
     public function getDebugInfo()
     {
-        return array (  604 => 234,  593 => 229,  589 => 228,  585 => 227,  582 => 226,  579 => 225,  575 => 224,  554 => 205,  544 => 203,  540 => 201,  536 => 199,  534 => 198,  531 => 197,  529 => 196,  523 => 193,  519 => 192,  515 => 191,  511 => 190,  507 => 189,  503 => 188,  500 => 187,  497 => 186,  492 => 185,  488 => 184,  465 => 163,  457 => 160,  454 => 159,  451 => 158,  445 => 156,  443 => 155,  439 => 154,  434 => 153,  432 => 152,  428 => 151,  422 => 148,  417 => 147,  415 => 146,  412 => 145,  408 => 144,  404 => 143,  399 => 142,  397 => 141,  392 => 140,  390 => 139,  385 => 138,  383 => 137,  379 => 135,  375 => 133,  373 => 132,  370 => 131,  368 => 130,  365 => 129,  363 => 128,  360 => 127,  358 => 126,  355 => 125,  353 => 124,  348 => 123,  346 => 122,  341 => 119,  335 => 117,  331 => 115,  329 => 114,  325 => 112,  319 => 110,  315 => 108,  313 => 107,  308 => 104,  302 => 102,  298 => 100,  296 => 99,  293 => 98,  287 => 96,  283 => 94,  281 => 93,  278 => 92,  272 => 90,  268 => 88,  266 => 87,  262 => 85,  256 => 83,  252 => 81,  250 => 80,  245 => 78,  242 => 77,  236 => 75,  232 => 73,  230 => 72,  225 => 70,  218 => 68,  215 => 67,  209 => 65,  203 => 62,  200 => 61,  197 => 60,  191 => 58,  185 => 56,  182 => 55,  178 => 53,  176 => 52,  168 => 49,  163 => 46,  159 => 45,  156 => 44,  154 => 43,  124 => 15,  122 => 14,  119 => 13,  109 => 12,  96 => 8,  92 => 7,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
+        return array (  612 => 242,  601 => 237,  597 => 236,  593 => 235,  590 => 234,  587 => 233,  583 => 232,  562 => 213,  552 => 211,  548 => 209,  544 => 207,  542 => 206,  539 => 205,  537 => 204,  531 => 201,  527 => 200,  523 => 199,  519 => 198,  515 => 197,  511 => 196,  508 => 195,  505 => 194,  500 => 193,  496 => 192,  473 => 171,  465 => 168,  462 => 167,  459 => 166,  453 => 164,  451 => 163,  447 => 162,  442 => 161,  440 => 160,  436 => 159,  430 => 156,  425 => 155,  423 => 154,  420 => 153,  416 => 152,  412 => 151,  407 => 150,  405 => 149,  400 => 148,  398 => 147,  393 => 146,  391 => 145,  387 => 143,  383 => 141,  381 => 140,  378 => 139,  376 => 138,  373 => 137,  371 => 136,  368 => 135,  366 => 134,  363 => 133,  361 => 132,  356 => 131,  354 => 130,  349 => 127,  343 => 125,  339 => 123,  337 => 122,  333 => 120,  327 => 118,  323 => 116,  321 => 115,  316 => 112,  310 => 110,  306 => 108,  304 => 107,  301 => 106,  295 => 104,  291 => 102,  289 => 101,  286 => 100,  280 => 98,  276 => 96,  274 => 95,  270 => 93,  264 => 91,  260 => 89,  258 => 88,  253 => 86,  250 => 85,  244 => 83,  240 => 81,  238 => 80,  233 => 78,  226 => 76,  223 => 75,  217 => 73,  211 => 70,  208 => 69,  205 => 68,  199 => 66,  193 => 64,  190 => 63,  186 => 61,  184 => 60,  176 => 57,  171 => 54,  167 => 53,  164 => 52,  162 => 51,  124 => 15,  122 => 14,  119 => 13,  109 => 12,  96 => 8,  92 => 7,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -684,6 +692,14 @@ function confirmSubmit(event) {
 
 
 <h1 class=\"h1-titre-page\"> Admin DashBoard</h1>
+
+<script src=\"https://www.google.com/recaptcha/api.js\" async defer></script>
+
+    <form action=\"?\" method=\"POST\">
+      <div class=\"g-recaptcha\" data-sitekey=\"6LeDSIYpAAAAAAS_lfWUkH69nFF_GU1ui9b7vOiU\"></div>
+      <br/>
+      <input type=\"submit\" value=\"Submit\">
+    </form>
 
 
 <h3 class='admin-titre-sections'>Toutes les commandes</h3>
