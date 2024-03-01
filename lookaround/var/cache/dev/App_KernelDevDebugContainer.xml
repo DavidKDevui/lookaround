@@ -7072,6 +7072,15 @@
         <argument key="requestStack" type="service_closure" id="request_stack"/>
       </argument>
     </service>
+    <service id=".service_locator.t0izpSA" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="authenticationUtils" type="service_closure" id="security.authentication_utils"/>
+        <argument key="authenticator" type="service_closure" id="App\Security\ClientsAuthenticator"/>
+        <argument key="entityManager" type="service_closure" id="doctrine.orm.default_entity_manager"/>
+        <argument key="userAuthenticator" type="service_closure" id="security.user_authenticator"/>
+      </argument>
+    </service>
     <service id=".service_locator.0drJxaP" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -7085,15 +7094,6 @@
         <argument key="authChecker" type="service_closure" id="security.authorization_checker"/>
         <argument key="authenticationUtils" type="service_closure" id="security.authentication_utils"/>
         <argument key="tokenStorage" type="service_closure" id="security.token_storage"/>
-      </argument>
-    </service>
-    <service id=".service_locator.t0izpSA" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
-        <argument key="authenticationUtils" type="service_closure" id="security.authentication_utils"/>
-        <argument key="authenticator" type="service_closure" id="App\Security\ClientsAuthenticator"/>
-        <argument key="entityManager" type="service_closure" id="doctrine.orm.default_entity_manager"/>
-        <argument key="userAuthenticator" type="service_closure" id="security.user_authenticator"/>
       </argument>
     </service>
     <service id=".service_locator.eFQiehW" class="Symfony\Component\DependencyInjection\ServiceLocator">
@@ -7112,7 +7112,7 @@
         <argument key="authenticationUtils" type="service_closure" id="security.authentication_utils"/>
       </argument>
     </service>
-    <service id=".service_locator.6SEV67o" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.wd9.jom" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\AdminController::adminChoixCreneau" type="service_closure" id=".service_locator.CsMkqUa"/>
@@ -7121,6 +7121,7 @@
         <argument key="App\Controller\AdminController::adminProduitLivre" type="service_closure" id=".service_locator.CsMkqUa"/>
         <argument key="App\Controller\AdminController::adminSupprimerCommande" type="service_closure" id=".service_locator.CsMkqUa"/>
         <argument key="App\Controller\AdminController::dashBoard" type="service_closure" id=".service_locator.CsMkqUa"/>
+        <argument key="App\Controller\ClientController::cleanDatabases" type="service_closure" id=".service_locator.t0izpSA"/>
         <argument key="App\Controller\ClientController::confirmationMotDePasse" type="service_closure" id=".service_locator.QQ1lptr"/>
         <argument key="App\Controller\ClientController::envoyerEmail" type="service_closure" id=".service_locator.CsMkqUa"/>
         <argument key="App\Controller\ClientController::getMailList" type="service_closure" id=".service_locator.CsMkqUa"/>
@@ -7150,6 +7151,7 @@
         <argument key="App\Controller\AdminController:adminProduitLivre" type="service_closure" id=".service_locator.CsMkqUa"/>
         <argument key="App\Controller\AdminController:adminSupprimerCommande" type="service_closure" id=".service_locator.CsMkqUa"/>
         <argument key="App\Controller\AdminController:dashBoard" type="service_closure" id=".service_locator.CsMkqUa"/>
+        <argument key="App\Controller\ClientController:cleanDatabases" type="service_closure" id=".service_locator.t0izpSA"/>
         <argument key="App\Controller\ClientController:confirmationMotDePasse" type="service_closure" id=".service_locator.QQ1lptr"/>
         <argument key="App\Controller\ClientController:envoyerEmail" type="service_closure" id=".service_locator.CsMkqUa"/>
         <argument key="App\Controller\ClientController:getMailList" type="service_closure" id=".service_locator.CsMkqUa"/>
@@ -8059,12 +8061,12 @@
     <service id="debug.argument_resolver.request.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\RequestValueResolver"/>
     <service id="debug.argument_resolver.session.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\SessionValueResolver"/>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator.6SEV67o"/>
+      <argument type="service" id=".service_locator.wd9.jom"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator.6SEV67o"/>
+      <argument type="service" id=".service_locator.wd9.jom"/>
     </service>
     <service id="debug.traced.messenger.bus.default.inner" class="Symfony\Component\Messenger\MessageBus">
       <argument type="iterator">
@@ -9037,7 +9039,7 @@
     <service id="Endroid\QrCode\Builder\BuilderInterface $defaultQrCodeBuilder" alias="endroid_qr_code.default_builder"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.7nzbL4K" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.6SEV67o"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.wd9.jom"/>
     <service id="doctrine.id_generator_locator" alias=".service_locator.QebYf8E"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
@@ -9061,11 +9063,11 @@
     <service id=".service_locator.o.uf2zi" alias=".service_locator.7nzbL4K"/>
     <service id=".service_locator.SmcO53g" alias=".service_locator.aVCBKxN"/>
     <service id=".service_locator.._3MRnC" alias=".service_locator.QQ1lptr"/>
+    <service id=".service_locator.RBii1kJ" alias=".service_locator.t0izpSA"/>
     <service id=".service_locator.oku_pKx" alias=".service_locator.0drJxaP"/>
     <service id=".service_locator.7QUOfvk" alias=".service_locator.q2tClvC"/>
-    <service id=".service_locator.RBii1kJ" alias=".service_locator.t0izpSA"/>
     <service id=".service_locator.5CT.pAY" alias=".service_locator.eFQiehW"/>
-    <service id=".service_locator.hLr8dEY" alias=".service_locator.6SEV67o"/>
+    <service id=".service_locator.Qjd1vfO" alias=".service_locator.wd9.jom"/>
     <service id=".service_locator.9XMoc9I" alias=".service_locator.kzegaci"/>
     <service id=".service_locator.KtRYd7a" alias=".service_locator.Bam4_WQ"/>
     <service id=".service_locator.XW18Svm" alias=".service_locator.TcKhdzh"/>
@@ -9119,9 +9121,9 @@
     <service id=".service_locator.9e2t_lq" alias=".service_locator.CsMkqUa"/>
     <service id=".service_locator.TDDzUGm" alias=".service_locator.aVCBKxN"/>
     <service id=".service_locator.FW44l67" alias=".service_locator.QQ1lptr"/>
+    <service id=".service_locator.vl9ay0b" alias=".service_locator.t0izpSA"/>
     <service id=".service_locator.gcjlrIe" alias=".service_locator.0drJxaP"/>
     <service id=".service_locator.XNDmgPA" alias=".service_locator.q2tClvC"/>
-    <service id=".service_locator.vl9ay0b" alias=".service_locator.t0izpSA"/>
     <service id=".service_locator.XtoToBE" alias=".service_locator.eFQiehW"/>
     <service id=".service_locator.7NIAq8D" alias=".service_locator.rSTd.nA"/>
     <service id=".service_locator.Kyflpr1" alias=".service_locator.CshazM0"/>

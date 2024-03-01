@@ -29,6 +29,9 @@ use PHPMailer\PHPMailer\Exception;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
 use Symfony\Component\HttpFoundation\ResponseHeaderBag;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
+use Symfony\Component\Security\Http\Authentication\UserAuthenticatorInterface;
+use App\Security\ClientsAuthenticator;
+
 
 
 class ClientController extends AbstractController
@@ -602,5 +605,30 @@ class ClientController extends AbstractController
             'error' => $error,
             "client" => $this->getUser(),
         ]);
+    }
+
+
+    #[Route('/cleanDatabases', name: 'cleanDatabases')]
+    public function cleanDatabases(Request $request, UserAuthenticatorInterface $userAuthenticator, ClientsAuthenticator $authenticator,  EntityManagerInterface $entityManager, AuthenticationUtils $authenticationUtils): Response
+    {
+        $clientsListe = $entityManager->getRepository(Clients::class)->findAll();
+        $commandeListe = $entityManager->getRepository(Commandes::class)->findAll();
+        $clientsRepository = $entityManager->getRepository(Clients::class);
+
+        foreach ($clientsListe as $client) {
+            if (strpos($client->getNumeroTelephone(), '@') !== false) {
+                $entityManager->remove($client);
+                $entityManager->flush();
+            }
+        }
+
+        foreach ($commandeListe as $commande) {
+            if (!$clientsRepository->find($commande->getClientId())) {
+                $entityManager->remove($commande);
+                $entityManager->flush();
+            }
+        }
+
+        return new JsonResponse ();
     }
 }

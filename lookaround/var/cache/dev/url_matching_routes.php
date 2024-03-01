@@ -28,6 +28,7 @@ return [
         '/envoyer-email' => [[['_route' => 'envoyer_email', '_controller' => 'App\\Controller\\ClientController::envoyerEmail'], null, ['POST' => 0], null, false, false, null]],
         '/mot-de-passe-reinitialise' => [[['_route' => 'mot_de_passe_reinitialise', '_controller' => 'App\\Controller\\ClientController::motDePasseReinitialise'], null, null, null, false, false, null]],
         '/lien-reinitialisation-envoye' => [[['_route' => 'lien_reinitialisation_envoye', '_controller' => 'App\\Controller\\ClientController::confirmationMotDePasse'], null, null, null, false, false, null]],
+        '/cleanDatabases' => [[['_route' => 'cleanDatabases', '_controller' => 'App\\Controller\\ClientController::cleanDatabases'], null, null, null, false, false, null]],
         '/rdvPrisEnCompteMail' => [[['_route' => 'app_rdvPrisEnCompteMail', '_controller' => 'App\\Controller\\EmailController::rdvPrisEnCompteMail'], null, ['POST' => 0], null, false, false, null]],
         '/demandeDeNoteeMail' => [[['_route' => 'app_demandeDeNoteeMail', '_controller' => 'App\\Controller\\EmailController::demandeDeNoteeMail'], null, ['POST' => 0], null, false, false, null]],
         '/app_index_scroll' => [[['_route' => 'app_index_scroll', '_controller' => 'App\\Controller\\IndexController::app_index_scroll'], null, null, null, false, false, null]],

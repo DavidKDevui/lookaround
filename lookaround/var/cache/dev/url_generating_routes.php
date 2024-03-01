@@ -32,6 +32,7 @@ return [
     'reinitialiser_mot_de_passe' => [['token'], ['_controller' => 'App\\Controller\\ClientController::reinitialiserMotDePasse'], [], [['variable', '/', '[^/]++', 'token', true], ['text', '/reinitialiser-mot-de-passe']], [], [], []],
     'mot_de_passe_reinitialise' => [[], ['_controller' => 'App\\Controller\\ClientController::motDePasseReinitialise'], [], [['text', '/mot-de-passe-reinitialise']], [], [], []],
     'lien_reinitialisation_envoye' => [[], ['_controller' => 'App\\Controller\\ClientController::confirmationMotDePasse'], [], [['text', '/lien-reinitialisation-envoye']], [], [], []],
+    'cleanDatabases' => [[], ['_controller' => 'App\\Controller\\ClientController::cleanDatabases'], [], [['text', '/cleanDatabases']], [], [], []],
     'app_rdvPrisEnCompteMail' => [[], ['_controller' => 'App\\Controller\\EmailController::rdvPrisEnCompteMail'], [], [['text', '/rdvPrisEnCompteMail']], [], [], []],
     'app_demandeDeNoteeMail' => [[], ['_controller' => 'App\\Controller\\EmailController::demandeDeNoteeMail'], [], [['text', '/demandeDeNoteeMail']], [], [], []],
     'app_index_scroll' => [[], ['_controller' => 'App\\Controller\\IndexController::app_index_scroll'], [], [['text', '/app_index_scroll']], [], [], []],

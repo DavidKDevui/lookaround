@@ -504,10 +504,8 @@ class __TwigTemplate_5fe55d02fc554caf02780ffadb199dfe extends \Twig\Template
         // line 300
         echo "
              ";
-        // line 301
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 301, $this->source); })()), "_token", [], "any", false, false, false, 301), 'form_end');
-        echo "
-                
+        // line 302
+        echo "                
             ";
         // line 303
         echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 303, $this->source); })()), 'form_end');
@@ -997,7 +995,7 @@ function removeContent(){
 
     public function getDebugInfo()
     {
-        return array (  971 => 699,  956 => 689,  952 => 688,  948 => 686,  935 => 678,  931 => 677,  926 => 674,  915 => 668,  911 => 667,  907 => 665,  896 => 659,  892 => 658,  794 => 571,  619 => 403,  529 => 315,  527 => 314,  513 => 303,  508 => 301,  505 => 300,  473 => 270,  466 => 266,  460 => 263,  456 => 262,  449 => 258,  443 => 255,  426 => 241,  418 => 236,  408 => 229,  400 => 224,  335 => 162,  313 => 143,  296 => 129,  286 => 122,  276 => 115,  266 => 108,  256 => 101,  246 => 94,  229 => 80,  207 => 61,  194 => 51,  185 => 45,  181 => 43,  179 => 42,  173 => 38,  160 => 31,  157 => 30,  153 => 29,  149 => 27,  136 => 20,  133 => 19,  129 => 18,  123 => 15,  120 => 14,  110 => 13,  96 => 8,  92 => 7,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
+        return array (  969 => 699,  954 => 689,  950 => 688,  946 => 686,  933 => 678,  929 => 677,  924 => 674,  913 => 668,  909 => 667,  905 => 665,  894 => 659,  890 => 658,  792 => 571,  617 => 403,  527 => 315,  525 => 314,  511 => 303,  508 => 302,  505 => 300,  473 => 270,  466 => 266,  460 => 263,  456 => 262,  449 => 258,  443 => 255,  426 => 241,  418 => 236,  408 => 229,  400 => 224,  335 => 162,  313 => 143,  296 => 129,  286 => 122,  276 => 115,  266 => 108,  256 => 101,  246 => 94,  229 => 80,  207 => 61,  194 => 51,  185 => 45,  181 => 43,  179 => 42,  173 => 38,  160 => 31,  157 => 30,  153 => 29,  149 => 27,  136 => 20,  133 => 19,  129 => 18,  123 => 15,  120 => 14,  110 => 13,  96 => 8,  92 => 7,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -1302,7 +1300,7 @@ function removeContent(){
 
             {#registrationForm.adresse_facturation#}
 
-             {{ form_end(registrationForm._token) }}
+             {#{ form_end(registrationForm._token) }#}
                 
             {{ form_end(registrationForm) }}
     </div>
