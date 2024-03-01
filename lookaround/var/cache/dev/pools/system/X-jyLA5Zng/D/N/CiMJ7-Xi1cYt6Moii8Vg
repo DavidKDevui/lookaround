@@ -1,0 +1,3 @@
+<?php //App%255CController%255CDropboxController%2523isFolderExists
+
+return [PHP_INT_MAX, []];

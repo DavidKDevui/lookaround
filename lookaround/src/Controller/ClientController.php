@@ -629,6 +629,6 @@ class ClientController extends AbstractController
             }
         }
 
-        return new JsonResponse ();
+        return $this->redirectToRoute('index');
     }
 }
