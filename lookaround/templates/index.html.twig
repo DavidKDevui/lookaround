@@ -6,6 +6,7 @@
 
 <link rel="stylesheet" href="{{ asset('css/style.css') }}" type="text/css">
 <link rel="icon" type="image/png" href="{{ asset('img/inoca.png') }}">
+<script src='https://www.google.com/recaptcha/api.js'></script>
 
 {% endblock %}
 
@@ -271,6 +272,7 @@
 
 
         <div class="wrapper">
+<!--
             <div class="captcha-area">
                 <div class="captcha-img">
                     <span class="captcha"></span>
@@ -278,10 +280,17 @@
                 <button class="reload-btn"><p class="fas fa-redo-alt">⟳</p></button>
             </div>
 
+            
+-->
+
+            <div class="g-recaptcha" data-callback="testCaptcha"  data-sitekey="6LffU4YpAAAAAIQvvsIfNNiejIpl3yI_tHLzIEuI"></div>
+
             <div class="input-area">
                 <input class="input_form_inscription" type="text" placeholder="Entrez le captcha" maxlength="6">
             </div>
         </div>
+
+
 
 
             <p class="text-error" id="text-error"></p>
@@ -310,6 +319,12 @@
 
 <script>    
 
+function testCaptcha(){
+    alert("yes mam");
+}
+
+    var isCaptchaValidated = false;
+
     const userStatusElement = document.getElementById('user-status');
     const isConnected = userStatusElement.dataset.isConnected;
 
@@ -329,6 +344,10 @@
         textError.style.display = "block";
 
 
+        function setCaptchaValide(){
+            isCaptchaValidated = true;
+        }
+
         async function onClickHandler() {
             
         //const emailList = await getMailList();
@@ -345,7 +364,7 @@
             else if (formPrefCreneau.value.length < 3)
                 textError.innerHTML = "Description trop courte"
 
-            else if (!isCaptchaCorrect()) {
+            else if (!isCaptchaValidated) {
                 textError.innerHTML = "Captcha incorrect"
             }
 
@@ -483,7 +502,7 @@ function changeVideoSource(sens) {
 </script>
 
 
-<script>
+<script>/*
 const captcha = document.querySelector(".captcha")
 reloadBtn = document.querySelector(".reload-btn")
 inputField = document.querySelector(".input-area input")
@@ -530,13 +549,13 @@ function isCaptchaCorrect(){
     statusTxt.style.color = "#ff0000";
     statusTxt.innerText = "Captcha not matched. Please try again!";
   }
-  */
+ 
 };
 
 function removeContent(){
  inputField.value = "";
  captcha.innerText = "";
-}
+}*/
 </script>
 
 
