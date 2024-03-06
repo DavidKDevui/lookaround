@@ -609,7 +609,7 @@ class ClientController extends AbstractController
 
 
     #[Route('/cleanDatabases', name: 'cleanDatabases')]
-    public function cleanDatabases(Request $request, UserAuthenticatorInterface $userAuthenticator, ClientsAuthenticator $authenticator,  EntityManagerInterface $entityManager, AuthenticationUtils $authenticationUtils): Response
+    public function cleanDatabases(Request $request, EntityManagerInterface $entityManager)
     {
         $clientsListe = $entityManager->getRepository(Clients::class)->findAll();
         $commandeListe = $entityManager->getRepository(Commandes::class)->findAll();
