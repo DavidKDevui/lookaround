@@ -512,7 +512,6 @@
 			txtsplit(startlookat, ',', hlookat,vlookat,fov,distortion,architectural);
 			lookat(get(hlookat),get(vlookat),get(fov),get(distortion),get(architectural));
 		);
-
 	</action>
 
 	
@@ -770,14 +769,17 @@
     if(show_mapbutton, inc(lpos,40));
 
 	if(device.mobile,
-	set(layer[skin_btn_next].html,  <a  style='color:#adadad; text-decoration:none; font-size:17.5px; margin-right : 7px;   font-weight: 400' href='https://lookaround.fr/' target='_blank'>l<span  style='color:#2bc8c8; font-weight: 500' >a®</span></a>);
-	set(layer[skin_btn_next].enabled, true);
+		set(layer[skin_btn_next].html,  <a  style='color:#adadad; text-decoration:none; font-size:17.5px; margin-right : 7px;   font-weight: 400' href='https://lookaround.fr/' target='_blank'>l<span  style='color:#2bc8c8; font-weight: 500' >a®</span></a>);
+		set(layer[skin_btn_next].enabled, true);
 	);
 
 	if(device.mobile,
 		set(layer[skin_title].css, "color:white; font-family:'Poppins', sans-serif; font-size:13px; text-align:center; font-weight:400;" );
 	);
 
+	if(area.pixelwidth LT 600,
+		set(layer[skin_title].css, "color:white; font-family:'Poppins', sans-serif; font-size:0px; text-align:center; font-weight:400;" );
+	);
 
 
 	if(device.mobile,

@@ -1638,6 +1638,7 @@ input:checked + label{
       opacity: 0;
       transition: opacity 0.15s;
       cursor: pointer;
+      overflow: hidden;
   }
 
   .image__overlay--blur {
@@ -1676,6 +1677,7 @@ input:checked + label{
     height: 204px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 15px;
     margin: 0 auto;
   }
 

@@ -776,10 +776,12 @@
 	);
 
 	if(device.mobile,
-		set(layer[skin_title].css, "color:white; font-family:'Poppins', sans-serif; font-size:13px; text-align:center; font-weight:400;" );
+		set(layer[skin_title].css, "color:white; font-family:'Poppins', sans-serif; font-size:13px; text-align:center; font-weight:400;");
 	);
 
-
+	if(area.pixelwidth LT 600,
+		set(layer[skin_title].css, "color:white; font-family:'Poppins', sans-serif; font-size:0px; text-align:center; font-weight:400;");
+	);
 
 	if(device.mobile,
 		set(layer[skin_btn_fs].visible, false);
