@@ -319,7 +319,7 @@ class ClientController extends AbstractController
             return new JsonResponse(["Accesible" => false, "URL" => "https://visite.lookaround.fr/" . $id . "/"]);
         }
     }
-
+/*
     #[Route('/isPhotosExiste', name: 'app_isPhotosExiste', methods: ['POST'])]
     public function isPhotosExiste(Request $request, EntityManagerInterface $entityManager)
     {
@@ -333,7 +333,7 @@ class ClientController extends AbstractController
             return new JsonResponse(["Accesible" => false, "URL" => "https://fichiers.lookaround.fr/PHOTOS_" . $id . ".zip"]);
         }
     }
-
+*/
 /*
     #[Route('/setNote', name: 'app_setNote', methods: ['POST'])]
     public function setNote(Request $request, EntityManagerInterface $entityManager)
@@ -608,27 +608,45 @@ class ClientController extends AbstractController
     }
 
 
-    #[Route('/cleanDatabases', name: 'cleanDatabases')]
+    #[Route('/api/cleanDatabases', name: 'cleanDatabases')]
     public function cleanDatabases(Request $request, EntityManagerInterface $entityManager)
     {
+        $countClients = 0;
+        $countCommandes = 0;
+
         $clientsListe = $entityManager->getRepository(Clients::class)->findAll();
         $commandeListe = $entityManager->getRepository(Commandes::class)->findAll();
         $clientsRepository = $entityManager->getRepository(Clients::class);
 
+            
+        $arrayClients = array();
+
         foreach ($clientsListe as $client) {
-            if (strpos($client->getNumeroTelephone(), '@') !== false) {
+            $arrayClients [] = $client->getId();
+            if (strpos($client->getNumeroTelephone(), '@') !== false || !preg_match('/^0[0-9\s]+$/', $client->getNumeroTelephone()) ) {
                 $entityManager->remove($client);
-                $entityManager->flush();
-            }
+                $countClients++;
+                
+            } 
+            
         }
-
+       
+        //$entityManager->flush();
+        
         foreach ($commandeListe as $commande) {
-            if (!$clientsRepository->find($commande->getClientId())) {
+            
+            $idCommande = strval($commande->getClientId()->getId());
+            
+            if (!in_array($idCommande, $arrayClients)) {
                 $entityManager->remove($commande);
-                $entityManager->flush();
+                $countCommandes++;
             }
         }
-
-        return $this->redirectToRoute('index');
+        
+        $entityManager->flush();
+        
+        return new Response("Suppression de " . $countClients . " clients et de " . $countCommandes ." commandes !");
+        
+        //return $this->redirectToRoute('index');
     }
 }
