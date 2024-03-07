@@ -203,27 +203,6 @@ class __TwigTemplate_18653506180f123db8fa4aeb46adc456 extends \Twig\Template
                         </div>
                     </div>
 
-                    <div class=\"image\" onclick=\"window.open('https://visite.lookaround.fr/32890391/?startscene=4&startlookat=-52,19.43,120,0,0;', '_blank');\" style=\"border-radius: 0px;overflow: hidden;\">
-                        <iframe class=\"image__img\" src=\"https://visite.lookaround.fr/32890391/?startscene=4&startlookat=-52,19.43,120,0,0;\" scrolling=\"no\" height=\"100%\" frameborder=\"0\" allowfullscreen></iframe>
-                        
-                        <div class=\"image__overlay image__overlay--primary\">
-                            <div class=\"image__title\">La Maison des Konate</div>
-                            <p class=\"image__description\">
-                                75 avenue Cléber 92140 Clamart
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class=\"image\" onclick=\"window.open('https://visite.lookaround.fr/32890391/?startscene=2&startlookat=190.65,6.82,120,0,0;', '_blank');\" style=\"border-radius: 0px;overflow: hidden;\">
-                        <iframe class=\"image__img\" src=\"https://visite.lookaround.fr/32890391/?startscene=2&startlookat=190.65,6.82,120,0,0;\" scrolling=\"no\" height=\"100%\" frameborder=\"0\" allowfullscreen></iframe>
-                        
-                        <div class=\"image__overlay image__overlay--primary\">
-                            <div class=\"image__title\">La Maison des Konate</div>
-                            <p class=\"image__description\">
-                                75 avenue Cléber 92140 Clamart
-                            </p>
-                        </div>
-                    </div>
 
                 
                 </div>
@@ -233,9 +212,9 @@ class __TwigTemplate_18653506180f123db8fa4aeb46adc456 extends \Twig\Template
 
 </section>
     ";
-        // line 97
-        $this->loadTemplate("tools/footer.html.twig", "realisations.html.twig", 97)->display($context);
-        // line 98
+        // line 76
+        $this->loadTemplate("tools/footer.html.twig", "realisations.html.twig", 76)->display($context);
+        // line 77
         echo "</section>
 
 
@@ -262,7 +241,7 @@ class __TwigTemplate_18653506180f123db8fa4aeb46adc456 extends \Twig\Template
 
     public function getDebugInfo()
     {
-        return array (  239 => 98,  237 => 97,  188 => 50,  186 => 49,  177 => 42,  164 => 35,  161 => 34,  157 => 33,  153 => 31,  140 => 24,  137 => 23,  133 => 22,  127 => 19,  124 => 18,  114 => 17,  96 => 8,  92 => 7,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
+        return array (  218 => 77,  216 => 76,  188 => 50,  186 => 49,  177 => 42,  164 => 35,  161 => 34,  157 => 33,  153 => 31,  140 => 24,  137 => 23,  133 => 22,  127 => 19,  124 => 18,  114 => 17,  96 => 8,  92 => 7,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -334,27 +313,6 @@ class __TwigTemplate_18653506180f123db8fa4aeb46adc456 extends \Twig\Template
                         </div>
                     </div>
 
-                    <div class=\"image\" onclick=\"window.open('https://visite.lookaround.fr/32890391/?startscene=4&startlookat=-52,19.43,120,0,0;', '_blank');\" style=\"border-radius: 0px;overflow: hidden;\">
-                        <iframe class=\"image__img\" src=\"https://visite.lookaround.fr/32890391/?startscene=4&startlookat=-52,19.43,120,0,0;\" scrolling=\"no\" height=\"100%\" frameborder=\"0\" allowfullscreen></iframe>
-                        
-                        <div class=\"image__overlay image__overlay--primary\">
-                            <div class=\"image__title\">La Maison des Konate</div>
-                            <p class=\"image__description\">
-                                75 avenue Cléber 92140 Clamart
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class=\"image\" onclick=\"window.open('https://visite.lookaround.fr/32890391/?startscene=2&startlookat=190.65,6.82,120,0,0;', '_blank');\" style=\"border-radius: 0px;overflow: hidden;\">
-                        <iframe class=\"image__img\" src=\"https://visite.lookaround.fr/32890391/?startscene=2&startlookat=190.65,6.82,120,0,0;\" scrolling=\"no\" height=\"100%\" frameborder=\"0\" allowfullscreen></iframe>
-                        
-                        <div class=\"image__overlay image__overlay--primary\">
-                            <div class=\"image__title\">La Maison des Konate</div>
-                            <p class=\"image__description\">
-                                75 avenue Cléber 92140 Clamart
-                            </p>
-                        </div>
-                    </div>
 
                 
                 </div>
