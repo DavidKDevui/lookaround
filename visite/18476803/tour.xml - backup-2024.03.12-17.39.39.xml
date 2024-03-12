@@ -20,7 +20,7 @@
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
-		<view hlookat="-152.373" vlookat="-8.360" fovtype="MFOV" fov="138.052" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+		<view hlookat="-152.373" vlookat="-2.559" fovtype="MFOV" fov="138.052" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
 		<preview url="panos/Entrppe_Campus.tiles/preview.jpg" />
 

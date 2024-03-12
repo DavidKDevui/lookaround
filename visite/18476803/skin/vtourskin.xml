@@ -71,7 +71,7 @@
 	<control mouse="drag"
 	         touch="drag"
 	         zoomtocursor="true"
-	         zoomoutcursor="false"
+	         zoomoutcursor="true"
 	         draginertia="0.09"
 	         dragfriction="0.93"
 	         movetoaccelerate="1.0"
