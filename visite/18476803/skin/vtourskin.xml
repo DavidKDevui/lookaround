@@ -80,11 +80,11 @@
 	         keybaccelerate="0.09"
 	         keybfriction="0.94"
 	         keybfovchange="0.25"
-	         mousefovchange="0.75"
+	         mousefovchange="0"
 	         fovspeed="3.0"
 	         fovfriction="0.9"
 	         bouncinglimits="true"
-	         />
+	/>
 
 	<!-- mouse cursors - https://krpano.com/docu/xml/#cursors -->
 	<cursors standard="default"
@@ -92,6 +92,7 @@
 	         moving="move"
 	         />
 
+	
 
 	<!-- ensure stagescale 2x for mobile devices (regardless if mobilescale is 0.5 or 1.0) -->
 	<krpano stagescale="calc:stagescale * 2" if="stagescale LT 1.0" devices="mobile" />
