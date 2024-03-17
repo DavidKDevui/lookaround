@@ -20,7 +20,7 @@
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
-		<view hlookat="-359.420" vlookat="0.903" fovtype="MFOV" fov="134.734" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+		<view hlookat="-358.789" vlookat="3.333" fovtype="MFOV" fov="133.133" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
 		<preview url="panos/Entrppe_Campus.tiles/preview.jpg" />
 
@@ -37,7 +37,7 @@
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
-		<view hlookat="-177.331" vlookat="4.096" fovtype="MFOV" fov="125.882" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+		<view hlookat="-158.882" vlookat="6.352" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
 		<preview url="panos/Accueil.tiles/preview.jpg" />
 
@@ -45,7 +45,7 @@
 			<cube url="panos/Accueil.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2112" />
 		</image>
 
-		<hotspot name="spot1" style="skin_hotspotstyle" ath="-175.426" atv="9.293" linkedscene="scene_etage_1" linkedscene_lookat="26.65,5.91,127.85" />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-175.426" atv="9.293" linkedscene="scene_etage_1" linkedscene_lookat="25.31,1.92,120.0" />
 		<hotspot name="spot2" style="skin_hotspotstyle" ath="5.635" atv="13.528" linkedscene="scene_entrppe_campus" linkedscene_hoffset="176.46" use3dtransition="true" />
 
 	</scene>
@@ -65,7 +65,7 @@
 
 		<hotspot name="spot1" style="skin_hotspotstyle" ath="110.644" atv="18.090" linkedscene="scene_etage_2" linkedscene_hoffset="-9.79" use3dtransition="true" />
 		<hotspot name="spot2" style="skin_hotspotstyle" ath="-74.790" atv="19.716" linkedscene="scene_couloir_1" linkedscene_hoffset="92.58" use3dtransition="true" />
-		<hotspot name="spot3" style="skin_hotspotstyle" ath="26.683" atv="42.403" linkedscene="scene_accueil" linkedscene_lookat="-177.09,-0.58,134.73" />
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="26.683" atv="42.403" linkedscene="scene_accueil" linkedscene_lookat="-176.67,-3.58,120.0" />
 
 	</scene>
 

@@ -45,7 +45,7 @@
 			<cube url="panos/Accueil.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2112" />
 		</image>
 
-		<hotspot name="spot1" style="skin_hotspotstyle" ath="-175.426" atv="9.293" linkedscene="scene_etage_1" linkedscene_lookat="26.65,5.91,127.85" />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-175.426" atv="9.293" linkedscene="scene_etage_1" linkedscene_lookat="25.31,1.92,120.0" />
 		<hotspot name="spot2" style="skin_hotspotstyle" ath="5.635" atv="13.528" linkedscene="scene_entrppe_campus" linkedscene_hoffset="176.46" use3dtransition="true" />
 
 	</scene>
