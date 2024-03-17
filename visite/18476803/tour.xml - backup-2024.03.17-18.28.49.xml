@@ -39,7 +39,7 @@
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
-		<view hlookat="-171.382" vlookat="-0.122" fovtype="MFOV" fov="135.511" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+		<view hlookat="-180.395" vlookat="0.915" fovtype="MFOV" fov="138.052" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
 		<preview url="panos/Extpprieur_Campus.tiles/preview.jpg" />
 
@@ -77,7 +77,7 @@
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
-		<view hlookat="10.704" vlookat="2.580" fovtype="MFOV" fov="138.052" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+		<view hlookat="13.094" vlookat="-3.539" fovtype="MFOV" fov="123.951" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
 		<preview url="panos/Entrppe_ppcole.tiles/preview.jpg" />
 
@@ -97,7 +97,7 @@
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
-		<view hlookat="-31.391" vlookat="6.613" fovtype="MFOV" fov="138.052" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+		<view hlookat="-41.256" vlookat="7.685" fovtype="MFOV" fov="123.951" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
 		<preview url="panos/Cafpptppria.tiles/preview.jpg" />
 
@@ -114,7 +114,7 @@
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
-		<view hlookat="-103.034" vlookat="8.041" fovtype="MFOV" fov="138.052" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+		<view hlookat="-113.747" vlookat="7.066" fovtype="MFOV" fov="123.951" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
 		<preview url="panos/Cafpptppria_2.tiles/preview.jpg" />
 
@@ -150,7 +150,7 @@
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
-		<view hlookat="-106.036" vlookat="3.115" fovtype="MFOV" fov="138.052" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+		<view hlookat="257.249" vlookat="5.713" fovtype="MFOV" fov="123.951" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
 		<preview url="panos/Couloir_1.tiles/preview.jpg" />
 
@@ -168,7 +168,7 @@
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
-		<view hlookat="-178.778" vlookat="-0.456" fovtype="MFOV" fov="138.052" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
 		<preview url="panos/Couloir_2.tiles/preview.jpg" />
 
@@ -187,7 +187,7 @@
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
-		<view hlookat="-121.077" vlookat="3.770" fovtype="MFOV" fov="138.052" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+		<view hlookat="-220.780" vlookat="-1.617" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
 		<preview url="panos/Couloir_3.tiles/preview.jpg" />
 
@@ -204,7 +204,7 @@
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
-		<view hlookat="-134.193" vlookat="8.125" fovtype="MFOV" fov="138.052" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+		<view hlookat="270.906" vlookat="3.909" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
 		<preview url="panos/Couloir_4.tiles/preview.jpg" />
 
@@ -214,7 +214,7 @@
 
 		<hotspot name="spot2" style="skin_hotspotstyle" ath="90.378" atv="17.712" linkedscene="scene_couloir_3" linkedscene_hoffset="-35.43" use3dtransition="true" />
 		<hotspot name="spot1" style="skin_hotspotstyle" ath="-89.558" atv="5.649" linkedscene="scene_couloir_5" linkedscene_hoffset="358.61" use3dtransition="true" />
-		<hotspot name="spot3" style="skin_hotspotstyle" ath="-179.084" atv="23.525" linkedscene="scene_couloir_sous-terrain_1" linkedscene_lookat="-65.94,0.47,134.8" />
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="-178.534" atv="22.507" linkedscene="scene_couloir_sous-terrain_1" linkedscene_lookat="-64.65,1.91,120.0" />
 
 	</scene>
 
@@ -222,7 +222,7 @@
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
-		<view hlookat="-90.594" vlookat="2.209" fovtype="MFOV" fov="138.052" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
 		<preview url="panos/Couloir_5.tiles/preview.jpg" />
 
@@ -239,7 +239,7 @@
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
-		<view hlookat="-382.728" vlookat="12.106" fovtype="MFOV" fov="138.052" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+		<view hlookat="37.044" vlookat="0.981" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
 		<preview url="panos/Couloir_6.tiles/preview.jpg" />
 
@@ -256,7 +256,7 @@
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
-		<view hlookat="-68.514" vlookat="8.325" fovtype="MFOV" fov="126.289" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
 		<preview url="panos/Couloir_Sous-terrain_1.tiles/preview.jpg" />
 
@@ -264,7 +264,7 @@
 			<cube url="panos/Couloir_Sous-terrain_1.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2112" />
 		</image>
 
-		<hotspot name="spot1" style="skin_hotspotstyle" ath="-68.265" atv="16.819" linkedscene="scene_couloir_4" linkedscene_lookat="183.62,4.68,134.73" />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-68.265" atv="16.819" linkedscene="scene_couloir_4" linkedscene_lookat="183.31,4.02,120.0" />
 		<hotspot name="spot2" style="skin_hotspotstyle" ath="20.129" atv="3.429" linkedscene="scene_couloir_sous-terrain_2" linkedscene_hoffset="224.87" use3dtransition="true" />
 		<hotspot name="spot3" style="skin_hotspotstyle" ath="-159.536" atv="11.593" linkedscene="scene_couloir_sous-terrain_3" linkedscene_hoffset="457.89" use3dtransition="true" />
 
@@ -274,7 +274,7 @@
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
-		<view hlookat="-117.839" vlookat="0.462" fovtype="MFOV" fov="134.800" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
 		<preview url="panos/Couloir_Sous-terrain_2.tiles/preview.jpg" />
 
@@ -290,7 +290,7 @@
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
-		<view hlookat="25.482" vlookat="6.992" fovtype="MFOV" fov="126.289" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
 		<preview url="panos/Couloir_Sous-terrain_3.tiles/preview.jpg" />
 
@@ -307,7 +307,7 @@
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
-		<view hlookat="-2.128" vlookat="6.992" fovtype="MFOV" fov="126.289" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
 		<preview url="panos/Couloir_Sous-terrain_4.tiles/preview.jpg" />
 
@@ -324,7 +324,7 @@
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
-		<view hlookat="187.346" vlookat="5.291" fovtype="MFOV" fov="126.289" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
 		<preview url="panos/Couloir_Sous-terrain_5.tiles/preview.jpg" />
 
