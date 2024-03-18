@@ -232,7 +232,7 @@ class __TwigTemplate_5fe55d02fc554caf02780ffadb199dfe extends \Twig\Template
 
     <div class='Partie-Exemples-5'>
         <div id=\"visite-containe\" class=\"visite-container\" style=\"text-align: center\">
-            <iframe src=\"https://visite.lookaround.fr/32890391/?startscene=2&startlookat=216.39,-0.83,120,0,0;\" scrolling=\"no\" id=\"iframe-fullscreen\" FRAMEBORDER=\"no\" style=\"box-shadow: 0 1px 1px rgba(0,0,0,.12),0 2px 2px rgba(0,0,0,.12),0 4px 4px rgba(0,0,0,.12),0 8px 8px rgba(0,0,0,.12),0 16px 16px rgba(0,0,0,.12);\" allowfullscreen></iframe>
+            <iframe src=\"https://visite.lookaround.fr/18476801/?startscene=1&startlookat=-162.02,4.63,134.73,0,0;\" scrolling=\"no\" id=\"iframe-fullscreen\" FRAMEBORDER=\"no\" style=\"box-shadow: 0 1px 1px rgba(0,0,0,.12),0 2px 2px rgba(0,0,0,.12),0 4px 4px rgba(0,0,0,.12),0 8px 8px rgba(0,0,0,.12),0 16px 16px rgba(0,0,0,.12);\" allowfullscreen></iframe>
         </div>
     </div>
 
@@ -1084,7 +1084,7 @@ function removeContent(){
 
     <div class='Partie-Exemples-5'>
         <div id=\"visite-containe\" class=\"visite-container\" style=\"text-align: center\">
-            <iframe src=\"https://visite.lookaround.fr/32890391/?startscene=2&startlookat=216.39,-0.83,120,0,0;\" scrolling=\"no\" id=\"iframe-fullscreen\" FRAMEBORDER=\"no\" style=\"box-shadow: 0 1px 1px rgba(0,0,0,.12),0 2px 2px rgba(0,0,0,.12),0 4px 4px rgba(0,0,0,.12),0 8px 8px rgba(0,0,0,.12),0 16px 16px rgba(0,0,0,.12);\" allowfullscreen></iframe>
+            <iframe src=\"https://visite.lookaround.fr/18476801/?startscene=1&startlookat=-162.02,4.63,134.73,0,0;\" scrolling=\"no\" id=\"iframe-fullscreen\" FRAMEBORDER=\"no\" style=\"box-shadow: 0 1px 1px rgba(0,0,0,.12),0 2px 2px rgba(0,0,0,.12),0 4px 4px rgba(0,0,0,.12),0 8px 8px rgba(0,0,0,.12),0 16px 16px rgba(0,0,0,.12);\" allowfullscreen></iframe>
         </div>
     </div>
 

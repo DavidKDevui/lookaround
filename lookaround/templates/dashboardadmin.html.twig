@@ -16,14 +16,6 @@
 
 <h1 class="h1-titre-page"> Admin DashBoard</h1>
 
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
-    <form action="?" method="POST">
-      <div class="g-recaptcha" data-sitekey="6LeDSIYpAAAAAAS_lfWUkH69nFF_GU1ui9b7vOiU"></div>
-      <br/>
-      <input type="submit" value="Submit">
-    </form>
-
 
 <h3 class='admin-titre-sections'>Toutes les commandes</h3>
 
@@ -49,7 +41,6 @@
   <tbody>
 
 {% set commandes = commandes|sort((a, b) => b.datecommande <=> a.datecommande) %}
-
   {% for commande in commandes %}
   
     <tr>
