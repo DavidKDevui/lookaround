@@ -232,7 +232,7 @@ class __TwigTemplate_5fe55d02fc554caf02780ffadb199dfe extends \Twig\Template
 
     <div class='Partie-Exemples-5'>
         <div id=\"visite-containe\" class=\"visite-container\" style=\"text-align: center\">
-            <iframe src=\"https://visite.lookaround.fr/18476801/?startscene=1&startlookat=-162.02,4.63,134.73,0,0;\" scrolling=\"no\" id=\"iframe-fullscreen\" FRAMEBORDER=\"no\" style=\"box-shadow: 0 1px 1px rgba(0,0,0,.12),0 2px 2px rgba(0,0,0,.12),0 4px 4px rgba(0,0,0,.12),0 8px 8px rgba(0,0,0,.12),0 16px 16px rgba(0,0,0,.12);\" allowfullscreen></iframe>
+            <iframe src=\"https://visite.lookaround.fr/18476801/?startscene=1&startlookat=-178.63,1.02,123.94,0.35,0;\" scrolling=\"no\" id=\"iframe-fullscreen\" FRAMEBORDER=\"no\" style=\"box-shadow: 0 1px 1px rgba(0,0,0,.12),0 2px 2px rgba(0,0,0,.12),0 4px 4px rgba(0,0,0,.12),0 8px 8px rgba(0,0,0,.12),0 16px 16px rgba(0,0,0,.12);\" allowfullscreen></iframe>
         </div>
     </div>
 
@@ -302,6 +302,28 @@ class __TwigTemplate_5fe55d02fc554caf02780ffadb199dfe extends \Twig\Template
     </div>
     </div>
 
+     <div class='Partie-Exemples-5'>
+        <h3>Ils nous ont fait confiance</h3>
+        <div style=\"grid-template-columns: 1fr 1fr 1fr 1fr;display: grid;width: 75%; padding: 20px;margin-top: 15px;margin: 0 auto; \">
+            <img src=\"";
+        // line 140
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/clients/isifa.png"), "html", null, true);
+        echo "\" class=\"partenaires-img\" onclick=\"ouvrirNouvelOnglet('https://www.isifaplusvalues.com/')\">
+            <img src=\"";
+        // line 141
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/clients/ihecf.jpg"), "html", null, true);
+        echo "\" class=\"partenaires-img\" onclick=\"ouvrirNouvelOnglet('https://www.ihecf.fr/')\">
+            <img src=\"";
+        // line 142
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/clients/mbway.png"), "html", null, true);
+        echo "\" class=\"partenaires-img\" onclick=\"ouvrirNouvelOnglet('https://www.mbway.com/')\">
+            <img src=\"";
+        // line 143
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/clients/ipac.jpg"), "html", null, true);
+        echo "\" class=\"partenaires-img\" onclick=\"ouvrirNouvelOnglet('https://www.ipacbachelorfactory.com/')\">
+        </div>
+    </div>
+
 
     <div class='Partie-Exemples-5' id=\"div-aide\" style=\"display:none\">
        <h3>Comment se déroule une création de visite virtuelle avec look<span style=\"font-weight : 500; color: #219988;\">around®</span> ?</h3>
@@ -309,7 +331,7 @@ class __TwigTemplate_5fe55d02fc554caf02780ffadb199dfe extends \Twig\Template
         <div class=\"carousel-tuto\" id=\"carousel-tuto\" style=\"display: grid; grid-template-rows : 5fr 1fr;\">
 
             <img id=\"carousel-img\" class=\"carousel-img\" src='";
-        // line 143
+        // line 153
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/tuto11.jpg"), "html", null, true);
         echo "'/>
             
@@ -331,7 +353,7 @@ class __TwigTemplate_5fe55d02fc554caf02780ffadb199dfe extends \Twig\Template
         <div class=\"modal-content\" style=\"width: 70%; font-size: 15px; border-radius: 8px;\">   
             <div style=\"display : grid; grid-template-columns: 1fr 3.5fr; align-items: center;\">
                 <img src=\"";
-        // line 162
+        // line 172
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/langage-de-programmation.png"), "html", null, true);
         echo "\" style=\"width: 150px;\"/>
                 <p style=\"padding: 8px;\">Un IFrame est un élément HTML utilisé pour intégrer un contenu d'une autre source à l'intérieur d'une page web. 
@@ -396,7 +418,7 @@ class __TwigTemplate_5fe55d02fc554caf02780ffadb199dfe extends \Twig\Template
 
                         <div class=\"contact-div\">
                             <img src=\"";
-        // line 224
+        // line 234
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/telephone(1).png"), "html", null, true);
         echo "\" class=\"middleinDiv\"/>
                             <p contenteditable=\"true\" style=\"cursor: default; text-decoration: none!important; color: black !important;\">06 51 45 01 06</p>
@@ -404,7 +426,7 @@ class __TwigTemplate_5fe55d02fc554caf02780ffadb199dfe extends \Twig\Template
                       
                         <div class=\"contact-div\">
                                 <img src=\"";
-        // line 229
+        // line 239
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/gmail.png"), "html", null, true);
         echo "\" class=\"middleinDiv\"/>
                                 <p>contact@lookaround.fr</p>
@@ -414,7 +436,7 @@ class __TwigTemplate_5fe55d02fc554caf02780ffadb199dfe extends \Twig\Template
                     <div class=\"line-contact-sheet\"     style='display:none'>
                           <div class=\"contact-div\">
                                 <img src=\"";
-        // line 236
+        // line 246
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/office.png"), "html", null, true);
         echo "\" class=\"middleinDiv\"/>
                                 <p>N°892 074 774 00019</p>
@@ -422,7 +444,7 @@ class __TwigTemplate_5fe55d02fc554caf02780ffadb199dfe extends \Twig\Template
                         
                         <div class=\"contact-div\">
                                 <img src=\"";
-        // line 241
+        // line 251
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/linkedin.png"), "html", null, true);
         echo "\" class=\"middleinDiv\"/>
                                 <p>lookaround</p>
@@ -439,38 +461,38 @@ class __TwigTemplate_5fe55d02fc554caf02780ffadb199dfe extends \Twig\Template
         <h2 class=\"titre2\">Prendre rendez-vous</h2>
 
         ";
-        // line 255
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 255, $this->source); })()), 'form_start');
+        // line 265
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 265, $this->source); })()), 'form_start');
         echo " 
     <br>
         <div class=\"line-1\">
             ";
-        // line 258
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 258, $this->source); })()), "nom", [], "any", false, false, false, 258), 'row');
+        // line 268
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 268, $this->source); })()), "nom", [], "any", false, false, false, 268), 'row');
         echo "
         </div>
     <br>
         <div class=\"line-2\">
             ";
-        // line 262
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 262, $this->source); })()), "email", [], "any", false, false, false, 262), 'row');
+        // line 272
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 272, $this->source); })()), "email", [], "any", false, false, false, 272), 'row');
         echo "
             ";
-        // line 263
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 263, $this->source); })()), "numero_telephone", [], "any", false, false, false, 263), 'row');
+        // line 273
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 273, $this->source); })()), "numero_telephone", [], "any", false, false, false, 273), 'row');
         echo "
         </div>
     <br>    
             ";
-        // line 266
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 266, $this->source); })()), "preference_creneau", [], "any", false, false, false, 266), 'row');
+        // line 276
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 276, $this->source); })()), "preference_creneau", [], "any", false, false, false, 276), 'row');
         echo "
     <br>
     <div class=\"line-2-3\" style=\" display:none\">
             <p style=\"font-size : 14px;\">Préference de contact :</p>
             ";
-        // line 270
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 270, $this->source); })()), "preference_contact", [], "any", false, false, false, 270), 'row');
+        // line 280
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 280, $this->source); })()), "preference_contact", [], "any", false, false, false, 280), 'row');
         echo "
         </div>
 
@@ -501,14 +523,14 @@ class __TwigTemplate_5fe55d02fc554caf02780ffadb199dfe extends \Twig\Template
             <button type=\"button\" id='go-submit-form' class=\"reserver-creneau-btn1\">Valider</button>
 
             ";
-        // line 300
+        // line 310
         echo "
              ";
-        // line 302
+        // line 312
         echo "                
             ";
-        // line 303
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 303, $this->source); })()), 'form_end');
+        // line 313
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 313, $this->source); })()), 'form_end');
         echo "
     </div>
  </div>
@@ -521,9 +543,9 @@ class __TwigTemplate_5fe55d02fc554caf02780ffadb199dfe extends \Twig\Template
 </div>
 </section>
     ";
-        // line 314
-        $this->loadTemplate("tools/footer.html.twig", "index.html.twig", 314)->display($context);
-        // line 315
+        // line 324
+        $this->loadTemplate("tools/footer.html.twig", "index.html.twig", 324)->display($context);
+        // line 325
         echo "</section>
 
 
@@ -613,7 +635,7 @@ var video = document.getElementById(\"video-element\");
 video.disablePictureInPicture = true;
 
 var arrayVideoLinks = [\"";
-        // line 403
+        // line 413
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("videos/look.mp4"), "html", null, true);
         echo "\", \"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("videos/coffee.mp4"), "html", null, true);
@@ -774,6 +796,10 @@ function removeContent(){
 
 <script>
 
+ function ouvrirNouvelOnglet(url) {
+    window.open(url, '_blank');
+  }
+
     var descriptionTutoArray = [
         \"1. Remplissez notre formulaire de prise de rendez-vous, en nous décrivant les spécificités de votre besoin\",
         \"2. Par la suite, nous vous contacterons pour étudier votre demande et pour convenir ensemble d'un créneau de rendez-vous\",
@@ -788,7 +814,7 @@ function removeContent(){
     var maxItemCarouselTuto = descriptionTutoArray.length;
 
     var arrayImageTutos = [\"";
-        // line 571
+        // line 585
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/tuto11.jpg"), "html", null, true);
         echo "\", \"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/tuto2.jpg"), "html", null, true);
@@ -886,11 +912,11 @@ function removeContent(){
 </script>
 
     ";
-        // line 658
+        // line 672
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 658, $this->source); })()), "session", [], "any", false, false, false, 658), "flashbag", [], "any", false, false, false, 658), "get", [0 => "smoothScroll"], "method", false, false, false, 658));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 672, $this->source); })()), "session", [], "any", false, false, false, 672), "flashbag", [], "any", false, false, false, 672), "get", [0 => "smoothScroll"], "method", false, false, false, 672));
         foreach ($context['_seq'] as $context["_key"] => $context["flash_message"]) {
-            // line 659
+            // line 673
             echo "        <script>
             document.addEventListener('DOMContentLoaded', function() {
                 smoothScroll('Partie-Exemples-4')
@@ -901,15 +927,15 @@ function removeContent(){
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['flash_message'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 665
+        // line 679
         echo "
 
         ";
-        // line 667
+        // line 681
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 667, $this->source); })()), "session", [], "any", false, false, false, 667), "flashbag", [], "any", false, false, false, 667), "get", [0 => "smoothScroll2"], "method", false, false, false, 667));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 681, $this->source); })()), "session", [], "any", false, false, false, 681), "flashbag", [], "any", false, false, false, 681), "get", [0 => "smoothScroll2"], "method", false, false, false, 681));
         foreach ($context['_seq'] as $context["_key"] => $context["flash_message"]) {
-            // line 668
+            // line 682
             echo "        <script>
             document.addEventListener('DOMContentLoaded', function() {
                 smoothScroll('div-aide')
@@ -920,16 +946,16 @@ function removeContent(){
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['flash_message'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 674
+        // line 688
         echo "
 
     
 ";
-        // line 677
+        // line 691
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 677, $this->source); })()), "session", [], "any", false, false, false, 677), "flashbag", [], "any", false, false, false, 677), "get", [0 => "connexionGo"], "method", false, false, false, 677));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 691, $this->source); })()), "session", [], "any", false, false, false, 691), "flashbag", [], "any", false, false, false, 691), "get", [0 => "connexionGo"], "method", false, false, false, 691));
         foreach ($context['_seq'] as $context["_key"] => $context["flash_message"]) {
-            // line 678
+            // line 692
             echo "
     <script>
         setTimeout(function() {
@@ -942,15 +968,15 @@ function removeContent(){
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['flash_message'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 686
+        // line 700
         echo "
 
 ";
-        // line 688
+        // line 702
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 688, $this->source); })()), "session", [], "any", false, false, false, 688), "flashbag", [], "any", false, false, false, 688), "get", [0 => "mdpReinit"], "method", false, false, false, 688));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 702, $this->source); })()), "session", [], "any", false, false, false, 702), "flashbag", [], "any", false, false, false, 702), "get", [0 => "mdpReinit"], "method", false, false, false, 702));
         foreach ($context['_seq'] as $context["_key"] => $context["flash_message"]) {
-            // line 689
+            // line 703
             echo "
     <script>
         tata.success(\"\", \"Mot de passe réinitialisé avec succès !\", {
@@ -965,7 +991,7 @@ function removeContent(){
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['flash_message'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 699
+        // line 713
         echo "
 
 <script>
@@ -995,7 +1021,7 @@ function removeContent(){
 
     public function getDebugInfo()
     {
-        return array (  969 => 699,  954 => 689,  950 => 688,  946 => 686,  933 => 678,  929 => 677,  924 => 674,  913 => 668,  909 => 667,  905 => 665,  894 => 659,  890 => 658,  792 => 571,  617 => 403,  527 => 315,  525 => 314,  511 => 303,  508 => 302,  505 => 300,  473 => 270,  466 => 266,  460 => 263,  456 => 262,  449 => 258,  443 => 255,  426 => 241,  418 => 236,  408 => 229,  400 => 224,  335 => 162,  313 => 143,  296 => 129,  286 => 122,  276 => 115,  266 => 108,  256 => 101,  246 => 94,  229 => 80,  207 => 61,  194 => 51,  185 => 45,  181 => 43,  179 => 42,  173 => 38,  160 => 31,  157 => 30,  153 => 29,  149 => 27,  136 => 20,  133 => 19,  129 => 18,  123 => 15,  120 => 14,  110 => 13,  96 => 8,  92 => 7,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
+        return array (  995 => 713,  980 => 703,  976 => 702,  972 => 700,  959 => 692,  955 => 691,  950 => 688,  939 => 682,  935 => 681,  931 => 679,  920 => 673,  916 => 672,  818 => 585,  639 => 413,  549 => 325,  547 => 324,  533 => 313,  530 => 312,  527 => 310,  495 => 280,  488 => 276,  482 => 273,  478 => 272,  471 => 268,  465 => 265,  448 => 251,  440 => 246,  430 => 239,  422 => 234,  357 => 172,  335 => 153,  322 => 143,  318 => 142,  314 => 141,  310 => 140,  296 => 129,  286 => 122,  276 => 115,  266 => 108,  256 => 101,  246 => 94,  229 => 80,  207 => 61,  194 => 51,  185 => 45,  181 => 43,  179 => 42,  173 => 38,  160 => 31,  157 => 30,  153 => 29,  149 => 27,  136 => 20,  133 => 19,  129 => 18,  123 => 15,  120 => 14,  110 => 13,  96 => 8,  92 => 7,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -1084,7 +1110,7 @@ function removeContent(){
 
     <div class='Partie-Exemples-5'>
         <div id=\"visite-containe\" class=\"visite-container\" style=\"text-align: center\">
-            <iframe src=\"https://visite.lookaround.fr/18476801/?startscene=1&startlookat=-162.02,4.63,134.73,0,0;\" scrolling=\"no\" id=\"iframe-fullscreen\" FRAMEBORDER=\"no\" style=\"box-shadow: 0 1px 1px rgba(0,0,0,.12),0 2px 2px rgba(0,0,0,.12),0 4px 4px rgba(0,0,0,.12),0 8px 8px rgba(0,0,0,.12),0 16px 16px rgba(0,0,0,.12);\" allowfullscreen></iframe>
+            <iframe src=\"https://visite.lookaround.fr/18476801/?startscene=1&startlookat=-178.63,1.02,123.94,0.35,0;\" scrolling=\"no\" id=\"iframe-fullscreen\" FRAMEBORDER=\"no\" style=\"box-shadow: 0 1px 1px rgba(0,0,0,.12),0 2px 2px rgba(0,0,0,.12),0 4px 4px rgba(0,0,0,.12),0 8px 8px rgba(0,0,0,.12),0 16px 16px rgba(0,0,0,.12);\" allowfullscreen></iframe>
         </div>
     </div>
 
@@ -1134,6 +1160,16 @@ function removeContent(){
             </p>
         </div>
     </div>
+    </div>
+
+     <div class='Partie-Exemples-5'>
+        <h3>Ils nous ont fait confiance</h3>
+        <div style=\"grid-template-columns: 1fr 1fr 1fr 1fr;display: grid;width: 75%; padding: 20px;margin-top: 15px;margin: 0 auto; \">
+            <img src=\"{{asset('img/clients/isifa.png')}}\" class=\"partenaires-img\" onclick=\"ouvrirNouvelOnglet('https://www.isifaplusvalues.com/')\">
+            <img src=\"{{asset('img/clients/ihecf.jpg')}}\" class=\"partenaires-img\" onclick=\"ouvrirNouvelOnglet('https://www.ihecf.fr/')\">
+            <img src=\"{{asset('img/clients/mbway.png')}}\" class=\"partenaires-img\" onclick=\"ouvrirNouvelOnglet('https://www.mbway.com/')\">
+            <img src=\"{{asset('img/clients/ipac.jpg')}}\" class=\"partenaires-img\" onclick=\"ouvrirNouvelOnglet('https://www.ipacbachelorfactory.com/')\">
+        </div>
     </div>
 
 
@@ -1556,6 +1592,10 @@ function removeContent(){
 
 
 <script>
+
+ function ouvrirNouvelOnglet(url) {
+    window.open(url, '_blank');
+  }
 
     var descriptionTutoArray = [
         \"1. Remplissez notre formulaire de prise de rendez-vous, en nous décrivant les spécificités de votre besoin\",

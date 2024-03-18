@@ -178,13 +178,12 @@ class __TwigTemplate_18653506180f123db8fa4aeb46adc456 extends \Twig\Template
 
 
  
-
 <section class='Body-Section-White'>
 
     ";
+        // line 48
+        $this->loadTemplate("tools/navbar.html.twig", "realisations.html.twig", 48)->display($context);
         // line 49
-        $this->loadTemplate("tools/navbar.html.twig", "realisations.html.twig", 49)->display($context);
-        // line 50
         echo "
     <section class='Cadre'>
         <div class='Partie-Exemples-5'>
@@ -192,7 +191,7 @@ class __TwigTemplate_18653506180f123db8fa4aeb46adc456 extends \Twig\Template
             <div class=\"visite-container-realisation\" style=\"text-align: center; margin-top: 20px;\">
                 
                 <div class=\"line-exemple-real\">
-                    <div class=\"image\" onclick=\"window.open('https://visite.lookaround.fr/18476801/', '_blank');\" style=\"border-radius: 0px;overflow: hidden;\">
+                    <div class=\"image\" onclick=\"window.open('https://visite.lookaround.fr/18476801/?startscene=0&startlookat=-0.25,1.02,123.94,0.35,0;', '_blank');\" style=\"border-radius: 0px;overflow: hidden;\">
                         <iframe class=\"image__img\" src=\"https://visite.lookaround.fr/18476801/?startscene=0&startlookat=2.33,-0.74,138.05,0.35,0;\" scrolling=\"no\" height=\"100%\" frameborder=\"0\" allowfullscreen></iframe>
                         
                         <div class=\"image__overlay image__overlay--primary\">
@@ -203,7 +202,7 @@ class __TwigTemplate_18653506180f123db8fa4aeb46adc456 extends \Twig\Template
                         </div>
                     </div>
 
-                    <div class=\"image\" onclick=\"window.open('https://visite.lookaround.fr/18476803/', '_blank');\" style=\"border-radius: 0px;overflow: hidden;\">
+                    <div class=\"image\" onclick=\"window.open('https://visite.lookaround.fr/18476803/?startscene=0&startlookat=-0.25,1.02,123.94,0.35,0;', '_blank');\" style=\"border-radius: 0px;overflow: hidden;\">
                         <iframe class=\"image__img\" src=\"https://visite.lookaround.fr/18476803/?startscene=0&startlookat=-150.37,-6.29,138.05,0.35,0;\" scrolling=\"no\" height=\"100%\" frameborder=\"0\" allowfullscreen></iframe>
                         
                         <div class=\"image__overlay image__overlay--primary\">
@@ -219,9 +218,9 @@ class __TwigTemplate_18653506180f123db8fa4aeb46adc456 extends \Twig\Template
 
 </section>
     ";
+        // line 82
+        $this->loadTemplate("tools/footer.html.twig", "realisations.html.twig", 82)->display($context);
         // line 83
-        $this->loadTemplate("tools/footer.html.twig", "realisations.html.twig", 83)->display($context);
-        // line 84
         echo "</section>
 
 
@@ -248,7 +247,7 @@ class __TwigTemplate_18653506180f123db8fa4aeb46adc456 extends \Twig\Template
 
     public function getDebugInfo()
     {
-        return array (  225 => 84,  223 => 83,  188 => 50,  186 => 49,  177 => 42,  164 => 35,  161 => 34,  157 => 33,  153 => 31,  140 => 24,  137 => 23,  133 => 22,  127 => 19,  124 => 18,  114 => 17,  96 => 8,  92 => 7,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
+        return array (  224 => 83,  222 => 82,  187 => 49,  185 => 48,  177 => 42,  164 => 35,  161 => 34,  157 => 33,  153 => 31,  140 => 24,  137 => 23,  133 => 22,  127 => 19,  124 => 18,  114 => 17,  96 => 8,  92 => 7,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -298,7 +297,6 @@ class __TwigTemplate_18653506180f123db8fa4aeb46adc456 extends \Twig\Template
 
 
  
-
 <section class='Body-Section-White'>
 
     {% include 'tools/navbar.html.twig' %}
@@ -309,7 +307,7 @@ class __TwigTemplate_18653506180f123db8fa4aeb46adc456 extends \Twig\Template
             <div class=\"visite-container-realisation\" style=\"text-align: center; margin-top: 20px;\">
                 
                 <div class=\"line-exemple-real\">
-                    <div class=\"image\" onclick=\"window.open('https://visite.lookaround.fr/18476801/', '_blank');\" style=\"border-radius: 0px;overflow: hidden;\">
+                    <div class=\"image\" onclick=\"window.open('https://visite.lookaround.fr/18476801/?startscene=0&startlookat=-0.25,1.02,123.94,0.35,0;', '_blank');\" style=\"border-radius: 0px;overflow: hidden;\">
                         <iframe class=\"image__img\" src=\"https://visite.lookaround.fr/18476801/?startscene=0&startlookat=2.33,-0.74,138.05,0.35,0;\" scrolling=\"no\" height=\"100%\" frameborder=\"0\" allowfullscreen></iframe>
                         
                         <div class=\"image__overlay image__overlay--primary\">
@@ -320,7 +318,7 @@ class __TwigTemplate_18653506180f123db8fa4aeb46adc456 extends \Twig\Template
                         </div>
                     </div>
 
-                    <div class=\"image\" onclick=\"window.open('https://visite.lookaround.fr/18476803/', '_blank');\" style=\"border-radius: 0px;overflow: hidden;\">
+                    <div class=\"image\" onclick=\"window.open('https://visite.lookaround.fr/18476803/?startscene=0&startlookat=-0.25,1.02,123.94,0.35,0;', '_blank');\" style=\"border-radius: 0px;overflow: hidden;\">
                         <iframe class=\"image__img\" src=\"https://visite.lookaround.fr/18476803/?startscene=0&startlookat=-150.37,-6.29,138.05,0.35,0;\" scrolling=\"no\" height=\"100%\" frameborder=\"0\" allowfullscreen></iframe>
                         
                         <div class=\"image__overlay image__overlay--primary\">

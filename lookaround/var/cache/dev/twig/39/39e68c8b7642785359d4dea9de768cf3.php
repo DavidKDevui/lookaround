@@ -971,9 +971,11 @@ async function getVisitesListe(id) {
         function submitForm(event, form) {
                 event.preventDefault();
                 const hiddenInputValue = form.querySelector('[name=\"id\"]').value;
-                downloadFile(hiddenInputValue);
+                //downloadFile(hiddenInputValue);
         }
-
+    
+    
+    /*
        async function downloadFile(parameter) {
             var url = 'https://fichiers.lookaround.fr/PHOTOS_' + parameter + '.zip'
 
@@ -996,7 +998,7 @@ async function getVisitesListe(id) {
                                 }
             
         }
-
+*/
 
 
 
@@ -1064,7 +1066,7 @@ async function getVisitesListe(id) {
         event.preventDefault();
 
         const response = await fetch('";
-        // line 584
+        // line 586
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_getCreneauxDispo");
         echo "', {
             method: 'POST'
@@ -1084,7 +1086,7 @@ async function getVisitesListe(id) {
                     const form = document.createElement('form');
                     form.method = 'POST';
                     form.action = '";
-        // line 601
+        // line 603
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_updateCreneau");
         echo "';
 
@@ -1218,229 +1220,229 @@ function verifierAdressePostale (adresse) {
 
 
 ";
-        // line 732
-        if (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 732, $this->source); })()), "session", [], "any", false, false, false, 732), "flashBag", [], "any", false, false, false, 732), "has", [0 => "FactureMail"], "method", false, false, false, 732)) {
-            // line 733
+        // line 734
+        if (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 734, $this->source); })()), "session", [], "any", false, false, false, 734), "flashBag", [], "any", false, false, false, 734), "has", [0 => "FactureMail"], "method", false, false, false, 734)) {
+            // line 735
             echo "
         ";
-            // line 734
+            // line 736
             $context["FM_id"] = "";
-            // line 735
+            // line 737
             echo "        ";
             $context["FM_email"] = "";
-            // line 736
+            // line 738
             echo "
         ";
-            // line 737
+            // line 739
             $context["FM_creneau"] = "";
-            // line 738
+            // line 740
             echo "        ";
             $context["FM_date_commande"] = "";
-            // line 739
+            // line 741
             echo "
         ";
-            // line 740
+            // line 742
             $context["FM_nom_entreprise"] = "";
-            // line 741
+            // line 743
             echo "        ";
             $context["FM_id_client"] = "";
-            // line 742
+            // line 744
             echo "
         ";
-            // line 743
+            // line 745
             $context["FM_adresse_facturation"] = "";
-            // line 744
+            // line 746
             echo "        ";
             $context["FM_nomFormule"] = "";
-            // line 745
+            // line 747
             echo "
         ";
-            // line 746
+            // line 748
             $context["FM_localisation"] = "";
-            // line 747
+            // line 749
             echo "        ";
             $context["FM_nbphotos"] = "";
-            // line 748
+            // line 750
             echo "        
         ";
-            // line 749
+            // line 751
             $context["FM_prix"] = "";
-            // line 750
+            // line 752
             echo "
 
     ";
-            // line 752
+            // line 754
             $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 752, $this->source); })()), "session", [], "any", false, false, false, 752), "flashbag", [], "any", false, false, false, 752), "get", [0 => "FactureMail"], "method", false, false, false, 752));
+            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 754, $this->source); })()), "session", [], "any", false, false, false, 754), "flashbag", [], "any", false, false, false, 754), "get", [0 => "FactureMail"], "method", false, false, false, 754));
             foreach ($context['_seq'] as $context["_key"] => $context["flash_message"]) {
-                // line 753
+                // line 755
                 echo "
         ";
-                // line 754
+                // line 756
                 if ( !twig_test_empty($context["flash_message"])) {
-                    // line 755
+                    // line 757
                     echo "            ";
                     $context['_parent'] = $context;
                     $context['_seq'] = twig_ensure_traversable($context["flash_message"]);
                     foreach ($context['_seq'] as $context["key"] => $context["value"]) {
-                        // line 756
+                        // line 758
                         echo "
                 ";
-                        // line 757
+                        // line 759
                         if (($context["key"] == "FM_id")) {
-                            // line 758
+                            // line 760
                             echo "                    ";
                             $context["FM_id"] = $context["value"];
-                            // line 759
+                            // line 761
                             echo "
                 ";
-                        } elseif ((                        // line 760
+                        } elseif ((                        // line 762
 $context["key"] == "FM_email")) {
-                            // line 761
+                            // line 763
                             echo "                    ";
                             $context["FM_email"] = $context["value"];
-                            // line 762
+                            // line 764
                             echo "
                 ";
-                        } elseif ((                        // line 763
+                        } elseif ((                        // line 765
 $context["key"] == "FM_creneau")) {
-                            // line 764
+                            // line 766
                             echo "                    ";
                             $context["FM_creneau"] = twig_date_format_filter($this->env, $context["value"], "Y-m-d H:i");
-                            // line 765
+                            // line 767
                             echo "
                 ";
-                        } elseif ((                        // line 766
+                        } elseif ((                        // line 768
 $context["key"] == "FM_date_commande")) {
-                            // line 767
+                            // line 769
                             echo "                    ";
                             $context["FM_date_commande"] = twig_date_format_filter($this->env, $context["value"], "d/m/Y");
-                            // line 768
+                            // line 770
                             echo "
                 ";
-                        } elseif ((                        // line 769
+                        } elseif ((                        // line 771
 $context["key"] == "FM_nom_entreprise")) {
-                            // line 770
+                            // line 772
                             echo "                    ";
                             $context["FM_nom_entreprise"] = $context["value"];
-                            // line 771
+                            // line 773
                             echo "
                 ";
-                        } elseif ((                        // line 772
+                        } elseif ((                        // line 774
 $context["key"] == "FM_id_client")) {
-                            // line 773
+                            // line 775
                             echo "                    ";
                             $context["FM_id_client"] = $context["value"];
-                            // line 774
+                            // line 776
                             echo "
                 ";
-                        } elseif ((                        // line 775
+                        } elseif ((                        // line 777
 $context["key"] == "FM_adresse_facturation")) {
-                            // line 776
+                            // line 778
                             echo "                    ";
                             $context["FM_adresse_facturation"] = $context["value"];
-                            // line 777
+                            // line 779
                             echo "
                 ";
-                        } elseif ((                        // line 778
+                        } elseif ((                        // line 780
 $context["key"] == "FM_nomFormule")) {
-                            // line 779
+                            // line 781
                             echo "                    ";
                             $context["FM_nomFormule"] = $context["value"];
-                            // line 780
+                            // line 782
                             echo "
                 ";
-                        } elseif ((                        // line 781
+                        } elseif ((                        // line 783
 $context["key"] == "FM_localisation")) {
-                            // line 782
+                            // line 784
                             echo "                    ";
                             $context["FM_localisation"] = $context["value"];
-                            // line 783
+                            // line 785
                             echo "
                 ";
-                        } elseif ((                        // line 784
+                        } elseif ((                        // line 786
 $context["key"] == "FM_nbphotos")) {
-                            // line 785
+                            // line 787
                             echo "                    ";
                             $context["FM_nbphotos"] = $context["value"];
-                            // line 786
+                            // line 788
                             echo "
                 ";
-                        } elseif ((                        // line 787
+                        } elseif ((                        // line 789
 $context["key"] == "FM_prix")) {
-                            // line 788
+                            // line 790
                             echo "                    ";
                             $context["FM_prix"] = $context["value"];
-                            // line 789
+                            // line 791
                             echo "
                 ";
                         }
-                        // line 791
+                        // line 793
                         echo "            ";
                     }
                     $_parent = $context['_parent'];
                     unset($context['_seq'], $context['_iterated'], $context['key'], $context['value'], $context['_parent'], $context['loop']);
                     $context = array_intersect_key($context, $_parent) + $_parent;
-                    // line 792
+                    // line 794
                     echo "        ";
                 }
-                // line 793
+                // line 795
                 echo "    ";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['flash_message'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 794
+            // line 796
             echo "
     <script>
         var FM_id = \"";
-            // line 796
-            echo twig_escape_filter($this->env, (isset($context["FM_id"]) || array_key_exists("FM_id", $context) ? $context["FM_id"] : (function () { throw new RuntimeError('Variable "FM_id" does not exist.', 796, $this->source); })()), "html", null, true);
+            // line 798
+            echo twig_escape_filter($this->env, (isset($context["FM_id"]) || array_key_exists("FM_id", $context) ? $context["FM_id"] : (function () { throw new RuntimeError('Variable "FM_id" does not exist.', 798, $this->source); })()), "html", null, true);
             echo "\";
         var FM_email = \"";
-            // line 797
-            echo twig_escape_filter($this->env, (isset($context["FM_email"]) || array_key_exists("FM_email", $context) ? $context["FM_email"] : (function () { throw new RuntimeError('Variable "FM_email" does not exist.', 797, $this->source); })()), "html", null, true);
+            // line 799
+            echo twig_escape_filter($this->env, (isset($context["FM_email"]) || array_key_exists("FM_email", $context) ? $context["FM_email"] : (function () { throw new RuntimeError('Variable "FM_email" does not exist.', 799, $this->source); })()), "html", null, true);
             echo "\";
 
         var FM_creneau = \"";
-            // line 799
-            echo twig_escape_filter($this->env, (isset($context["FM_creneau"]) || array_key_exists("FM_creneau", $context) ? $context["FM_creneau"] : (function () { throw new RuntimeError('Variable "FM_creneau" does not exist.', 799, $this->source); })()), "html", null, true);
+            // line 801
+            echo twig_escape_filter($this->env, (isset($context["FM_creneau"]) || array_key_exists("FM_creneau", $context) ? $context["FM_creneau"] : (function () { throw new RuntimeError('Variable "FM_creneau" does not exist.', 801, $this->source); })()), "html", null, true);
             echo "\";
         var FM_date_commande = \"";
-            // line 800
-            echo twig_escape_filter($this->env, (isset($context["FM_date_commande"]) || array_key_exists("FM_date_commande", $context) ? $context["FM_date_commande"] : (function () { throw new RuntimeError('Variable "FM_date_commande" does not exist.', 800, $this->source); })()), "html", null, true);
+            // line 802
+            echo twig_escape_filter($this->env, (isset($context["FM_date_commande"]) || array_key_exists("FM_date_commande", $context) ? $context["FM_date_commande"] : (function () { throw new RuntimeError('Variable "FM_date_commande" does not exist.', 802, $this->source); })()), "html", null, true);
             echo "\";
 
         var FM_nom_entreprise = \"";
-            // line 802
-            echo twig_escape_filter($this->env, (isset($context["FM_nom_entreprise"]) || array_key_exists("FM_nom_entreprise", $context) ? $context["FM_nom_entreprise"] : (function () { throw new RuntimeError('Variable "FM_nom_entreprise" does not exist.', 802, $this->source); })()), "html", null, true);
+            // line 804
+            echo twig_escape_filter($this->env, (isset($context["FM_nom_entreprise"]) || array_key_exists("FM_nom_entreprise", $context) ? $context["FM_nom_entreprise"] : (function () { throw new RuntimeError('Variable "FM_nom_entreprise" does not exist.', 804, $this->source); })()), "html", null, true);
             echo "\";
         var FM_id_client = \"";
-            // line 803
-            echo twig_escape_filter($this->env, (isset($context["FM_id_client"]) || array_key_exists("FM_id_client", $context) ? $context["FM_id_client"] : (function () { throw new RuntimeError('Variable "FM_id_client" does not exist.', 803, $this->source); })()), "html", null, true);
+            // line 805
+            echo twig_escape_filter($this->env, (isset($context["FM_id_client"]) || array_key_exists("FM_id_client", $context) ? $context["FM_id_client"] : (function () { throw new RuntimeError('Variable "FM_id_client" does not exist.', 805, $this->source); })()), "html", null, true);
             echo "\";
 
         var FM_adresse_facturation = \"";
-            // line 805
-            echo twig_escape_filter($this->env, (isset($context["FM_adresse_facturation"]) || array_key_exists("FM_adresse_facturation", $context) ? $context["FM_adresse_facturation"] : (function () { throw new RuntimeError('Variable "FM_adresse_facturation" does not exist.', 805, $this->source); })()), "html", null, true);
+            // line 807
+            echo twig_escape_filter($this->env, (isset($context["FM_adresse_facturation"]) || array_key_exists("FM_adresse_facturation", $context) ? $context["FM_adresse_facturation"] : (function () { throw new RuntimeError('Variable "FM_adresse_facturation" does not exist.', 807, $this->source); })()), "html", null, true);
             echo "\";
         var FM_nomFormule = \"";
-            // line 806
-            echo twig_escape_filter($this->env, (isset($context["FM_nomFormule"]) || array_key_exists("FM_nomFormule", $context) ? $context["FM_nomFormule"] : (function () { throw new RuntimeError('Variable "FM_nomFormule" does not exist.', 806, $this->source); })()), "html", null, true);
+            // line 808
+            echo twig_escape_filter($this->env, (isset($context["FM_nomFormule"]) || array_key_exists("FM_nomFormule", $context) ? $context["FM_nomFormule"] : (function () { throw new RuntimeError('Variable "FM_nomFormule" does not exist.', 808, $this->source); })()), "html", null, true);
             echo "\";
 
         var FM_localisation = \"";
-            // line 808
-            echo twig_escape_filter($this->env, (isset($context["FM_localisation"]) || array_key_exists("FM_localisation", $context) ? $context["FM_localisation"] : (function () { throw new RuntimeError('Variable "FM_localisation" does not exist.', 808, $this->source); })()), "html", null, true);
+            // line 810
+            echo twig_escape_filter($this->env, (isset($context["FM_localisation"]) || array_key_exists("FM_localisation", $context) ? $context["FM_localisation"] : (function () { throw new RuntimeError('Variable "FM_localisation" does not exist.', 810, $this->source); })()), "html", null, true);
             echo "\";
         var FM_nbphotos = \"";
-            // line 809
-            echo twig_escape_filter($this->env, (isset($context["FM_nbphotos"]) || array_key_exists("FM_nbphotos", $context) ? $context["FM_nbphotos"] : (function () { throw new RuntimeError('Variable "FM_nbphotos" does not exist.', 809, $this->source); })()), "html", null, true);
+            // line 811
+            echo twig_escape_filter($this->env, (isset($context["FM_nbphotos"]) || array_key_exists("FM_nbphotos", $context) ? $context["FM_nbphotos"] : (function () { throw new RuntimeError('Variable "FM_nbphotos" does not exist.', 811, $this->source); })()), "html", null, true);
             echo "\";
 
         var FM_prix = \"";
-            // line 811
-            echo twig_escape_filter($this->env, (isset($context["FM_prix"]) || array_key_exists("FM_prix", $context) ? $context["FM_prix"] : (function () { throw new RuntimeError('Variable "FM_prix" does not exist.', 811, $this->source); })()), "html", null, true);
+            // line 813
+            echo twig_escape_filter($this->env, (isset($context["FM_prix"]) || array_key_exists("FM_prix", $context) ? $context["FM_prix"] : (function () { throw new RuntimeError('Variable "FM_prix" does not exist.', 813, $this->source); })()), "html", null, true);
             echo "\";
 
 
@@ -1450,7 +1452,7 @@ $context["key"] == "FM_prix")) {
     
 ";
         }
-        // line 819
+        // line 821
         echo "
 
 
@@ -1477,7 +1479,7 @@ $context["key"] == "FM_prix")) {
 
     public function getDebugInfo()
     {
-        return array (  1454 => 819,  1443 => 811,  1438 => 809,  1434 => 808,  1429 => 806,  1425 => 805,  1420 => 803,  1416 => 802,  1411 => 800,  1407 => 799,  1402 => 797,  1398 => 796,  1394 => 794,  1388 => 793,  1385 => 792,  1379 => 791,  1375 => 789,  1372 => 788,  1370 => 787,  1367 => 786,  1364 => 785,  1362 => 784,  1359 => 783,  1356 => 782,  1354 => 781,  1351 => 780,  1348 => 779,  1346 => 778,  1343 => 777,  1340 => 776,  1338 => 775,  1335 => 774,  1332 => 773,  1330 => 772,  1327 => 771,  1324 => 770,  1322 => 769,  1319 => 768,  1316 => 767,  1314 => 766,  1311 => 765,  1308 => 764,  1306 => 763,  1303 => 762,  1300 => 761,  1298 => 760,  1295 => 759,  1292 => 758,  1290 => 757,  1287 => 756,  1282 => 755,  1280 => 754,  1277 => 753,  1273 => 752,  1269 => 750,  1267 => 749,  1264 => 748,  1261 => 747,  1259 => 746,  1256 => 745,  1253 => 744,  1251 => 743,  1248 => 742,  1245 => 741,  1243 => 740,  1240 => 739,  1237 => 738,  1235 => 737,  1232 => 736,  1229 => 735,  1227 => 734,  1224 => 733,  1222 => 732,  1088 => 601,  1068 => 584,  919 => 437,  917 => 436,  905 => 427,  901 => 425,  897 => 423,  892 => 420,  885 => 418,  879 => 414,  841 => 379,  837 => 378,  780 => 324,  772 => 319,  764 => 314,  754 => 307,  746 => 302,  736 => 301,  733 => 300,  727 => 298,  725 => 297,  719 => 294,  714 => 292,  706 => 291,  701 => 290,  699 => 289,  690 => 283,  680 => 282,  677 => 281,  671 => 279,  669 => 278,  664 => 276,  660 => 275,  655 => 273,  650 => 272,  648 => 271,  642 => 267,  636 => 265,  634 => 264,  623 => 262,  619 => 261,  616 => 260,  612 => 258,  608 => 256,  606 => 255,  600 => 253,  598 => 252,  592 => 248,  589 => 247,  579 => 237,  575 => 236,  566 => 229,  564 => 228,  559 => 226,  549 => 225,  546 => 224,  540 => 222,  538 => 221,  533 => 219,  529 => 218,  522 => 217,  520 => 216,  506 => 205,  502 => 204,  493 => 197,  489 => 195,  482 => 192,  477 => 191,  470 => 187,  465 => 186,  462 => 185,  456 => 181,  446 => 174,  439 => 171,  429 => 164,  422 => 161,  420 => 160,  415 => 157,  408 => 152,  402 => 148,  400 => 147,  397 => 146,  395 => 145,  388 => 141,  383 => 139,  375 => 138,  372 => 137,  366 => 135,  364 => 134,  351 => 132,  339 => 130,  336 => 129,  334 => 128,  325 => 122,  321 => 121,  308 => 119,  304 => 118,  299 => 117,  297 => 116,  284 => 106,  280 => 105,  271 => 98,  259 => 96,  255 => 95,  248 => 94,  246 => 93,  243 => 92,  240 => 91,  237 => 90,  234 => 89,  231 => 88,  229 => 87,  226 => 86,  224 => 85,  221 => 84,  217 => 83,  214 => 82,  212 => 81,  209 => 80,  207 => 79,  200 => 75,  195 => 72,  193 => 71,  185 => 65,  172 => 58,  169 => 57,  165 => 56,  162 => 55,  148 => 47,  145 => 46,  141 => 45,  137 => 43,  135 => 34,  131 => 32,  129 => 18,  123 => 15,  119 => 13,  109 => 12,  96 => 8,  92 => 7,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
+        return array (  1456 => 821,  1445 => 813,  1440 => 811,  1436 => 810,  1431 => 808,  1427 => 807,  1422 => 805,  1418 => 804,  1413 => 802,  1409 => 801,  1404 => 799,  1400 => 798,  1396 => 796,  1390 => 795,  1387 => 794,  1381 => 793,  1377 => 791,  1374 => 790,  1372 => 789,  1369 => 788,  1366 => 787,  1364 => 786,  1361 => 785,  1358 => 784,  1356 => 783,  1353 => 782,  1350 => 781,  1348 => 780,  1345 => 779,  1342 => 778,  1340 => 777,  1337 => 776,  1334 => 775,  1332 => 774,  1329 => 773,  1326 => 772,  1324 => 771,  1321 => 770,  1318 => 769,  1316 => 768,  1313 => 767,  1310 => 766,  1308 => 765,  1305 => 764,  1302 => 763,  1300 => 762,  1297 => 761,  1294 => 760,  1292 => 759,  1289 => 758,  1284 => 757,  1282 => 756,  1279 => 755,  1275 => 754,  1271 => 752,  1269 => 751,  1266 => 750,  1263 => 749,  1261 => 748,  1258 => 747,  1255 => 746,  1253 => 745,  1250 => 744,  1247 => 743,  1245 => 742,  1242 => 741,  1239 => 740,  1237 => 739,  1234 => 738,  1231 => 737,  1229 => 736,  1226 => 735,  1224 => 734,  1090 => 603,  1070 => 586,  919 => 437,  917 => 436,  905 => 427,  901 => 425,  897 => 423,  892 => 420,  885 => 418,  879 => 414,  841 => 379,  837 => 378,  780 => 324,  772 => 319,  764 => 314,  754 => 307,  746 => 302,  736 => 301,  733 => 300,  727 => 298,  725 => 297,  719 => 294,  714 => 292,  706 => 291,  701 => 290,  699 => 289,  690 => 283,  680 => 282,  677 => 281,  671 => 279,  669 => 278,  664 => 276,  660 => 275,  655 => 273,  650 => 272,  648 => 271,  642 => 267,  636 => 265,  634 => 264,  623 => 262,  619 => 261,  616 => 260,  612 => 258,  608 => 256,  606 => 255,  600 => 253,  598 => 252,  592 => 248,  589 => 247,  579 => 237,  575 => 236,  566 => 229,  564 => 228,  559 => 226,  549 => 225,  546 => 224,  540 => 222,  538 => 221,  533 => 219,  529 => 218,  522 => 217,  520 => 216,  506 => 205,  502 => 204,  493 => 197,  489 => 195,  482 => 192,  477 => 191,  470 => 187,  465 => 186,  462 => 185,  456 => 181,  446 => 174,  439 => 171,  429 => 164,  422 => 161,  420 => 160,  415 => 157,  408 => 152,  402 => 148,  400 => 147,  397 => 146,  395 => 145,  388 => 141,  383 => 139,  375 => 138,  372 => 137,  366 => 135,  364 => 134,  351 => 132,  339 => 130,  336 => 129,  334 => 128,  325 => 122,  321 => 121,  308 => 119,  304 => 118,  299 => 117,  297 => 116,  284 => 106,  280 => 105,  271 => 98,  259 => 96,  255 => 95,  248 => 94,  246 => 93,  243 => 92,  240 => 91,  237 => 90,  234 => 89,  231 => 88,  229 => 87,  226 => 86,  224 => 85,  221 => 84,  217 => 83,  214 => 82,  212 => 81,  209 => 80,  207 => 79,  200 => 75,  195 => 72,  193 => 71,  185 => 65,  172 => 58,  169 => 57,  165 => 56,  162 => 55,  148 => 47,  145 => 46,  141 => 45,  137 => 43,  135 => 34,  131 => 32,  129 => 18,  123 => 15,  119 => 13,  109 => 12,  96 => 8,  92 => 7,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -1973,9 +1975,11 @@ async function getVisitesListe(id) {
         function submitForm(event, form) {
                 event.preventDefault();
                 const hiddenInputValue = form.querySelector('[name=\"id\"]').value;
-                downloadFile(hiddenInputValue);
+                //downloadFile(hiddenInputValue);
         }
-
+    
+    
+    /*
        async function downloadFile(parameter) {
             var url = 'https://fichiers.lookaround.fr/PHOTOS_' + parameter + '.zip'
 
@@ -1998,7 +2002,7 @@ async function getVisitesListe(id) {
                                 }
             
         }
-
+*/
 
 
 

@@ -82,7 +82,7 @@
 
     <div class='Partie-Exemples-5'>
         <div id="visite-containe" class="visite-container" style="text-align: center">
-            <iframe src="https://visite.lookaround.fr/18476801/?startscene=1&startlookat=-162.02,4.63,134.73,0,0;" scrolling="no" id="iframe-fullscreen" FRAMEBORDER="no" style="box-shadow: 0 1px 1px rgba(0,0,0,.12),0 2px 2px rgba(0,0,0,.12),0 4px 4px rgba(0,0,0,.12),0 8px 8px rgba(0,0,0,.12),0 16px 16px rgba(0,0,0,.12);" allowfullscreen></iframe>
+            <iframe src="https://visite.lookaround.fr/18476801/?startscene=1&startlookat=-178.63,1.02,123.94,0.35,0;" scrolling="no" id="iframe-fullscreen" FRAMEBORDER="no" style="box-shadow: 0 1px 1px rgba(0,0,0,.12),0 2px 2px rgba(0,0,0,.12),0 4px 4px rgba(0,0,0,.12),0 8px 8px rgba(0,0,0,.12),0 16px 16px rgba(0,0,0,.12);" allowfullscreen></iframe>
         </div>
     </div>
 
@@ -132,6 +132,16 @@
             </p>
         </div>
     </div>
+    </div>
+
+     <div class='Partie-Exemples-5'>
+        <h3>Ils nous ont fait confiance</h3>
+        <div style="grid-template-columns: 1fr 1fr 1fr 1fr;display: grid;width: 75%; padding: 20px;margin-top: 15px;margin: 0 auto; ">
+            <img src="{{asset('img/clients/isifa.png')}}" class="partenaires-img" onclick="ouvrirNouvelOnglet('https://www.isifaplusvalues.com/')">
+            <img src="{{asset('img/clients/ihecf.jpg')}}" class="partenaires-img" onclick="ouvrirNouvelOnglet('https://www.ihecf.fr/')">
+            <img src="{{asset('img/clients/mbway.png')}}" class="partenaires-img" onclick="ouvrirNouvelOnglet('https://www.mbway.com/')">
+            <img src="{{asset('img/clients/ipac.jpg')}}" class="partenaires-img" onclick="ouvrirNouvelOnglet('https://www.ipacbachelorfactory.com/')">
+        </div>
     </div>
 
 
@@ -554,6 +564,10 @@ function removeContent(){
 
 
 <script>
+
+ function ouvrirNouvelOnglet(url) {
+    window.open(url, '_blank');
+  }
 
     var descriptionTutoArray = [
         "1. Remplissez notre formulaire de prise de rendez-vous, en nous décrivant les spécificités de votre besoin",
