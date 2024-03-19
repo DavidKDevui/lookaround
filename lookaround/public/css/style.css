@@ -987,9 +987,9 @@ body {
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-.line-6{
+.line-4{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 
@@ -1300,7 +1300,7 @@ color: yellow;
 }
 
 .argument-card{
-  padding: 20px 2px;
+  padding: 30px 2px;
   text-align: center;
   background-color: #ffffff75;
 }
@@ -1799,7 +1799,7 @@ input:checked + label{
 }
 
 .Partie-Exemples-5 h3 {
-  font-size: 15px;
+  font-size: 16px;
 }
 .Partie-Exemples-5 p {
   font-size: 12.5px;
@@ -1820,10 +1820,7 @@ input:checked + label{
     font-size: 13px;
 }
 
-.input_form_inscription, .input_form_inscription2, .input_form_inscription3  {
-  font-size: 33px;
-  margin-bottom: 20px;
-}
+
 
 .input_form_inscription2 {
   height: 185px;
@@ -1946,6 +1943,11 @@ input:checked + label{
   
 .Partie-Exemples-5 h3 {
   font-size: 22px !important;
+}
+
+.input_form_inscription, .input_form_inscription2, .input_form_inscription3  {
+  font-size: 33px;
+  margin-bottom: 20px;
 }
 
   
@@ -2128,7 +2130,7 @@ label {
   margin-bottom: 40px;
 }
 
-.line-6 {
+.line-4 {
   display: block;
   margin-top: 40px;
   margin-bottom: 40px;

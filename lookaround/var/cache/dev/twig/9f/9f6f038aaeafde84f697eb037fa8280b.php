@@ -304,7 +304,7 @@ class __TwigTemplate_811f6967e30d48f327feef6b20771364 extends \Twig\Template
     function defTarif(){
 
         const radiosToTarif = {
-        \"radio-1-10\" : 100, \"radio-11-20\" : 150, \"radio-21-30\" : 200, 
+        \"radio-1-10\" : 200, \"radio-11-20\" : 250, \"radio-21-30\" : 300, 
         \"radio-idf\" : 149.90, \"radio-hors-idf\" : 279.90, \"radio-suisse-belgique\" : 489.90}
 
         var finalTarif = 0;
@@ -541,7 +541,7 @@ class __TwigTemplate_811f6967e30d48f327feef6b20771364 extends \Twig\Template
     function defTarif(){
 
         const radiosToTarif = {
-        \"radio-1-10\" : 100, \"radio-11-20\" : 150, \"radio-21-30\" : 200, 
+        \"radio-1-10\" : 200, \"radio-11-20\" : 250, \"radio-21-30\" : 300, 
         \"radio-idf\" : 149.90, \"radio-hors-idf\" : 279.90, \"radio-suisse-belgique\" : 489.90}
 
         var finalTarif = 0;

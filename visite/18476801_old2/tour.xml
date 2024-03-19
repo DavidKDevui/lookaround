@@ -1,0 +1,453 @@
+﻿<krpano version="1.21" title="">
+
+	<include url="skin/vtourskin.xml" />
+
+	<!-- customize skin settings: maps, gyro, webvr, thumbnails, tooltips, layout, design, ... -->
+	
+	<!--
+	    For an alternative skin design either change the <skin_settings> values 
+	    from above or optionally include one of the predefined designs from below.
+	-->
+	<!-- <include url="skin/vtourskin_design_flat_light.xml"  /> -->
+	<!-- <include url="skin/vtourskin_design_glass.xml"       /> -->
+	<!-- <include url="skin/vtourskin_design_ultra_light.xml" /> -->
+	<!-- <include url="skin/vtourskin_design_117.xml"         /> -->
+	<!-- <include url="skin/vtourskin_design_117round.xml"    /> -->
+	<!-- <include url="skin/vtourskin_design_black.xml"       /> -->
+	
+
+	<scene name="scene_Entrppe_Campus" title="Entrée Campus" onstart="" thumburl="panos/Entrppe_Campus.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="-0.247" vlookat="1.019" fovtype="MFOV" fov="123.937" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Entrppe_Campus.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/Entrppe_Campus.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2112" />
+		</image>
+
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="2.143" atv="8.698" linkedscene="scene_accueil" linkedscene_hoffset="181.62" use3dtransition="true" />
+
+	</scene>
+
+	
+	<scene name="scene_Accueil" title="Accueil" onstart="" thumburl="panos/Accueil.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="-178.627" vlookat="1.019" fovtype="MFOV" fov="123.937" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Accueil.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/Accueil.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2112" />
+		</image>
+
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="5.375" atv="13.514" linkedscene="scene_entrppe_campus" linkedscene_hoffset="178.38" use3dtransition="true" />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-175.259" atv="10.839" linkedscene="scene_etage_1" linkedscene_lookat="25.09,6.12,131.39" />
+
+	</scene>
+
+
+	<scene name="scene_Etage_1" title="1er Étage" onstart="" thumburl="panos/Etage_1.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="25.090" vlookat="6.120" fovtype="MFOV" fov="131.390" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Etage_1.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/Etage_1.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2112" />
+		</image>
+
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="26.668" atv="43.292" linkedscene="scene_accueil" linkedscene_lookat="-177.58,-1.42,123.94" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="112.984" atv="18.626" linkedscene="scene_etage_2" linkedscene_hoffset="-11.44" use3dtransition="true" />
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="-76.271" atv="17.448" linkedscene="scene_etage_bis" linkedscene_hoffset="90.03" use3dtransition="true" />
+
+	</scene>
+
+	
+	<scene name="scene_Etage_Bis" title="1er Étage" onstart="" thumburl="panos/Etage_Bis.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="23.238" vlookat="-0.902" fovtype="MFOV" fov="131.390" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Etage_Bis.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/Etage_Bis.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2112" />
+		</image>
+
+		<hotspot name="spot4" style="skin_hotspotstyle" ath="-162.653" atv="18.859" linkedscene="scene_etage_1" linkedscene_hoffset="269.97" use3dtransition="true" />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-4.713" atv="21.490" linkedscene="scene_cafpptppria" linkedscene_hoffset="267.88" use3dtransition="true" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="76.601" atv="10.500" linkedscene="scene_couloir_est_1" linkedscene_hoffset="26.2" use3dtransition="true" />
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="-95.332" atv="14.404" linkedscene="scene_couloir_ouest_1" linkedscene_hoffset="195.0" use3dtransition="true" />
+
+	</scene>
+
+
+	<scene name="scene_Etage_2" title="1er Étage" onstart="" thumburl="panos/Etage_2.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="103.494" vlookat="5.598" fovtype="MFOV" fov="131.390" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Etage_2.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/Etage_2.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2112" />
+		</image>
+
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="-78.452" atv="17.421" linkedscene="scene_etage_1" linkedscene_hoffset="371.44" use3dtransition="true" />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="19.441" atv="15.789" linkedscene="scene_couloir_sud_1" linkedscene_lookat="-359.34,22.44,120.0" linkedscene_hoffset="302.48" use3dtransition="true" />
+
+	</scene>
+
+
+	<scene name="scene_Couloir_Sud_1" title="1er Étage" onstart="" thumburl="panos/Couloir_Sud_1.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="-17.217" vlookat="4.910" fovtype="MFOV" fov="131.390" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Couloir_Sud_1.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/Couloir_Sud_1.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2112" />
+		</image>
+
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="141.922" atv="14.689" linkedscene="scene_etage_2" linkedscene_lookat="-359.34,22.44,120.0" linkedscene_hoffset="57.52" use3dtransition="true" />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-6.859" atv="29.819" linkedscene="scene_couloir_sud_2" linkedscene_hoffset="142.54" use3dtransition="true" />
+
+	</scene>
+
+
+	<scene name="scene_Cafpptppria" title="Cafétéria" onstart="" thumburl="panos/Cafpptppria.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="-14.400" vlookat="-0.380" fovtype="MFOV" fov="131.390" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Cafpptppria.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/Cafpptppria.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2112" />
+		</image>
+
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="81.335" atv="20.657" linkedscene="scene_etage_bis" linkedscene_hoffset="92.12" use3dtransition="true" />
+
+	</scene>
+
+
+	<scene name="scene_Salle_11" title="Salle 11" onstart="" thumburl="panos/Salle_11.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="-110.017" vlookat="13.345" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Salle_11.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/Salle_11.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2112" />
+		</image>
+
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="40.011" atv="48.504" linkedscene="scene_couloir_est_8" linkedscene_hoffset="-35.21" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_Salle_14" title="Salle 14" onstart="" thumburl="panos/Salle_14.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="-79.268" vlookat="-0.234" fovtype="MFOV" fov="131.390" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Salle_14.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/Salle_14.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2112" />
+		</image>
+
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="2.803" atv="27.743" linkedscene="scene_couloir_est_3" linkedscene_hoffset="258.71" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_Salle_15" title="Salle 15" onstart="" thumburl="panos/Salle_15.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="185.566" vlookat="1.493" fovtype="MFOV" fov="131.390" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Salle_15.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/Salle_15.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2112" />
+		</image>
+
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-78.669" atv="29.624" linkedscene="scene_couloir_est_1" linkedscene_hoffset="270.96" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_Salle_O_Lab" title="Salle O&apos;Lab" onstart="" thumburl="panos/Salle_O_Lab.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="-0.171" vlookat="8.843" fovtype="MFOV" fov="128.004" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Salle_O_Lab.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/Salle_O_Lab.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2112" />
+		</image>
+
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="141.212" atv="34.340" linkedscene="scene_couloir_est_7" linkedscene_hoffset="41.17" use3dtransition="true" />
+
+	</scene>
+
+
+
+	<scene name="scene_Couloir_Est_1" title="Couloir Est" onstart="" thumburl="panos/Couloir_Est_1.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="86.113" vlookat="0.660" fovtype="MFOV" fov="131.390" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Couloir_Est_1.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/Couloir_Est_1.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2112" />
+		</image>
+
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="-81.018" atv="10.546" linkedscene="scene_etage_bis" linkedscene_hoffset="333.8" use3dtransition="true" />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="12.288" atv="26.710" linkedscene="scene_salle_15" linkedscene_hoffset="89.04" use3dtransition="true" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="100.456" atv="8.505" linkedscene="scene_couloir_est_2" linkedscene_hoffset="83.9" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_Couloir_Est_2" title="Couloir Est" onstart="" thumburl="panos/Couloir_Est_2.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="182.444" vlookat="3.548" fovtype="MFOV" fov="131.390" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Couloir_Est_2.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/Couloir_Est_2.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2112" />
+		</image>
+
+		<hotspot name="spot4" style="skin_hotspotstyle" ath="4.357" atv="8.855" linkedscene="scene_couloir_est_1" linkedscene_hoffset="276.1" use3dtransition="true" />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-176.249" atv="14.958" linkedscene="scene_couloir_est_3" linkedscene_hoffset="352.4" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_Couloir_Est_3" title="Couloir Est" onstart="" thumburl="panos/Couloir_Est_3.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="171.991" vlookat="1.022" fovtype="MFOV" fov="131.390" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Couloir_Est_3.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/Couloir_Est_3.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2112" />
+		</image>
+
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-3.848" atv="15.933" linkedscene="scene_couloir_est_2" linkedscene_hoffset="7.6" use3dtransition="true" />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="81.511" atv="26.067" linkedscene="scene_salle_14" linkedscene_hoffset="101.29" use3dtransition="true" />
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="175.328" atv="6.772" linkedscene="scene_couloir_est_4" linkedscene_hoffset="6.09" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_Couloir_Est_4" title="Couloir Est" onstart="" thumburl="panos/Couloir_Est_4.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="181.442" vlookat="12.420" fovtype="MFOV" fov="131.390" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Couloir_Est_4.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/Couloir_Est_4.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2112" />
+		</image>
+
+		<hotspot name="spot4" style="skin_hotspotstyle" ath="1.431" atv="9.846" linkedscene="scene_couloir_est_3" linkedscene_hoffset="353.91" use3dtransition="true" />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="179.679" atv="7.792" linkedscene="scene_couloir_est_5" linkedscene_hoffset="-178.29" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_Couloir_Est_5" title="Couloir Est" onstart="" thumburl="panos/Couloir_Est_5.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="6.134" vlookat="2.851" fovtype="MFOV" fov="131.390" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Couloir_Est_5.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/Couloir_Est_5.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2112" />
+		</image>
+
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-178.614" atv="9.266" linkedscene="scene_couloir_est_4" linkedscene_hoffset="538.29" use3dtransition="true" />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="1.735" atv="14.373" linkedscene="scene_couloir_est_6" linkedscene_hoffset="19.21" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_Couloir_Est_6" title="Couloir Est" onstart="" thumburl="panos/Couloir_Est_6.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="25.344" vlookat="2.851" fovtype="MFOV" fov="131.390" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Couloir_Est_6.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/Couloir_Est_6.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2112" />
+		</image>
+
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="-159.054" atv="13.468" linkedscene="scene_couloir_est_5" linkedscene_hoffset="340.79" use3dtransition="true" />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="58.489" atv="15.128" linkedscene="scene_couloir_est_7" linkedscene_hoffset="35.2" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_Couloir_Est_7" title="Couloir Est" onstart="" thumburl="panos/Couloir_Est_7.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="94.249" vlookat="-0.194" fovtype="MFOV" fov="131.390" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Couloir_Est_7.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/Couloir_Est_7.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2112" />
+		</image>
+
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-86.311" atv="14.270" linkedscene="scene_couloir_est_6" linkedscene_hoffset="324.8" use3dtransition="true" />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="2.381" atv="27.782" linkedscene="scene_salle_o_lab" linkedscene_hoffset="318.83" use3dtransition="true" />
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="92.902" atv="11.217" linkedscene="scene_couloir_est_8" linkedscene_hoffset="184.61" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_Couloir_Est_8" title="Couloir Est" onstart="" thumburl="panos/Couloir_Est_8.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="248.285" vlookat="7.992" fovtype="MFOV" fov="128.004" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Couloir_Est_8.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/Couloir_Est_8.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2112" />
+		</image>
+
+		<hotspot name="spot4" style="skin_hotspotstyle" ath="97.512" atv="11.887" linkedscene="scene_couloir_est_7" linkedscene_hoffset="175.39" use3dtransition="true" />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-87.107" atv="15.984" linkedscene="scene_couloir_est_9" linkedscene_hoffset="88.5" use3dtransition="true" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-175.196" atv="39.605" linkedscene="scene_salle_11" linkedscene_hoffset="395.21" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_Couloir_Est_9" title="Couloir Est" onstart="" thumburl="panos/Couloir_Est_9.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="-21.202" vlookat="9.781" fovtype="MFOV" fov="128.004" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Couloir_Est_9.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/Couloir_Est_9.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2112" />
+		</image>
+
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-178.602" atv="19.724" linkedscene="scene_couloir_est_8" linkedscene_hoffset="271.5" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_Couloir_Ouest_1" title="Couloir Ouest" onstart="" thumburl="panos/Couloir_Ouest_1.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="99.968" vlookat="10.539" fovtype="MFOV" fov="128.004" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Couloir_Ouest_1.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/Couloir_Ouest_1.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2112" />
+		</image>
+
+		<hotspot name="spot5" style="skin_hotspotstyle" ath="-80.335" atv="17.003" linkedscene="scene_etage_bis" linkedscene_hoffset="165.0" use3dtransition="true" />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="40.565" atv="12.155" linkedscene="scene_couloir_ouest_2" linkedscene_hoffset="236.65" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_Couloir_Ouest_2" title="Couloir Ouest" onstart="" thumburl="panos/Couloir_Ouest_2.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="2.888" vlookat="5.241" fovtype="MFOV" fov="128.004" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Couloir_Ouest_2.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/Couloir_Ouest_2.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2112" />
+		</image>
+
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="97.220" atv="11.973" linkedscene="scene_couloir_ouest_1" linkedscene_hoffset="123.35" use3dtransition="true" />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="6.371" atv="12.292" linkedscene="scene_couloir_ouest_3" linkedscene_hoffset="31.98" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_Couloir_Ouest_3" title="Couloir Ouest" onstart="" thumburl="panos/Couloir_Ouest_3.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="-148.877" vlookat="8.712" fovtype="MFOV" fov="128.004" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Couloir_Ouest_3.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/Couloir_Ouest_3.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2112" />
+		</image>
+
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="-141.644" atv="10.955" linkedscene="scene_couloir_ouest_2" linkedscene_hoffset="328.02" use3dtransition="true" />
+
+	</scene>
+
+	
+
+	<scene name="scene_Couloir_Sud_2" title="Couloir Sud" onstart="" thumburl="panos/Couloir_Sud_2.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="134.643" vlookat="4.912" fovtype="MFOV" fov="131.390" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Couloir_Sud_2.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/Couloir_Sud_2.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2112" />
+		</image>
+
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="-44.315" atv="26.644" linkedscene="scene_couloir_sud_1" linkedscene_hoffset="217.46" use3dtransition="true" />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="106.145" atv="29.189" linkedscene="scene_couloir_sud_3" linkedscene_hoffset="176.21" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_Couloir_Sud_3" title="Couloir Sud" onstart="" thumburl="panos/Couloir_Sud_3.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="-77.779" vlookat="9.542" fovtype="MFOV" fov="131.390" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Couloir_Sud_3.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/Couloir_Sud_3.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2112" />
+		</image>
+
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="102.355" atv="28.088" linkedscene="scene_couloir_sud_2" linkedscene_hoffset="183.79" use3dtransition="true" />
+
+	</scene>
+
+</krpano>

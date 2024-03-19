@@ -214,7 +214,7 @@ class __TwigTemplate_5fe55d02fc554caf02780ffadb199dfe extends \Twig\Template
         </div>
     </div>
     
-    <div class='Partie-Exemples-5' style=\"background-image: url('img/circle-scatter-haikei(3).png');\">
+    <div class='Partie-Exemples-5'>
        <h3>Qu'est-ce qu'une visite virtuelle ?</h3>
 
           <p class=\"align-center-vertically\" style=\"background-color: #ffffff8f;\">Une visite virtuelle est une expérience interactive qui permet aux utilisateurs de parcourir et d'explorer un espace en utilisant des technologies numériques. 
@@ -236,7 +236,7 @@ class __TwigTemplate_5fe55d02fc554caf02780ffadb199dfe extends \Twig\Template
         </div>
     </div>
 
-     <div class='Partie-Exemples-5'  style=\"padding: 27px 3px; border-bottom: 1px solid #8282821c; background-image: url('../img/circle-scatter-haikei(3).png');\">
+     <div class='Partie-Exemples-5'>
         <h3>Qu'apporterais une visite virtuelle à mon site ?</h3>
         <div class='line-3'  style=\"margin-top:20px\">
 
@@ -324,11 +324,11 @@ class __TwigTemplate_5fe55d02fc554caf02780ffadb199dfe extends \Twig\Template
         </div>
     </div>
 
-<div class='Partie-Exemples-5' style=\"background-image: url('img/circle-scatter-haikei(3).png')\">
+<div class='Partie-Exemples-5'>
 
     <h3>Comment se déroule une prise de vue <span>look<span style=\"font-weight : 500; color: #219988;\">around®</span></span> ?</h3>
     <br>
-    <div class=\"line-6\" style=\"grid-template-columns : 1fr 1fr 1fr 1fr\">
+    <div class=\"line-4\">
         <div class=\"argument-card\"> <img class=\"argument-img\" src='";
         // line 152
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/telephone(1).png"), "html", null, true);
@@ -1037,7 +1037,7 @@ function removeContent(){
         </div>
     </div>
     
-    <div class='Partie-Exemples-5' style=\"background-image: url('img/circle-scatter-haikei(3).png');\">
+    <div class='Partie-Exemples-5'>
        <h3>Qu'est-ce qu'une visite virtuelle ?</h3>
 
           <p class=\"align-center-vertically\" style=\"background-color: #ffffff8f;\">Une visite virtuelle est une expérience interactive qui permet aux utilisateurs de parcourir et d'explorer un espace en utilisant des technologies numériques. 
@@ -1056,7 +1056,7 @@ function removeContent(){
         </div>
     </div>
 
-     <div class='Partie-Exemples-5'  style=\"padding: 27px 3px; border-bottom: 1px solid #8282821c; background-image: url('../img/circle-scatter-haikei(3).png');\">
+     <div class='Partie-Exemples-5'>
         <h3>Qu'apporterais une visite virtuelle à mon site ?</h3>
         <div class='line-3'  style=\"margin-top:20px\">
 
@@ -1114,11 +1114,11 @@ function removeContent(){
         </div>
     </div>
 
-<div class='Partie-Exemples-5' style=\"background-image: url('img/circle-scatter-haikei(3).png')\">
+<div class='Partie-Exemples-5'>
 
     <h3>Comment se déroule une prise de vue <span>look<span style=\"font-weight : 500; color: #219988;\">around®</span></span> ?</h3>
     <br>
-    <div class=\"line-6\" style=\"grid-template-columns : 1fr 1fr 1fr 1fr\">
+    <div class=\"line-4\">
         <div class=\"argument-card\"> <img class=\"argument-img\" src='{{asset(\"img/telephone(1).png\")}}' /><br> <h3>1- Premier contact</h3><p>Durant un appel, nous réponderons à toutes vos questions, puis nous pourront convenir d'un RDV.</p></div>
         <div class=\"argument-card\"> <img class=\"argument-img\" src='{{asset(\"img/camera(1).png\")}}'/><br> <h3>2- Prise de vue</h3><p >Le jour J, nous effectuons les prises de vues dans vos espaces. Cela peut durer entre 20 et 45 minutes.</p></div>
         <div class=\"argument-card\"> <img class=\"argument-img\" src='{{asset(\"img/computer.png\")}}'/><br> <h3>3- Création de la visite</h3><p>Après le traitement et l'édition des photos, nous nous attelons à la création de la visite.</p></div>
