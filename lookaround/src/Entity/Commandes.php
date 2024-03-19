@@ -383,8 +383,6 @@ class Commandes
     }
 
 
-
-
     public function getClientId(): ?Clients
     {
         return $this->client;
@@ -393,7 +391,6 @@ class Commandes
     public function setClientId(?Clients $client): self
     {
         $this->client = $client;
-
         return $this;
     }
 }

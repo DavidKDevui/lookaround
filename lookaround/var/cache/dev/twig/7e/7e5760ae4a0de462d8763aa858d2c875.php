@@ -324,87 +324,29 @@ class __TwigTemplate_5fe55d02fc554caf02780ffadb199dfe extends \Twig\Template
         </div>
     </div>
 
-
-    <div class='Partie-Exemples-5' id=\"div-aide\" style=\"display:none\">
-       <h3>Comment se déroule une création de visite virtuelle avec look<span style=\"font-weight : 500; color: #219988;\">around®</span> ?</h3>
-
-        <div class=\"carousel-tuto\" id=\"carousel-tuto\" style=\"display: grid; grid-template-rows : 5fr 1fr;\">
-
-            <img id=\"carousel-img\" class=\"carousel-img\" src='";
-        // line 153
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/tuto11.jpg"), "html", null, true);
-        echo "'/>
-            
-            <div>
-                <p id=\"container-descriptionTuto\" class=\"container-descriptionTuto\" style=\"padding-bottom: 28px; font-weight: 400;\"></p>
-                <div class=\"indicators-tuto\"></div>
-            </div>
-            
-            <div class=\"nav-left\" id=\"nav-left2\" onclick=\"carouselTutoPrevious()\">&lsaquo;</div>
-            <div class=\"nav-right\" id=\"nav-right2\" onclick=\"carouselTutoSuivant()\">&rsaquo;</div>
-
-        </div>
-    </div>
-
-
-<!--<button onclick=\"myModalDefinition.style.display = 'block'\">Définition IFrame</button>
-
-<div id=\"myModalDefinition\" class=\"modal\">
-        <div class=\"modal-content\" style=\"width: 70%; font-size: 15px; border-radius: 8px;\">   
-            <div style=\"display : grid; grid-template-columns: 1fr 3.5fr; align-items: center;\">
-                <img src=\"";
-        // line 172
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/langage-de-programmation.png"), "html", null, true);
-        echo "\" style=\"width: 150px;\"/>
-                <p style=\"padding: 8px;\">Un IFrame est un élément HTML utilisé pour intégrer un contenu d'une autre source à l'intérieur d'une page web. 
-                    Cela permet aux développeurs de combiner différentes ressources et fonctionnalités provenant de diverses sources en les incorporant harmonieusement dans une seule page.
-                    L'IFrame est généralement défini avec une source (URL) spécifique qui indique le contenu à charger à l'intérieur de l'IFrame. </p>
-            </div>    
-        </div>
-</div>
-
-<script>
-    var myModalDefinition = document.getElementById(\"myModalDefinition\");
-</script>
--->
-
 <div class='Partie-Exemples-5' style=\"background-image: url('img/circle-scatter-haikei(3).png')\">
 
-    <h3>L'efficacité des visites virtuelles en quelques chiffres</h3>
-
-        <div class=\"line-3\" style=\"margin-top: 20px\">
-            <div style='display: grid; grid-template-rows 1.5fr 1fr; padding: 5px 5px; background-color: #ffffff91;text-align: center;'>
-                <span class=\"pourcentage\">67%</span>
-                <p class=\"reference-p\"  >Augmentation des réservations en ligne pour des chambres d'hôtel</p>
-                <p class=\"reference-source\">Source: Best Western Hotels & Resorts</p>
-            </div>
-
-            <div style='display: grid;  grid-template-rows 1.5fr 1fr; padding: 5px 5px; background-color: #ffffff91;text-align: center;'>
-                <span class=\"pourcentage\">62%</span>
-                <p class=\"reference-p\"  >Consommateurs utilisant les visites virtuelles pour choisir un restaurant</p>
-                <p class=\"reference-source\">Source: TechValidate</p>
-            </div>
-
-            <div style='display: grid;  grid-template-rows 1.5fr 1fr; padding: 5px 5px; background-color: #ffffff91;text-align: center;'>
-                <span class=\"pourcentage\">94%</span>
-                <p class=\"reference-p\"  >Étudiants préférant visiter un campus virtuellement avant de prendre une décision</p>
-                <p class=\"reference-source\">Source: Cappex</p>
-            </div>
-        </div>
+    <h3>Comment se déroule une prise de vue <span>look<span style=\"font-weight : 500; color: #219988;\">around®</span></span> ?</h3>
+    <br>
+    <div class=\"line-6\" style=\"grid-template-columns : 1fr 1fr 1fr 1fr\">
+        <div class=\"argument-card\"> <img class=\"argument-img\" src='";
+        // line 152
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/telephone(1).png"), "html", null, true);
+        echo "' /><br> <h3>1- Premier contact</h3><p>Durant un appel, nous réponderons à toutes vos questions, puis nous pourront convenir d'un RDV.</p></div>
+        <div class=\"argument-card\"> <img class=\"argument-img\" src='";
+        // line 153
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/camera(1).png"), "html", null, true);
+        echo "'/><br> <h3>2- Prise de vue</h3><p >Le jour J, nous effectuons les prises de vues dans vos espaces. Cela peut durer entre 20 et 45 minutes.</p></div>
+        <div class=\"argument-card\"> <img class=\"argument-img\" src='";
+        // line 154
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/computer.png"), "html", null, true);
+        echo "'/><br> <h3>3- Création de la visite</h3><p>Après le traitement et l'édition des photos, nous nous attelons à la création de la visite.</p></div>
+        <div class=\"argument-card\"> <img class=\"argument-img\" src='";
+        // line 155
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/paquet.png"), "html", null, true);
+        echo "'/><br> <h3>4- Livraison de la visite</h3><p>Nous vous envoyons les packages de votre visite, ainsi que l'url sur laquelle nous l'hébergeons.</p></div>
     </div>
-
-<!--
-    <div class='Partie-Exemples-5'>
-       <h3>Nous proposons également de la photographie grand angle</h3>
-
-        <img src=\"https://www.camif-habitat.fr/wp-content/uploads/2022/08/Renovation-dun-appartement-a-Avignon-85-10.jpg\" style=\"width: 700px; height : 300px; border-radius: 25px; padding : 20px; margin: 0 auto\"/>
-
-       <p class=\"align-center-vertically\">La photographie grand angle est une technique utilisée en photographie pour capturer un champ de vision plus large que ce que l'œil humain peut naturellement voir. Elle implique l'utilisation d'un objectif grand angle qui a une distance focale plus courte que les objectifs standards, ce qui permet d'inclure davantage d'espace dans le cadre de la photo.</p>
-       <p class=\"align-center-vertically\">Il peut donc être interessant de proposer des photos grand angle sur votre site, car ça peut avoir beaucoup d'utilité</p>
-
-      
-    </div>
--->
+</div>
 
 
     <div class=\"line-2\">
@@ -418,7 +360,7 @@ class __TwigTemplate_5fe55d02fc554caf02780ffadb199dfe extends \Twig\Template
 
                         <div class=\"contact-div\">
                             <img src=\"";
-        // line 234
+        // line 170
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/telephone(1).png"), "html", null, true);
         echo "\" class=\"middleinDiv\"/>
                             <p contenteditable=\"true\" style=\"cursor: default; text-decoration: none!important; color: black !important;\">06 51 45 01 06</p>
@@ -426,7 +368,7 @@ class __TwigTemplate_5fe55d02fc554caf02780ffadb199dfe extends \Twig\Template
                       
                         <div class=\"contact-div\">
                                 <img src=\"";
-        // line 239
+        // line 175
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/gmail.png"), "html", null, true);
         echo "\" class=\"middleinDiv\"/>
                                 <p>contact@lookaround.fr</p>
@@ -436,7 +378,7 @@ class __TwigTemplate_5fe55d02fc554caf02780ffadb199dfe extends \Twig\Template
                     <div class=\"line-contact-sheet\"     style='display:none'>
                           <div class=\"contact-div\">
                                 <img src=\"";
-        // line 246
+        // line 182
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/office.png"), "html", null, true);
         echo "\" class=\"middleinDiv\"/>
                                 <p>N°892 074 774 00019</p>
@@ -444,7 +386,7 @@ class __TwigTemplate_5fe55d02fc554caf02780ffadb199dfe extends \Twig\Template
                         
                         <div class=\"contact-div\">
                                 <img src=\"";
-        // line 251
+        // line 187
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/linkedin.png"), "html", null, true);
         echo "\" class=\"middleinDiv\"/>
                                 <p>lookaround</p>
@@ -461,38 +403,38 @@ class __TwigTemplate_5fe55d02fc554caf02780ffadb199dfe extends \Twig\Template
         <h2 class=\"titre2\">Prendre rendez-vous</h2>
 
         ";
-        // line 265
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 265, $this->source); })()), 'form_start');
+        // line 201
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 201, $this->source); })()), 'form_start');
         echo " 
     <br>
         <div class=\"line-1\">
             ";
-        // line 268
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 268, $this->source); })()), "nom", [], "any", false, false, false, 268), 'row');
+        // line 204
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 204, $this->source); })()), "nom", [], "any", false, false, false, 204), 'row');
         echo "
         </div>
     <br>
         <div class=\"line-2\">
             ";
-        // line 272
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 272, $this->source); })()), "email", [], "any", false, false, false, 272), 'row');
+        // line 208
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 208, $this->source); })()), "email", [], "any", false, false, false, 208), 'row');
         echo "
             ";
-        // line 273
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 273, $this->source); })()), "numero_telephone", [], "any", false, false, false, 273), 'row');
+        // line 209
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 209, $this->source); })()), "numero_telephone", [], "any", false, false, false, 209), 'row');
         echo "
         </div>
     <br>    
             ";
-        // line 276
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 276, $this->source); })()), "preference_creneau", [], "any", false, false, false, 276), 'row');
+        // line 212
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 212, $this->source); })()), "preference_creneau", [], "any", false, false, false, 212), 'row');
         echo "
     <br>
     <div class=\"line-2-3\" style=\" display:none\">
             <p style=\"font-size : 14px;\">Préference de contact :</p>
             ";
-        // line 280
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 280, $this->source); })()), "preference_contact", [], "any", false, false, false, 280), 'row');
+        // line 216
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 216, $this->source); })()), "preference_contact", [], "any", false, false, false, 216), 'row');
         echo "
         </div>
 
@@ -523,14 +465,14 @@ class __TwigTemplate_5fe55d02fc554caf02780ffadb199dfe extends \Twig\Template
             <button type=\"button\" id='go-submit-form' class=\"reserver-creneau-btn1\">Valider</button>
 
             ";
-        // line 310
+        // line 246
         echo "
              ";
-        // line 312
+        // line 248
         echo "                
             ";
-        // line 313
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 313, $this->source); })()), 'form_end');
+        // line 249
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 249, $this->source); })()), 'form_end');
         echo "
     </div>
  </div>
@@ -543,9 +485,9 @@ class __TwigTemplate_5fe55d02fc554caf02780ffadb199dfe extends \Twig\Template
 </div>
 </section>
     ";
-        // line 324
-        $this->loadTemplate("tools/footer.html.twig", "index.html.twig", 324)->display($context);
-        // line 325
+        // line 260
+        $this->loadTemplate("tools/footer.html.twig", "index.html.twig", 260)->display($context);
+        // line 261
         echo "</section>
 
 
@@ -635,7 +577,7 @@ var video = document.getElementById(\"video-element\");
 video.disablePictureInPicture = true;
 
 var arrayVideoLinks = [\"";
-        // line 413
+        // line 349
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("videos/look.mp4"), "html", null, true);
         echo "\", \"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("videos/coffee.mp4"), "html", null, true);
@@ -814,7 +756,7 @@ function removeContent(){
     var maxItemCarouselTuto = descriptionTutoArray.length;
 
     var arrayImageTutos = [\"";
-        // line 585
+        // line 521
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/tuto11.jpg"), "html", null, true);
         echo "\", \"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/tuto2.jpg"), "html", null, true);
@@ -912,11 +854,11 @@ function removeContent(){
 </script>
 
     ";
-        // line 672
+        // line 608
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 672, $this->source); })()), "session", [], "any", false, false, false, 672), "flashbag", [], "any", false, false, false, 672), "get", [0 => "smoothScroll"], "method", false, false, false, 672));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 608, $this->source); })()), "session", [], "any", false, false, false, 608), "flashbag", [], "any", false, false, false, 608), "get", [0 => "smoothScroll"], "method", false, false, false, 608));
         foreach ($context['_seq'] as $context["_key"] => $context["flash_message"]) {
-            // line 673
+            // line 609
             echo "        <script>
             document.addEventListener('DOMContentLoaded', function() {
                 smoothScroll('Partie-Exemples-4')
@@ -927,15 +869,15 @@ function removeContent(){
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['flash_message'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 679
+        // line 615
         echo "
 
         ";
-        // line 681
+        // line 617
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 681, $this->source); })()), "session", [], "any", false, false, false, 681), "flashbag", [], "any", false, false, false, 681), "get", [0 => "smoothScroll2"], "method", false, false, false, 681));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 617, $this->source); })()), "session", [], "any", false, false, false, 617), "flashbag", [], "any", false, false, false, 617), "get", [0 => "smoothScroll2"], "method", false, false, false, 617));
         foreach ($context['_seq'] as $context["_key"] => $context["flash_message"]) {
-            // line 682
+            // line 618
             echo "        <script>
             document.addEventListener('DOMContentLoaded', function() {
                 smoothScroll('div-aide')
@@ -946,16 +888,16 @@ function removeContent(){
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['flash_message'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 688
+        // line 624
         echo "
 
     
 ";
-        // line 691
+        // line 627
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 691, $this->source); })()), "session", [], "any", false, false, false, 691), "flashbag", [], "any", false, false, false, 691), "get", [0 => "connexionGo"], "method", false, false, false, 691));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 627, $this->source); })()), "session", [], "any", false, false, false, 627), "flashbag", [], "any", false, false, false, 627), "get", [0 => "connexionGo"], "method", false, false, false, 627));
         foreach ($context['_seq'] as $context["_key"] => $context["flash_message"]) {
-            // line 692
+            // line 628
             echo "
     <script>
         setTimeout(function() {
@@ -968,15 +910,15 @@ function removeContent(){
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['flash_message'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 700
+        // line 636
         echo "
 
 ";
-        // line 702
+        // line 638
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 702, $this->source); })()), "session", [], "any", false, false, false, 702), "flashbag", [], "any", false, false, false, 702), "get", [0 => "mdpReinit"], "method", false, false, false, 702));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 638, $this->source); })()), "session", [], "any", false, false, false, 638), "flashbag", [], "any", false, false, false, 638), "get", [0 => "mdpReinit"], "method", false, false, false, 638));
         foreach ($context['_seq'] as $context["_key"] => $context["flash_message"]) {
-            // line 703
+            // line 639
             echo "
     <script>
         tata.success(\"\", \"Mot de passe réinitialisé avec succès !\", {
@@ -991,7 +933,7 @@ function removeContent(){
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['flash_message'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 713
+        // line 649
         echo "
 
 <script>
@@ -1021,7 +963,7 @@ function removeContent(){
 
     public function getDebugInfo()
     {
-        return array (  995 => 713,  980 => 703,  976 => 702,  972 => 700,  959 => 692,  955 => 691,  950 => 688,  939 => 682,  935 => 681,  931 => 679,  920 => 673,  916 => 672,  818 => 585,  639 => 413,  549 => 325,  547 => 324,  533 => 313,  530 => 312,  527 => 310,  495 => 280,  488 => 276,  482 => 273,  478 => 272,  471 => 268,  465 => 265,  448 => 251,  440 => 246,  430 => 239,  422 => 234,  357 => 172,  335 => 153,  322 => 143,  318 => 142,  314 => 141,  310 => 140,  296 => 129,  286 => 122,  276 => 115,  266 => 108,  256 => 101,  246 => 94,  229 => 80,  207 => 61,  194 => 51,  185 => 45,  181 => 43,  179 => 42,  173 => 38,  160 => 31,  157 => 30,  153 => 29,  149 => 27,  136 => 20,  133 => 19,  129 => 18,  123 => 15,  120 => 14,  110 => 13,  96 => 8,  92 => 7,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
+        return array (  937 => 649,  922 => 639,  918 => 638,  914 => 636,  901 => 628,  897 => 627,  892 => 624,  881 => 618,  877 => 617,  873 => 615,  862 => 609,  858 => 608,  760 => 521,  581 => 349,  491 => 261,  489 => 260,  475 => 249,  472 => 248,  469 => 246,  437 => 216,  430 => 212,  424 => 209,  420 => 208,  413 => 204,  407 => 201,  390 => 187,  382 => 182,  372 => 175,  364 => 170,  346 => 155,  342 => 154,  338 => 153,  334 => 152,  322 => 143,  318 => 142,  314 => 141,  310 => 140,  296 => 129,  286 => 122,  276 => 115,  266 => 108,  256 => 101,  246 => 94,  229 => 80,  207 => 61,  194 => 51,  185 => 45,  181 => 43,  179 => 42,  173 => 38,  160 => 31,  157 => 30,  153 => 29,  149 => 27,  136 => 20,  133 => 19,  129 => 18,  123 => 15,  120 => 14,  110 => 13,  96 => 8,  92 => 7,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -1172,81 +1114,17 @@ function removeContent(){
         </div>
     </div>
 
-
-    <div class='Partie-Exemples-5' id=\"div-aide\" style=\"display:none\">
-       <h3>Comment se déroule une création de visite virtuelle avec look<span style=\"font-weight : 500; color: #219988;\">around®</span> ?</h3>
-
-        <div class=\"carousel-tuto\" id=\"carousel-tuto\" style=\"display: grid; grid-template-rows : 5fr 1fr;\">
-
-            <img id=\"carousel-img\" class=\"carousel-img\" src='{{asset(\"img/tuto11.jpg\")}}'/>
-            
-            <div>
-                <p id=\"container-descriptionTuto\" class=\"container-descriptionTuto\" style=\"padding-bottom: 28px; font-weight: 400;\"></p>
-                <div class=\"indicators-tuto\"></div>
-            </div>
-            
-            <div class=\"nav-left\" id=\"nav-left2\" onclick=\"carouselTutoPrevious()\">&lsaquo;</div>
-            <div class=\"nav-right\" id=\"nav-right2\" onclick=\"carouselTutoSuivant()\">&rsaquo;</div>
-
-        </div>
-    </div>
-
-
-<!--<button onclick=\"myModalDefinition.style.display = 'block'\">Définition IFrame</button>
-
-<div id=\"myModalDefinition\" class=\"modal\">
-        <div class=\"modal-content\" style=\"width: 70%; font-size: 15px; border-radius: 8px;\">   
-            <div style=\"display : grid; grid-template-columns: 1fr 3.5fr; align-items: center;\">
-                <img src=\"{{ asset('img/langage-de-programmation.png') }}\" style=\"width: 150px;\"/>
-                <p style=\"padding: 8px;\">Un IFrame est un élément HTML utilisé pour intégrer un contenu d'une autre source à l'intérieur d'une page web. 
-                    Cela permet aux développeurs de combiner différentes ressources et fonctionnalités provenant de diverses sources en les incorporant harmonieusement dans une seule page.
-                    L'IFrame est généralement défini avec une source (URL) spécifique qui indique le contenu à charger à l'intérieur de l'IFrame. </p>
-            </div>    
-        </div>
-</div>
-
-<script>
-    var myModalDefinition = document.getElementById(\"myModalDefinition\");
-</script>
--->
-
 <div class='Partie-Exemples-5' style=\"background-image: url('img/circle-scatter-haikei(3).png')\">
 
-    <h3>L'efficacité des visites virtuelles en quelques chiffres</h3>
-
-        <div class=\"line-3\" style=\"margin-top: 20px\">
-            <div style='display: grid; grid-template-rows 1.5fr 1fr; padding: 5px 5px; background-color: #ffffff91;text-align: center;'>
-                <span class=\"pourcentage\">67%</span>
-                <p class=\"reference-p\"  >Augmentation des réservations en ligne pour des chambres d'hôtel</p>
-                <p class=\"reference-source\">Source: Best Western Hotels & Resorts</p>
-            </div>
-
-            <div style='display: grid;  grid-template-rows 1.5fr 1fr; padding: 5px 5px; background-color: #ffffff91;text-align: center;'>
-                <span class=\"pourcentage\">62%</span>
-                <p class=\"reference-p\"  >Consommateurs utilisant les visites virtuelles pour choisir un restaurant</p>
-                <p class=\"reference-source\">Source: TechValidate</p>
-            </div>
-
-            <div style='display: grid;  grid-template-rows 1.5fr 1fr; padding: 5px 5px; background-color: #ffffff91;text-align: center;'>
-                <span class=\"pourcentage\">94%</span>
-                <p class=\"reference-p\"  >Étudiants préférant visiter un campus virtuellement avant de prendre une décision</p>
-                <p class=\"reference-source\">Source: Cappex</p>
-            </div>
-        </div>
+    <h3>Comment se déroule une prise de vue <span>look<span style=\"font-weight : 500; color: #219988;\">around®</span></span> ?</h3>
+    <br>
+    <div class=\"line-6\" style=\"grid-template-columns : 1fr 1fr 1fr 1fr\">
+        <div class=\"argument-card\"> <img class=\"argument-img\" src='{{asset(\"img/telephone(1).png\")}}' /><br> <h3>1- Premier contact</h3><p>Durant un appel, nous réponderons à toutes vos questions, puis nous pourront convenir d'un RDV.</p></div>
+        <div class=\"argument-card\"> <img class=\"argument-img\" src='{{asset(\"img/camera(1).png\")}}'/><br> <h3>2- Prise de vue</h3><p >Le jour J, nous effectuons les prises de vues dans vos espaces. Cela peut durer entre 20 et 45 minutes.</p></div>
+        <div class=\"argument-card\"> <img class=\"argument-img\" src='{{asset(\"img/computer.png\")}}'/><br> <h3>3- Création de la visite</h3><p>Après le traitement et l'édition des photos, nous nous attelons à la création de la visite.</p></div>
+        <div class=\"argument-card\"> <img class=\"argument-img\" src='{{asset(\"img/paquet.png\")}}'/><br> <h3>4- Livraison de la visite</h3><p>Nous vous envoyons les packages de votre visite, ainsi que l'url sur laquelle nous l'hébergeons.</p></div>
     </div>
-
-<!--
-    <div class='Partie-Exemples-5'>
-       <h3>Nous proposons également de la photographie grand angle</h3>
-
-        <img src=\"https://www.camif-habitat.fr/wp-content/uploads/2022/08/Renovation-dun-appartement-a-Avignon-85-10.jpg\" style=\"width: 700px; height : 300px; border-radius: 25px; padding : 20px; margin: 0 auto\"/>
-
-       <p class=\"align-center-vertically\">La photographie grand angle est une technique utilisée en photographie pour capturer un champ de vision plus large que ce que l'œil humain peut naturellement voir. Elle implique l'utilisation d'un objectif grand angle qui a une distance focale plus courte que les objectifs standards, ce qui permet d'inclure davantage d'espace dans le cadre de la photo.</p>
-       <p class=\"align-center-vertically\">Il peut donc être interessant de proposer des photos grand angle sur votre site, car ça peut avoir beaucoup d'utilité</p>
-
-      
-    </div>
--->
+</div>
 
 
     <div class=\"line-2\">

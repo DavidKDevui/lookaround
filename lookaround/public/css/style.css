@@ -623,7 +623,7 @@ body {
 
 .video-container-content-titre {
   font-size: 20px;
-  font-weight: 400;
+  font-weight: 500;
   text-align: end;
   line-height: 40px;
   
@@ -987,6 +987,11 @@ body {
   grid-template-columns: 1fr 1fr 1fr;
 }
 
+.line-6{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
 
 .line-1-6{
   display: grid;
@@ -1295,7 +1300,7 @@ color: yellow;
 }
 
 .argument-card{
-  padding: 20px 15px;
+  padding: 20px 2px;
   text-align: center;
   background-color: #ffffff75;
 }
@@ -1304,7 +1309,7 @@ color: yellow;
   font-size: 13px;
   text-align: center;
   font-weight: 300;
-  padding: 0px 25px;
+  padding: 0px 15px;
 }
 .argument-card h3{
   font-size: 14px;
@@ -2122,6 +2127,13 @@ label {
   margin-top: 40px;
   margin-bottom: 40px;
 }
+
+.line-6 {
+  display: block;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
 
 #video-element {
   display: none;
