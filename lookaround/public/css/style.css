@@ -1632,7 +1632,7 @@ input:checked + label{
   border-radius: 0px;
 }
 
-  .image__overlay {
+.image__overlay {
       position: absolute;
       top: 0;
       left: 0;
@@ -1672,12 +1672,12 @@ input:checked + label{
   }
 
   .image__title {
-      font-size: 1.2em;
+      font-size: 20px;
       font-weight: bold;
   }
 
   .image__description {
-      font-size: 1.25em;
+      font-size: 13px;
       margin-top: 0.25em;
   }
 
