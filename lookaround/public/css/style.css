@@ -1822,15 +1822,7 @@ input:checked + label{
 
 
 
-.input_form_inscription2 {
-  height: 185px;
-}
 
-
-.titre2 {
-  font-size: 33px;
-  font-weight: 400;
-}
 
 .reference-source {
   font-size: 10px !important;
@@ -1930,7 +1922,7 @@ input:checked + label{
 
 
 
-
+/*VERSION MOBILE*/
 @media (max-width: 1000px) {
   .logo-LA {
     font-size: 65px;
@@ -1939,6 +1931,13 @@ input:checked + label{
   .Partie-Exemples-5 ul li {
   font-size: 18px !important;
 }
+
+
+.titre2 {
+  font-size: 33px;
+  font-weight: 400;
+}
+
 
   
 .Partie-Exemples-5 h3 {
@@ -1950,6 +1949,10 @@ input:checked + label{
   margin-bottom: 20px;
 }
 
+
+.input_form_inscription2 {
+  height: 185px;
+}
   
   .container-infos-pdv{
       margin-top: 60px !important;

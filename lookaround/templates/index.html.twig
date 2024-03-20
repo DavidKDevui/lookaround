@@ -15,28 +15,6 @@
 <script src="{{ asset('js/tata.js') }}"></script>
 
 
-{% for flash_message in app.session.flashbag.get('success') %}
-    <script>
-        tata.success("", "{{ flash_message }}", {
-            duration: 3000,
-            closeBtn: false,
-            animate: "slide",    
-        });
-    </script>
-{% endfor %}
-
-
-{% for flash_message in app.session.flashbag.get('failed') %}
-    <script>
-        tata.error("", "{{ flash_message }}", {
-            duration: 3000,
-            closeBtn: false,
-            animate: "slide",       
-        });
-    </script>
-{% endfor %}
-
-
 
 <section class='Body-Section-White'>
     {% include 'tools/navbar.html.twig' %}
@@ -136,7 +114,7 @@
 
      <div class='Partie-Exemples-5'>
         <h3>Ils nous ont fait confiance</h3>
-        <div style="grid-template-columns: 1fr 1fr 1fr 1fr;display: grid;width: 75%; padding: 20px;margin-top: 15px;margin: 0 auto; ">
+        <div class="line-4" style="width: 75%; padding: 20px;margin: 0 auto;">
             <img src="{{asset('img/clients/isifa.png')}}" class="partenaires-img" onclick="ouvrirNouvelOnglet('https://www.isifaplusvalues.com/')">
             <img src="{{asset('img/clients/ihecf.jpg')}}" class="partenaires-img" onclick="ouvrirNouvelOnglet('https://www.ihecf.fr/')">
             <img src="{{asset('img/clients/mbway.png')}}" class="partenaires-img" onclick="ouvrirNouvelOnglet('https://www.mbway.com/')">
@@ -149,7 +127,7 @@
     <h3>Comment se déroule une prise de vue <span>look<span style="font-weight : 500; color: #219988;">around®</span></span> ?</h3>
     <br>
     <div class="line-4">
-        <div class="argument-card"> <img class="argument-img" src='{{asset("img/telephone(1).png")}}' /><br> <h3>1- Premier contact</h3><p>Durant un appel, nous réponderons à toutes vos questions, puis nous pourront convenir d'un RDV.</p></div>
+        <div class="argument-card"> <img class="argument-img" src='{{asset("img/telephone(1).png")}}' /><br> <h3>1- Premier contact</h3><p>Durant un appel, nous répondons à toutes vos questions, puis, nous convenons d'un RDV.</p></div>
         <div class="argument-card"> <img class="argument-img" src='{{asset("img/camera(1).png")}}'/><br> <h3>2- Prise de vue</h3><p >Le jour J, nous effectuons les prises de vues dans vos espaces. Cela peut durer entre 20 et 45 minutes.</p></div>
         <div class="argument-card"> <img class="argument-img" src='{{asset("img/computer.png")}}'/><br> <h3>3- Création de la visite</h3><p>Après le traitement et l'édition des photos, nous nous attelons à la création de la visite.</p></div>
         <div class="argument-card"> <img class="argument-img" src='{{asset("img/paquet.png")}}'/><br> <h3>4- Livraison de la visite</h3><p>Nous vous envoyons les packages de votre visite, ainsi que l'url sur laquelle nous l'hébergeons.</p></div>
@@ -175,9 +153,9 @@
                                 <img src="{{ asset('img/gmail.png') }}" class="middleinDiv"/>
                                 <p>contact@lookaround.fr</p>
                         </div>
-                    </div>
+                        </div>
 
-                    <div class="line-contact-sheet"     style='display:none'>
+                        <div class="line-contact-sheet"   style='display:none'>
                           <div class="contact-div">
                                 <img src="{{ asset('img/office.png') }}" class="middleinDiv"/>
                                 <p>N°892 074 774 00019</p>
@@ -218,33 +196,14 @@
 
 
         <div class="wrapper">
-<!--
-            <div class="captcha-area">
-                <div class="captcha-img">
-                    <span class="captcha"></span>
-                </div>
-                <button class="reload-btn"><p class="fas fa-redo-alt">⟳</p></button>
-            </div>
-
-            
--->
-
             <div class="g-recaptcha" data-callback="setCaptchaValide"  data-sitekey="6LffU4YpAAAAAIQvvsIfNNiejIpl3yI_tHLzIEuI"></div>
         </div>
-
-
-
 
             <p class="text-error" id="text-error"></p>
 
              <br> 
    
-        <!--<button type="submit" class="reserver-creneau-btn">Valider</button>-->
             <button type="button" id='go-submit-form' class="reserver-creneau-btn1">Valider</button>
-
-            {#registrationForm.adresse_facturation#}
-
-             {#{ form_end(registrationForm._token) }#}
                 
             {{ form_end(registrationForm) }}
     </div>
@@ -328,91 +287,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 })
 
-/*
-
-videojs('panoramaExemple4', {
-    plugins: {
-        pannellum: {}
-    }
-});
-*/
-/*
-
-var carouselNumber = -1;
-var carouselMax = 2;
-
-var LeTitre = document.getElementById("LeTitre");
-
-var video = document.getElementById("video-element");
-video.disablePictureInPicture = true;
-
-var arrayVideoLinks = ["{{ asset('videos/look.mp4') }}", "{{ asset('videos/coffee.mp4') }}", "{{ asset('videos/sea.mp4') }}"]
-
-const indicatorsContainer = document.querySelector('.indicators');
-
-
-for (let i = 0; i < carouselMax + 1; i++) {
-    const indicator = document.createElement('span');
-    indicator.classList.add('indicator');
-    if (i === 0) {
-        indicator.classList.add('active');
-    }
-    indicatorsContainer.appendChild(indicator);
-}
-
-changeVideoSource("right")
-
-var LeTitre = document.getElementById("LeTitre");
-
-function changeVideoSource(sens) {
-
-    if (sens == "right"){
-        if (carouselNumber != carouselMax)
-            carouselNumber ++;
-    }
-
-    if (sens == "left"){
-        if (carouselNumber != 0)
-            carouselNumber --;
-    }
-
-    const indicators = document.querySelectorAll('.indicator');
-    indicators.forEach((indicator, index) => {
-        indicator.classList.remove('active');
-        if (index  === carouselNumber) {
-            indicator.classList.add('active');
-        }
-    });
-   // LeTitre.innerHTML = nomsCommerciaux[carouselNumber];
-
-    var source = video.getElementsByTagName("source")[0];
-    source.setAttribute("src", arrayVideoLinks[carouselNumber]);
-    video.load();
-
-
-    if (carouselNumber == 0) {
-        document.getElementById("nav-left").style.display = "none";
-    }
-
-    else if (carouselNumber == carouselMax) {
-        document.getElementById("nav-right").style.display = "none";
-    }
-
-    else  {
-        document.getElementById("nav-right").style.display = "block";
-        document.getElementById("nav-left").style.display = "block";
-    }
-}
-*/
-
-
-
     function formatPhone() {
 
-         const input = document.getElementById('registration_form_numero_telephone');
-
-       
-        let value = input.value.replace(/\D/g, ''); // ne garder que les chiffres
+        var input = document.getElementById('registration_form_numero_telephone');
+        var value = input.value.replace(/\D/g, ''); // ne garder que les chiffres
 
         var v = value.replace(/\s+/g, "").replace(/[^0-9]/gi, "");
         var matches = v.match(/\d{2,16}/g);
@@ -431,7 +309,6 @@ function changeVideoSource(sens) {
 
 
     function displayToast (erreur, conseil) {
-
         tata.text(erreur, conseil, {
             duration: 3000,
             closeBtn: false,
@@ -442,133 +319,12 @@ function changeVideoSource(sens) {
 </script>
 
 
-<script>/*
-const captcha = document.querySelector(".captcha")
-reloadBtn = document.querySelector(".reload-btn")
-inputField = document.querySelector(".input-area input")
-
-inputField.addEventListener("keypress", function(event) {
-  if (event.key === "Enter") {
-    event.preventDefault(); 
-  }
-});
-
-
-//storing all captcha characters in array
-let allCharacters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O',
-                     'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd',
-                     'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
-                     't', 'u', 'v', 'w', 'x', 'y', 'z', 0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-function getCaptcha(){
-  for (let i = 0; i < 6; i++) { //getting 6 random characters from the array
-    let randomCharacter = allCharacters[Math.floor(Math.random() * allCharacters.length)];
-    captcha.innerText += ` ${randomCharacter}`; //passing 6 random characters inside captcha innerText
-  }
-}
-getCaptcha(); //calling getCaptcha when the page open
-//calling getCaptcha & removeContent on the reload btn click
-reloadBtn.addEventListener("click", (event)=>{
-  event.preventDefault(); 
-  removeContent();
-  getCaptcha();
-});
-
-function isCaptchaCorrect(){
-  let inputVal = inputField.value.split('').join(' ');
-  
-  return inputVal == captcha.innerText;
-  /*
-  if(inputVal == captcha.innerText){ //if captcha matched
-    statusTxt.style.color = "#4db2ec";
-    statusTxt.innerText = "Nice! You don't appear to be a robot.";
-    setTimeout(()=>{
-      removeContent();
-      getCaptcha();
-    }, 2000);
-  }else{
-    statusTxt.style.color = "#ff0000";
-    statusTxt.innerText = "Captcha not matched. Please try again!";
-  }
- 
-};
-
-function removeContent(){
- inputField.value = "";
- captcha.innerText = "";
-}*/
-</script>
-
 
 <script>
 
  function ouvrirNouvelOnglet(url) {
     window.open(url, '_blank');
   }
-
-    var descriptionTutoArray = [
-        "1. Remplissez notre formulaire de prise de rendez-vous, en nous décrivant les spécificités de votre besoin",
-        "2. Par la suite, nous vous contacterons pour étudier votre demande et pour convenir ensemble d'un créneau de rendez-vous",
-        "3. Le jour J, nous réaliserons les prises de vues sur votre site. Nous vous recommandons de limiter le nombre de personnes présentes sur site ce jour là",
-        "4. Vous pourrez facilement suivre l'avancée et toutes les étapes du processus de votre commande via votre espace client",
-        "5. Nous commencerons le processus en éditant et en effectuant le traitement de vos photos, puis nous les utiliserons pour créer votre visite",
-        "6. Dans les 48 heures après le rendez-vous, nous vous livrerons la visite sous la forme d'un code d'intégration IFrame, ainsi que les photos 360°",
-        "7. Intégrez la visite et les photos à votre site web, et faites profiter vos visiteurs d'une expérience interactive (exmpl insta carousel, bannière site , use cases)"
-    ];
-
-    var compteurCarouselTuto = 0;
-    var maxItemCarouselTuto = descriptionTutoArray.length;
-
-    var arrayImageTutos = ["{{ asset('img/tuto11.jpg') }}", "{{ asset('img/tuto2.jpg') }}", "{{ asset('img/tuto3.jpg') }}", "{{ asset('img/tuto44.jpg') }}", "{{ asset('img/tuto5.jpg') }}"]
-
-
-    function carouselTutoSuivant(){
-        compteurCarouselTuto++;
-        setIndicatorsTuto();
-
-        if (compteurCarouselTuto > 0)
-            document.getElementById("nav-left2").style.display = "block"; 
-
-        if (compteurCarouselTuto == maxItemCarouselTuto - 1)
-            document.getElementById("nav-right2").style.display = "none"; 
-    }
-
-    function carouselTutoPrevious(){
-        compteurCarouselTuto--;
-        setIndicatorsTuto();
-
-        if (compteurCarouselTuto == 0)
-            document.getElementById("nav-left2").style.display = "none"; 
-        if (compteurCarouselTuto != maxItemCarouselTuto - 1)
-            document.getElementById("nav-right2").style.display = "block"; 
-    }
-
-    
-    function setIndicatorsTuto(){
-
-        
-
-        const indicatorsContainer2 = document.querySelector('.indicators-tuto');
-
-        while (indicatorsContainer2.firstChild) {
-            indicatorsContainer2.removeChild(indicatorsContainer2.firstChild);
-        }
-
-        for (let i = 0; i < maxItemCarouselTuto; i++) {
-            const indicator = document.createElement('span');
-            indicator.classList.add('indicator2');
-            if (i === compteurCarouselTuto) {
-                indicator.classList.add('active');
-            }
-            indicatorsContainer2.appendChild(indicator);
-        }
-
-        document.getElementById("container-descriptionTuto").innerHTML = descriptionTutoArray[compteurCarouselTuto];
-        document.getElementById("carousel-img").src = arrayImageTutos[compteurCarouselTuto];
-
-    }
-
-    setIndicatorsTuto();
-
 
     function smoothScroll(target) {
         var element = document.getElementById(target);
@@ -614,7 +370,7 @@ function removeContent(){
     {% endfor %}
 
 
-        {% for flash_message in app.session.flashbag.get('smoothScroll2') %}
+    {% for flash_message in app.session.flashbag.get('smoothScroll2') %}
         <script>
             document.addEventListener('DOMContentLoaded', function() {
                 smoothScroll('div-aide')
@@ -622,35 +378,29 @@ function removeContent(){
         </script>
     {% endfor %}
 
+    {% for flash_message in app.session.flashbag.get('success') %}
+        <script>
+            tata.success("", "{{ flash_message }}", {
+                duration: 3000,
+                closeBtn: false,
+                animate: "slide",    
+            });
+        </script>
+    {% endfor %}
 
-    
-{% for flash_message in app.session.flashbag.get('connexionGo') %}
-
-    <script>
-        setTimeout(function() {
-          document.getElementById("myModal").style.display = "block";
-        }, 200);
-    </script>
-
-{% endfor %}
-
-
-{% for flash_message in app.session.flashbag.get('mdpReinit') %}
-
-    <script>
-        tata.success("", "Mot de passe réinitialisé avec succès !", {
-            duration: 3000,
-            closeBtn: false,
-            animate: "slide",    
-        });
-    </script>
-
-{% endfor %}
+    {% for flash_message in app.session.flashbag.get('failed') %}
+        <script>
+            tata.error("", "{{ flash_message }}", {
+                duration: 3000,
+                closeBtn: false,
+                animate: "slide",       
+            });
+        </script>
+    {% endfor %}
 
 
 <script>
     var screenWidth = window.innerWidth;
-   // alert("Screen width: " + screenWidth + " pixels");
 </script>
 
 
