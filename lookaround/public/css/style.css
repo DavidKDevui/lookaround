@@ -300,7 +300,7 @@ body {
 .part-element p{
   padding: 0px 40px;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 13px;
   text-align: center;
   margin-bottom: 10px;
 }
@@ -336,12 +336,12 @@ body {
 .part-rules p, .part-rules ul li {
   padding: 0px 5px;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 13px;
   text-align: left;
 }
 
 .part-rules ul{
-  font-size: 14px;
+  font-size: 13px;
   text-align: left;
   padding: 0px 35px;
   font-weight: 400;
@@ -431,7 +431,7 @@ body {
   border-width: 0px 0px 1px 0px;
   outline-width: 0;
   width: 95%;
-  font-size: 14px;
+  font-size: 13px;
   padding: 0px 5px;
   margin: 20px 0px;
 }
@@ -442,7 +442,7 @@ body {
   outline-width: 0;
   width: 95%;
   height: 60px;
-  font-size: 14px;
+  font-size: 13px;
   padding: 0px 5px;
   resize: none;
 }
@@ -766,7 +766,7 @@ body {
 
 .reserver-creneau-btn3 {
   z-index: 1;
-  font-size: 14px;
+  font-size: 13px;
   background: linear-gradient(90deg, #219988 0%, #218e99 100%);
   border: 0px solid;
   color: rgb(255, 255, 255);
@@ -998,7 +998,7 @@ body {
   border : 0.5px solid;
   padding: 12px;
   border-radius : 0px;
-  font-size : 14px;
+  font-size : 13px;
   margin-bottom: 5px;
   border-color: #8282824a;
 }
@@ -1076,7 +1076,7 @@ body {
   outline-width: 0;
   width: 100%;
   border-color: rgb(0, 0, 0);
-  font-size: 14px;
+  font-size: 13px;
   padding: 8px 5px;
   height: 100px;
   font-weight: 300;
@@ -1090,7 +1090,7 @@ body {
 }
 
 .argument-card p{
-  font-size: 14px;
+  font-size: 13px;
   text-align: left;
   font-weight: 400;
   padding: 0px 0px;
@@ -1428,7 +1428,7 @@ input:checked + label{
 
 
 .btn-skin1, .btn-skin2{
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .icon-trois-protein{
