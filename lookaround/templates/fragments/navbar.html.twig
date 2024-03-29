@@ -16,13 +16,10 @@
 
  <div class="navbar3">
     <div class="navbar3-container">
-    
-    
         
     </div>
 </div>
-
-    <div style="width: 100%; background-color: #f6f6f6;">
+    <div style="width: 100%; {{lightBackgroundNav ? "" : 'background-color: #f6f6f6;'}}">
     <div class="topnav" id="myTopnav">
         <form method='post' id="formGoToIndex" action="{{ path('index') }}">
             <h1 onclick="goToIndex.submit()" class="logo-LA">look<span style="font-weight : 500; color: #219988;">around®</span></h1>
@@ -30,7 +27,7 @@
         <!--    <img class="biglogo" src='{{asset("img/biglogo.png")}}' /> -->
         </form> 
         
-        <a href="{{ path('quiSommesNous') }}">Qui sommes-nous ?</a>
+        <a href="{{ path('notreHistoire') }}">Notre histoire</a>
         <a href="{{ path('nosRealisations') }}">Nos réalisations</a>
         <a href="{{ path('nosTarifs') }}">Nos tarifs</a>
         <a href="{{ path('trouverUneVisite') }}"> Trouver une visite</a>

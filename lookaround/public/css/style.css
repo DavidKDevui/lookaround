@@ -204,7 +204,7 @@ body {
   text-decoration: none;
   line-height: 40px;
   padding: 9px 0px;
-  font-size: 15px;
+  font-size: 14.5px;
 }
 
 .topnav a.active {
@@ -261,6 +261,7 @@ body {
 .section-content {
   margin: 0 auto;
   /*width: 1200px;*/
+  width: 100%;
   overflow: hidden;
 }
 
@@ -326,7 +327,7 @@ body {
 
 .part-rules h3{
   font-weight: 100;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
   text-align: left;
   margin-bottom: 3px;
@@ -552,7 +553,7 @@ body {
 
 .video-container-content-titre {
   font-size: 22px;
-  font-weight: 500;
+  font-weight: 600;
   text-align: end;
   height: min-content;
   /*line-height: 40px;*/
@@ -625,7 +626,7 @@ body {
 }
 
 .contact-div p {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 400;
   margin-top: 10px;
   padding: 0;
@@ -1096,7 +1097,7 @@ body {
   padding: 0px 0px;
 }
 .argument-card h3{
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 600;
   text-align: left;
 }
