@@ -486,7 +486,7 @@ abstract class AbstractObjectNormalizer extends AbstractNormalizer
                     $class = $collectionValueType->getClassName().'[]';
 
                     if (\count($collectionKeyType = $type->getCollectionKeyTypes()) > 0) {
-                        [$context['key_type']] = $collectionKeyType;
+                        $context['key_type'] = \count($collectionKeyType) > 1 ? $collectionKeyType : $collectionKeyType[0];
                     }
 
                     $context['value_type'] = $collectionValueType;
@@ -780,6 +780,10 @@ abstract class AbstractObjectNormalizer extends AbstractNormalizer
      */
     private function getMappedClass(array $data, string $class, array $context): string
     {
+        if (null !== $object = $this->extractObjectToPopulate($class, $context, self::OBJECT_TO_POPULATE)) {
+            return $object::class;
+        }
+
         if (!$mapping = $this->classDiscriminatorResolver?->getMappingForClass($class)) {
             return $class;
         }

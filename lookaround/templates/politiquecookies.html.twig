@@ -1,92 +1,50 @@
-{% extends 'base.html.twig' %}
+{% extends 'fragments/base.html.twig' %}
 
 {% block title %} Politique en matière de cookies - Réalisation de visites virtuelles à 360° {% endblock %}
 
-{% block stylesheets %}
-
-<link rel="stylesheet" href="{{ asset('css/style.css') }}">
-<link rel="icon" type="image/png" href="{{ asset('img/inoca.png') }}">
-
-{% endblock %}
-
 {% block body %}
 
-<script src="{{ asset('js/tata.js') }}"></script>
+<section class='body-background'>
+    {% include 'fragments/navbar.html.twig' %}
 
+    <section class='section-content'>
+        <div class='part-rules'>
+            <h2>Politique en matière de cookies</h2>
 
-    {% for flash_message in app.session.flashbag.get('success') %}
-        <script>
-            tata.success("", "{{ flash_message }}", {
-                duration: 3000,
-                closeBtn: false,
-                animate: "slide",    
-            });
-        </script>
-    {% endfor %}
-
-
-    {% for flash_message in app.session.flashbag.get('failed') %}
-        <script>
-            tata.error("", "{{ flash_message }}", {
-                duration: 3000,
-                closeBtn: false,
-                animate: "slide",       
-            });
-        </script>
-    {% endfor %}
-
-
-<link rel="stylesheet" href="https://cdn.pannellum.org/2.5/pannellum.css"/>
-<script type="text/javascript" src="https://cdn.pannellum.org/2.5/pannellum.js"></script>
-
-<link href="https://vjs.zencdn.net/7.1.0/video-js.css" rel="stylesheet" type="text/css">
-<script src="https://vjs.zencdn.net/7.1.0/video.js"></script>
- 
-
-<section class='Body-Section-White'>
-    {% include 'tools/navbar.html.twig' %}
-
-    <section class='Cadre'>
-
-        <div class='Partie-Exemples-5' style="text-align: left">
-
-            <h1 class="h1-titre-page">Politique en matière de cookies</h1>
-
-            <h3 style="margin-top: 60px; font-size: 15px;text-align: left; padding: 0px 55px;">1. Introduction</h2>
-            <p style="text-align: left">Nous utilisons des cookies et des technologies similaires sur notre site web pour améliorer votre expérience utilisateur et vous fournir des services personnalisés. Cette politique de cookies explique ce que sont les cookies, comment nous les utilisons et comment vous pouvez les gérer.
+            <h3>1. Introduction</h2>
+            <p>Nous utilisons des cookies et des technologies similaires sur notre site web pour améliorer votre expérience utilisateur et vous fournir des services personnalisés. Cette politique de cookies explique ce que sont les cookies, comment nous les utilisons et comment vous pouvez les gérer.
             </p>
 
-            <h3 style="margin-top: 30px; font-size: 15px;text-align: left; padding: 0px 55px;">2. Qu'est-ce qu'un cookie ?</h2>
-            <p style="text-align: left">
+            <h3>2. Qu'est-ce qu'un cookie ?</h2>
+            <p>
                 Un cookie est un petit fichier texte qui est stocké sur votre ordinateur ou votre appareil mobile lorsque vous visitez notre site web. Les cookies nous permettent de vous reconnaître et de vous proposer des fonctionnalités personnalisées, comme la mémorisation de vos préférences de langue ou la conservation de votre panier d'achat.
             </p>
 
-            <h3 style="margin-top: 30px; font-size: 15px;text-align: left; padding: 0px 55px;">3. Comment utilisons-nous les cookies ?</h2>
-            <p style="text-align: left">
+            <h3>3. Comment utilisons-nous les cookies ?</h2>
+            <p>
               Nous utilisons des cookies pour les finalités suivantes :
             </p>
-            <ul style="margin-top: 8px; font-size: 14px;text-align: left; padding: 0px 75px; font-weight: 300">
-             <li  class="li-text">Fonctionnalité : ces cookies sont nécessaires au bon fonctionnement de notre site web et nous permettent de mémoriser vos préférences de langue et vos informations de connexion.</li>
 
-             <li  class="li-text">Analyse : nous utilisons des cookies d'analyse pour collecter des données sur la manière dont les visiteurs utilisent notre site web. Ces données nous aident à améliorer nos services et à mieux comprendre les besoins de nos clients.</li>
-
-            <li  class="li-text"> Publicité : nous utilisons des cookies publicitaires pour afficher des publicités pertinentes et personnalisées en fonction de vos intérêts.</li>
+            <ul>
+                <li>Fonctionnalité : ces cookies sont nécessaires au bon fonctionnement de notre site web et nous permettent de mémoriser vos préférences de langue et vos informations de connexion.</li>
+                <li>Analyse : nous utilisons des cookies d'analyse pour collecter des données sur la manière dont les visiteurs utilisent notre site web. Ces données nous aident à améliorer nos services et à mieux comprendre les besoins de nos clients.</li>
+                <li> Publicité : nous utilisons des cookies publicitaires pour afficher des publicités pertinentes et personnalisées en fonction de vos intérêts.</li>
             </ul>
 
-            <h3 style="margin-top: 30px; font-size: 15px;text-align: left; padding: 0px 55px;">4. Gestion des cookies</h2>
-            <p style="text-align: left">
+            <h3>4. Gestion des cookies</h2>
+            <p>
                Vous pouvez gérer les cookies en modifiant les paramètres de votre navigateur. Vous pouvez choisir d'accepter ou de refuser les cookies, ou de demander une notification chaque fois qu'un cookie est utilisé. Veuillez noter que si vous refusez les cookies, certaines fonctionnalités de notre site web peuvent ne pas fonctionner correctement.
             </p>
 
-            <h3 style="margin-top: 30px; font-size: 15px;text-align: left; padding: 0px 55px;">5. Cookies tiers</h2>
-            <p style="text-align: left">
+            <h3>5. Cookies tiers</h2>
+            <p>
                 Nous pouvons utiliser des cookies tiers sur notre site web pour des finalités d'analyse ou de publicité. Ces cookies sont placés par des tiers et nous n'avons pas le contrôle sur leur utilisation. Nous vous recommandons de consulter la politique de confidentialité et la politique de cookies de ces tiers pour en savoir plus sur leur utilisation des cookies.
             </p>
         </div>
 
     </section>
 
-    {% include 'tools/footer.html.twig' %}
+    {% include 'fragments/footer.html.twig' %}
 </section>
 
 

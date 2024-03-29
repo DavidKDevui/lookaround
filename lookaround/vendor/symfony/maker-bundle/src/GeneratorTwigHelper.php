@@ -66,7 +66,7 @@ final class GeneratorTwigHelper
     {
         if ($this->fileManager->fileExists($this->fileManager->getPathForTemplate('base.html.twig'))) {
             return <<<TWIG
-                {% extends 'base.html.twig' %}
+                {% extends 'fragments/base.html.twig' %}
 
                 {% block title %}$title{% endblock %}
 

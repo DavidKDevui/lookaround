@@ -1,93 +1,41 @@
-{% extends 'base.html.twig' %}
+{% extends 'fragments/base.html.twig' %}
 
 {% block title %} Conditions générales d'utilisation - Réalisation de visites virtuelles à 360° {% endblock %}
 
-
-{% block stylesheets %}
-
-<link rel="stylesheet" href="{{ asset('css/style.css') }}"/>
-<link rel="icon" type="image/png" href="{{ asset('img/inoca.png') }}"/>
-<link rel="stylesheet" href="https://cdn.pannellum.org/2.5/pannellum.css"/>
-<script type="text/javascript" src="https://cdn.pannellum.org/2.5/pannellum.js"></script>
-
-<link href="https://vjs.zencdn.net/7.1.0/video-js.css" rel="stylesheet" type="text/css">
-<script src="https://vjs.zencdn.net/7.1.0/video.js"></script>
-{% endblock %}
-
-
-
 {% block body %}
 
-<script src="{{ asset('js/tata.js') }}"></script>
+<section class='body-background'>
 
+    {% include 'fragments/navbar.html.twig' %}
 
-    {% for flash_message in app.session.flashbag.get('success') %}
-        <script>
-            tata.success("", "{{ flash_message }}", {
-                duration: 3000,
-                closeBtn: false,
-                animate: "slide",    
-            });
-        </script>
-    {% endfor %}
+    <section class='section-content'>
+        <div class='part-rules'>
+            <h2>Conditions générales d'utilisation</h2>
 
+            <h3>1. Droits et obligations des utilisateurs</h3>
+            <p>
+                <strong>2.1</strong> Vous avez le droit d'utiliser le service conformément aux présentes conditions d'utilisation et aux lois en vigueur.
+            </p>
+            <p>
+                <strong>2.2</strong> Vous vous engagez à utiliser le service de manière légale, éthique et appropriée, en respectant les droits des autres utilisateurs et en vous abstenant de toute activité frauduleuse, abusive ou illégale.
+            </p>
 
-    {% for flash_message in app.session.flashbag.get('failed') %}
-        <script>
-            tata.error("", "{{ flash_message }}", {
-                duration: 3000,
-                closeBtn: false,
-                animate: "slide",       
-            });
-        </script>
-    {% endfor %}
+            <h3>2. Visites virtuelles et hébergement</h3>
+            <p>
+                <strong>3.1</strong> Nous vous livrerons votre visite virtuelle sous la forme d'un projet HTML. Nous également hébergerons cette dernière sur nos serveurs, ce qui fait que vous pourrez aussi directement intégrer la visite via une balise iFrame sur votre site Web.
+            </p>
 
-
-
- 
-
-<section class='Body-Section-White'>
-    {% include 'tools/navbar.html.twig' %}
-
-    <section class='Cadre'>
-
-        <div class='Partie-Exemples-5'  style="text-align: left">
-
-            <h1 class="h1-titre-page">Conditions générales d'utilisation</h1>
-
-
-
-
-    <h3 style="margin-top: 30px; font-size: 15px;text-align: left; padding: 0px 55px;">1. Droits et obligations des utilisateurs</h2>
-    <p style="text-align: left">
-        <strong>2.1</strong> Vous avez le droit d'utiliser le service conformément aux présentes conditions d'utilisation et aux lois en vigueur.
-    </p>
-    <p style="text-align: left">
-        <strong>2.2</strong> Vous vous engagez à utiliser le service de manière légale, éthique et appropriée, en respectant les droits des autres utilisateurs et en vous abstenant de toute activité frauduleuse, abusive ou illégale.
-    </p>
-
-    <h3 style="margin-top: 30px; font-size: 15px;text-align: left; padding: 0px 55px;">2. Visites virtuelles et hébergement</h2>
-    <p style="text-align: left">
-        <strong>3.1</strong> Nous vous livrerons votre visite virtuelle sous la forme d'un projet HTML. Durant au minimum un an après la livraison de vore visite, vous hébergerons cette dernière sur nos serveurs, ce qui fait que vous pourrez aussi directement intégrer la visite via une balise iFrame sur votre site Web .
-    </p>
-
-    <h3 style="margin-top: 30px; font-size: 15px;text-align: left; padding: 0px 55px;">3. Propriété intellectuelle</h2>
-    <p style="text-align: left">
-        <strong>3.1</strong> Vous conservez tous les droits de propriété intellectuelle sur le contenu que vous fournissez à lookaround pour la création de la visite virtuelle de votre site.
-    </p>
-    <p style="text-align: left">
-        <strong>3.2</strong> En utilisant le service, vous accordez à lookaround une licence mondiale, non exclusive, transférable et libre de redevances pour héberger, reproduire et distribuer votre visite virtuelle à des fins de promotion et de marketing de lookaround.
-    </p>
-
-
-    </div>
-
+            <h3>3. Propriété intellectuelle</h3>
+            <p>
+                <strong>3.1</strong> Vous conservez tous les droits de propriété intellectuelle sur le contenu que vous fournissez à lookaround pour la création de la visite virtuelle de votre site.
+            </p>
+            <p>
+                <strong>3.2</strong> En utilisant le service, vous accordez à lookaround une licence mondiale, non exclusive, transférable et libre de redevances pour héberger, reproduire et distribuer votre visite virtuelle à des fins de promotion et de marketing de lookaround.
+            </p>
+        </div>
     </section>
-
-    {% include 'tools/footer.html.twig' %}
+    {% include 'fragments/footer.html.twig' %}
 </section>
-
-
 
 
 {% endblock %}

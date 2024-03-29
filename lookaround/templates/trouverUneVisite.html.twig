@@ -1,0 +1,75 @@
+{% extends 'fragments/base.html.twig' %}
+
+{% block title %} Trouver une visite - Réalisation de visites virtuelles à 360° {% endblock %}
+
+{% block body %}
+
+    <section class='body-background'>
+        {% include 'fragments/navbar.html.twig' %}
+        <section class='section-content'>
+            <div class='part-element'>
+                <h1 class="h1-titre-page" >Recherchez une visite virtuelle à l'aide d'un numéro de référence</h1>
+                <div style="text-align: center; margin-top: 75px; margin-bottom: 120px">
+                    <input class="input-search-visite" type="text" id="id" name="id" value="" minLength="8" maxlength="8" placeholder="Entrez votre numéro de référence"/><br>
+                    <input type="button" value="Trouver une visite" id="go-visite" onclick="getVisitesListe(inputId.value)" class="reserver-creneau-btn3"  style="width: 200px; opacity: 0.55; pointer-events: none;"/>
+                </div>
+            </div>
+
+
+        <script>
+            var visiteBtn = document.getElementById('go-visite');
+            var inputId = document.getElementById('id');
+
+            gestionOpacityBtnVisite()
+
+            function gestionOpacityBtnVisite(){
+                if (inputId.value.length == 8 ){
+                    visiteBtn.style.opacity = "1";
+                    visiteBtn.style.pointerEvents = "all";
+                }
+                else {
+                    visiteBtn.style.opacity = "0.55";
+                    visiteBtn.style.pointerEvents = "none";
+                }
+            }
+            
+            inputId.addEventListener('input', function(event) {
+                inputId.value = inputId.value.replace(/\D/g, '');
+                gestionOpacityBtnVisite()
+            });
+
+            inputId.addEventListener("keydown", function(event) {
+                if (event.key === "Enter" && inputId.value.length == 8) {
+                    getVisitesListe(inputId.value)
+                }
+            });
+
+            async function getVisitesListe(id) {
+                
+                const response = await fetch('/isVisiteExisting', {
+                    method: 'POST',
+                    body: JSON.stringify({ id: id }) 
+                });
+
+                const data = await response.json();
+
+                if (data.exists)
+                    window.open(data.url, '_blank');
+                else {
+                    tata.error("", "Visite inexistante ou introuvable", {
+                        duration: 3000,
+                        closeBtn: false,
+                        animate: "slide",       
+                    });
+                }
+            }
+
+        </script>
+
+    </section>
+
+    {% include 'fragments/footer.html.twig' %}
+
+</section>
+
+{% endblock %}

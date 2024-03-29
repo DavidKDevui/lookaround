@@ -1,4 +1,4 @@
-{% extends 'base.html.twig' %}
+{% extends 'fragments/base.html.twig' %}
 
 {% block title %}Reset your password{% endblock %}
 
@@ -12,7 +12,7 @@
         {{ form_row(requestForm.<?= $email_field ?>) }}
         <div>
             <small>
-                Enter your email address and we will send you a
+                Enter your email address, and we will send you a
                 link to reset your password.
             </small>
         </div>

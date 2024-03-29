@@ -1,0 +1,76 @@
+
+<div class="navbar1" style='display:none'>
+    <div class="navbar1-container"> 
+        <a>FR</a>
+        <a href="{{ path('scrollToForm') }}">Contact</a>
+    </div>
+</div>
+
+ <div class="navbar2" style="display:none">
+    <form method='post' id="formGoToIndex" action="{{ path('index') }}">
+        <h1 onclick="goToIndex.submit()" class="logo-LA">look<span style="font-weight : 500; color: #219988;">around®</span></h1>
+        <span class="three-bar-navbar-mobile">≡</span>
+    <!--    <img class="biglogo" src='{{asset("img/biglogo.png")}}' /> -->
+    </form>    
+</div>
+
+ <div class="navbar3">
+    <div class="navbar3-container">
+    
+    
+        
+    </div>
+</div>
+
+    <div style="width: 100%; background-color: #f6f6f6;">
+    <div class="topnav" id="myTopnav">
+        <form method='post' id="formGoToIndex" action="{{ path('index') }}">
+            <h1 onclick="goToIndex.submit()" class="logo-LA">look<span style="font-weight : 500; color: #219988;">around®</span></h1>
+            <span class="three-bar-navbar-mobile">≡</span>
+        <!--    <img class="biglogo" src='{{asset("img/biglogo.png")}}' /> -->
+        </form> 
+        
+        <a href="{{ path('quiSommesNous') }}">Qui sommes-nous ?</a>
+        <a href="{{ path('nosRealisations') }}">Nos réalisations</a>
+        <a href="{{ path('nosTarifs') }}">Nos tarifs</a>
+        <a href="{{ path('trouverUneVisite') }}"> Trouver une visite</a>
+        
+    </div>
+    </div>
+
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars" id="three-bars" style=" font-size: 50px;margin-top: 6px; position: absolute;top: 20px;right: 40px; color: black; display:none; padding:10px"></i>
+        </a>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+
+
+<div class="navbar4">
+    <div class="navbar4-container">
+        <div>
+            <img src="{{asset('img/camera(1).png')}}" class="icon-trois-protein"/>
+            <a>Une qualité visuelle d'une grande finesse</a>
+        </div>
+        <div>
+            <img src="{{asset('img/marque-de-localisation.png')}}" class="icon-trois-protein"/>
+            <a>France métropolitaine, Belgique et Genève</a>
+        </div> 
+        <div>
+            <img src="{{asset('../img/paquet.png')}}" class="icon-trois-protein"/>
+            <a>Livraison dans les 72h après les prises de vue</a>
+        </div>
+    </div>
+</div>
+
+<script>
+    var goToIndex = document.getElementById("formGoToIndex");
+</script>

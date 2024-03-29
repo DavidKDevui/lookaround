@@ -1,4 +1,4 @@
-{% extends 'base.html.twig' %}
+{% extends 'fragments/base.html.twig' %}
 
 {% block title %}Reset your password{% endblock %}
 

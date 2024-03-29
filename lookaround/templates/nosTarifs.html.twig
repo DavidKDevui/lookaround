@@ -1,0 +1,156 @@
+{% extends 'fragments/base.html.twig' %}
+
+{% block title %} Nos tarifs - Réalisation de visites virtuelles à 360° {% endblock %}
+
+{% block body %}
+
+<section class='body-background'>
+    {% include 'fragments/navbar.html.twig' %}
+    <section class='section-content'>
+        <div class='part-tarifs'>
+            <h1 class="h1-titre-page">Obtenez rapidement un devis grâce à notre simulateur</h1>
+
+            <div class='pagetarif-container'>
+                
+                <div class="container-infos-pdv">
+                    <span class="span-intitulé-question"> De combien de prises de vues aurais-je besoin pour ma visite virtuelle ?</span>
+                    <p>Le choix du nombre de prises dépend de plusieurs facteurs, tels que la taille de l'espace, l'objectif de la visite et les détails que vous souhaitez capturer.</p>
+                    <p style="margin-top: 10px;"> Vous aurez générallement besoin de :
+
+                    <br> ▪️ <strong>1 à 10 photos</strong> pour une chambre d'hotel, un studio, un commerce, un restaurant, une salle de cinéma, etc...
+
+                    <br> ▪️ <strong>11 à 20 photos</strong> pour une salle de sport, un appartement, une galerie d'art, une concession, etc...
+
+                    <br> ▪️ <strong>21 à 30 photos</strong> pour un campus universitaire, une grande surface, un site touristique, un espace événementiel, etc...</p>
+
+                    <p style="margin-top: 10px;">Si vous avez encore un doute sur le nombre de prises de vues qu'il vous faut, nous pourrons en convenir durant un entretien</p>
+
+                    <br>
+    
+                    <span class="span-intitulé-question">Comment se passe la livraison et l'hébergement de ma visite ?</span>
+                    <p> Lors de la livraison d'une commande, nous vous envoyons les fichiers votre visite virtuelle sous le format d'un projet HTML. Nous l'hébergeons également sur nos serveurs, ce qui vous permettera une très simple intégration à votre site via une url ou une balise IFrame,
+                    et une facilité de partage grâce à une adresse url.</p>
+                    <br>
+
+                    <span class="span-intitulé-question"> Pourquoi les tarifs sont-ils plus élevés en dehors de l'Ile de France ?</span>
+                    <p>look<span style="font-weight : 500; color: #219988;">around®</span> étant une société basée en région parisienne, et voulant opérer dans toute la France, il nous faut pouvoir couvrir les frais de déplacement lorsque la mission se trouve en dehors de l'Ile de France.
+                    C'est donc la raison pour laquelle une prestation y sera un peu plus cher.</p>
+                    <br>
+                </div>
+
+                <div class="card-tarif">
+
+                    <div style="margin-top: 25px;">
+                      
+                        <h1 class="h1-tarif-container" style="padding: 40px;"> 
+                        
+                            <span id="prix-Total" >---</span><span class="euros-span" style="font-size: 25px;">€</span> <span class="ttc-span" style="font-size: 15px;">TTC</span>
+                            <p id="prix-Heber" style="font-size: 14px;display: none;">&nbsp;</p> 
+                        </h1>
+                    </div>
+                    
+                    <p style="width: 100%">Localisation de votre site :</p>
+                    <div style="width: 100%;border: 1px solid;border-radius: 4px; border-color: #e8e8e8; display: flex; justify-content: center; margin-bottom: 8px; overflow: hidden;">
+                        <input type="radio" id="radio-idf" name="radioSelect-Zone"/>
+                        <label style="width: 33.33%;" for="radio-idf">Ile de France</label>
+                        <input type="radio" id="radio-hors-idf" name="radioSelect-Zone"/>
+                        <label style="width: 33.33%;" for="radio-hors-idf">Autres régions</label>
+                        <input type="radio" id="radio-suisse-belgique" name="radioSelect-Zone"/>
+                        <label style="width: 33.33%;" for="radio-suisse-belgique">Belgique / Genève</label>
+                    </div>
+            
+                    <p>Nombre de prises de vues souhaités :</p>
+
+                    <div style="width: 100%;border: 1px solid;border-radius: 4px; border-color: #e8e8e8; display: flex; justify-content: center; margin-bottom: 8px; overflow: hidden;">
+                        <input type="radio" id="radio-1-10" name="radioSelect-PDV"/>
+                        <label style="width: 33.33%;"  for="radio-1-10">1 à 10 photos</label>
+                        <input type="radio" id="radio-11-20" name="radioSelect-PDV"/>
+                        <label style="width: 33.33%;"  for="radio-11-20">11 à 20 photos</label>
+                        <input type="radio" id="radio-21-30" name="radioSelect-PDV"/>
+                        <label style="width: 33.33%;"  for="radio-21-30">21 à 30 photos</label>
+                    </div>
+
+                    <div style='margin-top: 20px;'>
+                        <p>Seront compris dans le service :</p>
+                        <p style='margin-top: 10px;'>✔️ Les prises de vues à 360° sur votre site</p>
+                        <p>✔️ Le traitement et l'édition des photos</p>
+                        <p>✔️ La livraison de la visite virtuelle et des photos 360</p>
+                    </div>
+
+                    <form method='post' action="{{ path('scrollToForm') }}">
+                        <input type="submit" class='reserver-creneau-btn3' value ="Prendre rendez-vous"></input>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+</section>
+    {% include 'fragments/footer.html.twig' %}
+
+
+<script>
+
+    const boutonsRadioZone = document.getElementsByName('radioSelect-Zone');
+    const boutonsRadioPDV = document.getElementsByName('radioSelect-PDV');
+    const boutonsRadioGA= document.getElementsByName('radioSelect-GA');
+    const boutonsRadioIFrame= document.getElementsByName('radioSelect-IFrame');
+
+    const boutonsRadio = document.querySelectorAll('input[type="radio"]');
+
+    for (let i = 0; i < boutonsRadio.length; i++) {
+        boutonsRadio[i].addEventListener("click", function () {
+            priceCalculator()
+        })
+    }
+
+    function priceCalculator(){
+
+        const radiosToTarif = {
+        "radio-1-10" : 200, "radio-11-20" : 250, "radio-21-30" : 300, 
+        "radio-idf" : 149.90, "radio-hors-idf" : 279.90, "radio-suisse-belgique" : 489.90}
+
+        var finalTarif = 0;
+
+        var isAllChecked = true;
+
+        if (isAllChecked){
+            for (let i = 0; i < boutonsRadioZone.length; i++) {
+                if (boutonsRadioZone[i].checked) {
+                    finalTarif += radiosToTarif[boutonsRadioZone[i].id];
+                    isAllChecked = true;
+                    break;
+                }  
+                else
+                    isAllChecked = false;
+            }
+        }
+
+        if (isAllChecked){
+            for (let i = 0; i < boutonsRadioPDV.length; i++) {
+                if (boutonsRadioPDV[i].checked){
+                    finalTarif += radiosToTarif[boutonsRadioPDV[i].id];
+                    isAllChecked = true;
+                    break;
+                }
+                else
+                    isAllChecked = false;
+            }
+        }
+
+        if (isAllChecked){
+            document.getElementById("prix-Total").innerHTML = finalTarif.toFixed(2);
+            document.getElementById("prix-Heber").innerHTML = "";
+        }
+        else {
+            document.getElementById("prix-Total").innerHTML = "---" ;
+            document.getElementById("prix-Heber").innerHTML = "&nbsp;" ;
+        }
+    }
+
+    priceCalculator();
+
+</script>
+      
+
+{% endblock %}

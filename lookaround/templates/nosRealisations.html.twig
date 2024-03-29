@@ -1,0 +1,36 @@
+{% extends 'fragments/base.html.twig' %}
+
+{% block title %} Nos réalisations - Réalisation de visites virtuelles à 360° {% endblock %}
+
+{% block body %}
+ 
+<section class='body-background'>
+
+    {% include 'fragments/navbar.html.twig' %}
+
+    <section class='section-content'>
+        <div class='part-element'>
+            <h1 class="h1-titre-page">Découvrez nos visites virtuelles précédemment réalisées</h1>
+            <div class="visite-container-realisation" style="text-align: center; margin-top: 20px;">
+                    <!--<h3 class="h1-titre-page" style="text-align : left; padding : 15px; font-size: 15px;font-weight: 500;">🏫 Campus universitaires 🏫</h3>-->
+                    <div class="line-exemple-real">
+                        {% for visite in visites %}
+                            {% if visite.typeVisite == "campus_universitaire" %}
+                                <div class="image" onclick="window.open('{{visite.urlAccess}}', '_blank');" style="border-radius: 0px;overflow: hidden;">
+                                    <iframe class="image__img" src="{{visite.urlVitrine}}" scrolling="no" height="100%" frameborder="0" allowfullscreen></iframe>
+                                    <div class="image__overlay image__overlay--primary">
+                                        <span class="image__title" >{{visite.companyName}}</span>
+                                        <p class="image__description" style="line-height: 20px;">{{visite.companyAddress}} <br> {{visite.companyNPA}}</p>
+
+                                    </div>
+                                </div>
+                            {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+    </section>
+
+    {% include 'fragments/footer.html.twig' %}
+</section>
+
+{% endblock %}

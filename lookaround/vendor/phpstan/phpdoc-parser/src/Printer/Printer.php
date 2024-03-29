@@ -10,6 +10,11 @@ use PHPStan\PhpDocParser\Ast\Node;
 use PHPStan\PhpDocParser\Ast\PhpDoc\AssertTagMethodValueNode;
 use PHPStan\PhpDocParser\Ast\PhpDoc\AssertTagPropertyValueNode;
 use PHPStan\PhpDocParser\Ast\PhpDoc\AssertTagValueNode;
+use PHPStan\PhpDocParser\Ast\PhpDoc\Doctrine\DoctrineAnnotation;
+use PHPStan\PhpDocParser\Ast\PhpDoc\Doctrine\DoctrineArgument;
+use PHPStan\PhpDocParser\Ast\PhpDoc\Doctrine\DoctrineArray;
+use PHPStan\PhpDocParser\Ast\PhpDoc\Doctrine\DoctrineArrayItem;
+use PHPStan\PhpDocParser\Ast\PhpDoc\Doctrine\DoctrineTagValueNode;
 use PHPStan\PhpDocParser\Ast\PhpDoc\ExtendsTagValueNode;
 use PHPStan\PhpDocParser\Ast\PhpDoc\ImplementsTagValueNode;
 use PHPStan\PhpDocParser\Ast\PhpDoc\MethodTagValueNode;
@@ -23,6 +28,8 @@ use PHPStan\PhpDocParser\Ast\PhpDoc\PhpDocTagNode;
 use PHPStan\PhpDocParser\Ast\PhpDoc\PhpDocTagValueNode;
 use PHPStan\PhpDocParser\Ast\PhpDoc\PhpDocTextNode;
 use PHPStan\PhpDocParser\Ast\PhpDoc\PropertyTagValueNode;
+use PHPStan\PhpDocParser\Ast\PhpDoc\RequireExtendsTagValueNode;
+use PHPStan\PhpDocParser\Ast\PhpDoc\RequireImplementsTagValueNode;
 use PHPStan\PhpDocParser\Ast\PhpDoc\ReturnTagValueNode;
 use PHPStan\PhpDocParser\Ast\PhpDoc\SelfOutTagValueNode;
 use PHPStan\PhpDocParser\Ast\PhpDoc\TemplateTagValueNode;
@@ -92,9 +99,12 @@ final class Printer
 		ArrayShapeNode::class . '->items' => ', ',
 		ObjectShapeNode::class . '->items' => ', ',
 		CallableTypeNode::class . '->parameters' => ', ',
+		CallableTypeNode::class . '->templateTypes' => ', ',
 		GenericTypeNode::class . '->genericTypes' => ', ',
 		ConstExprArrayNode::class . '->items' => ', ',
 		MethodTagValueNode::class . '->parameters' => ', ',
+		DoctrineArray::class . '->items' => ', ',
+		DoctrineAnnotation::class . '->arguments' => ', ',
 	];
 
 	/**
@@ -106,6 +116,8 @@ final class Printer
 		CallableTypeNode::class . '->parameters' => ['(', '', ''],
 		ArrayShapeNode::class . '->items' => ['{', '', ''],
 		ObjectShapeNode::class . '->items' => ['{', '', ''],
+		DoctrineArray::class . '->items' => ['{', '', ''],
+		DoctrineAnnotation::class . '->arguments' => ['(', '', ''],
 	];
 
 	/** @var array<string, list<class-string<TypeNode>>> */
@@ -186,6 +198,10 @@ final class Printer
 			return $node->text;
 		}
 		if ($node instanceof PhpDocTagNode) {
+			if ($node->value instanceof DoctrineTagValueNode) {
+				return $this->print($node->value);
+			}
+
 			return trim(sprintf('%s %s', $node->name, $this->print($node->value)));
 		}
 		if ($node instanceof PhpDocTagValueNode) {
@@ -210,6 +226,18 @@ final class Printer
 			$isVariadic = $node->isVariadic ? '...' : '';
 			$isOptional = $node->isOptional ? '=' : '';
 			return trim("{$type}{$isReference}{$isVariadic}{$node->parameterName}") . $isOptional;
+		}
+		if ($node instanceof DoctrineAnnotation) {
+			return (string) $node;
+		}
+		if ($node instanceof DoctrineArgument) {
+			return (string) $node;
+		}
+		if ($node instanceof DoctrineArray) {
+			return (string) $node;
+		}
+		if ($node instanceof DoctrineArrayItem) {
+			return (string) $node;
 		}
 
 		throw new LogicException(sprintf('Unknown node type %s', get_class($node)));
@@ -255,6 +283,14 @@ final class Printer
 			return "{$static}{$returnType}{$node->methodName}{$templateTypes}({$parameters}){$description}";
 		}
 		if ($node instanceof MixinTagValueNode) {
+			$type = $this->printType($node->type);
+			return trim("{$type} {$node->description}");
+		}
+		if ($node instanceof RequireExtendsTagValueNode) {
+			$type = $this->printType($node->type);
+			return trim("{$type} {$node->description}");
+		}
+		if ($node instanceof RequireImplementsTagValueNode) {
 			$type = $this->printType($node->type);
 			return trim("{$type} {$node->description}");
 		}
@@ -345,10 +381,15 @@ final class Printer
 			} else {
 				$returnType = $this->printType($node->returnType);
 			}
+			$template = $node->templateTypes !== []
+				? '<' . implode(', ', array_map(function (TemplateTagValueNode $templateNode): string {
+					return $this->print($templateNode);
+				}, $node->templateTypes)) . '>'
+				: '';
 			$parameters = implode(', ', array_map(function (CallableTypeParameterNode $parameterNode): string {
 				return $this->print($parameterNode);
 			}, $node->parameters));
-			return "{$node->identifier}({$parameters}): {$returnType}";
+			return "{$node->identifier}{$template}({$parameters}): {$returnType}";
 		}
 		if ($node instanceof ConditionalTypeForParameterNode) {
 			return sprintf(
@@ -491,7 +532,7 @@ final class Printer
 		[$isMultiline, $beforeAsteriskIndent, $afterAsteriskIndent] = $this->isMultiline($tokenIndex, $originalNodes, $originalTokens);
 
 		if ($insertStr === "\n * ") {
-			$insertStr = sprintf("\n%s*%s", $beforeAsteriskIndent, $afterAsteriskIndent);
+			$insertStr = sprintf('%s%s*%s', $originalTokens->getDetectedNewline() ?? "\n", $beforeAsteriskIndent, $afterAsteriskIndent);
 		}
 
 		foreach ($diff as $i => $diffElem) {
@@ -524,7 +565,7 @@ final class Printer
 						}
 
 						if ($insertNewline) {
-							$result .= $insertStr . sprintf("\n%s*%s", $beforeAsteriskIndent, $afterAsteriskIndent);
+							$result .= $insertStr . sprintf('%s%s*%s', $originalTokens->getDetectedNewline() ?? "\n", $beforeAsteriskIndent, $afterAsteriskIndent);
 						} else {
 							$result .= $insertStr;
 						}
@@ -568,7 +609,7 @@ final class Printer
 
 				$itemEndPos = $tokenIndex - 1;
 				if ($insertNewline) {
-					$result .= $insertStr . sprintf("\n%s*%s", $beforeAsteriskIndent, $afterAsteriskIndent);
+					$result .= $insertStr . sprintf('%s%s*%s', $originalTokens->getDetectedNewline() ?? "\n", $beforeAsteriskIndent, $afterAsteriskIndent);
 				} else {
 					$result .= $insertStr;
 				}
@@ -637,7 +678,7 @@ final class Printer
 				if (!$first) {
 					$result .= $insertStr;
 					if ($insertNewline) {
-						$result .= sprintf("\n%s*%s", $beforeAsteriskIndent, $afterAsteriskIndent);
+						$result .= sprintf('%s%s*%s', $originalTokens->getDetectedNewline() ?? "\n", $beforeAsteriskIndent, $afterAsteriskIndent);
 					}
 				}
 
@@ -768,6 +809,10 @@ final class Printer
 			$subEndPos = $origSubNode->getAttribute(Attribute::END_INDEX);
 			if ($subStartPos < 0 || $subEndPos < 0) {
 				throw new LogicException();
+			}
+
+			if ($subEndPos < $subStartPos) {
+				return $this->print($node);
 			}
 
 			if ($subNode === null) {

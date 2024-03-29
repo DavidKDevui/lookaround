@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}{% endblock %}</title>
+        <meta name="description" content="Réalisation de visites virtuelles à 360°">
+        <meta name="keywords" content="visite virtuelle, immersion, expérience interactive, entreprise, produits, visite virtuelles, 3D, metaverse, immersif, logement, appartement, salle de sport, musée, université">
+        <meta name="robots" content="index,follow">
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}" type="text/css">
+        <link rel="icon" type="image/png" href="{{ asset('img/inoca.png') }}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+        <script src="{{ asset('js/tata.js') }}"></script>
+
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
+    </head>
+
+    <body>
+        {% block body %}{% endblock %}
+    </body>
+</html>
