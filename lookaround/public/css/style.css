@@ -283,7 +283,7 @@ body {
 }
 
 .part-element h2{
-  font-size: 20px;
+  font-size: 18.5px;
   font-weight: 500;
   text-align: center;
   margin-bottom: 20px;
@@ -551,7 +551,7 @@ body {
 }
 
 .video-container-content-titre {
-  font-size: 25px;
+  font-size: 22px;
   font-weight: 500;
   text-align: end;
   height: min-content;
@@ -561,7 +561,7 @@ body {
 }
 
 .video-container-content-text {
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 400;
   text-align: end;
 }
@@ -731,7 +731,7 @@ body {
 */
 .btn-skin1 {
   z-index: 1;
-  font-size: 16px;
+  font-size: 15px;
   background-color: #219988;
   border: 0px solid;
   color: rgb(255, 255, 255);
@@ -750,7 +750,7 @@ body {
 
 .btn-skin2 {
   z-index: 1;
-  font-size: 16px;
+  font-size: 15px;
   background-color: rgba(255, 255, 255, 0);
   border: 2px solid #219988;
   color: #219988;
@@ -1096,7 +1096,7 @@ body {
   padding: 0px 0px;
 }
 .argument-card h3{
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 600;
   text-align: left;
 }
@@ -1523,7 +1523,7 @@ input:checked + label{
 }
 
 .reserver-creneau-btn4, .reserver-creneau-btn5, .btn-skin10  {
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .item-order{
@@ -2001,8 +2001,6 @@ label {
 .part-element, .footer-container{
   width: 100%;
 }
-
-
 
 }
 
