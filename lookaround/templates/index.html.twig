@@ -6,23 +6,23 @@
 
 <script src='https://www.google.com/recaptcha/api.js'></script>
 
-<section class='body-background'>
+<section class='body-background' style="background: url('{{asset('img/background-index-blue.png')}}');  background-size: cover; ">
     {% include 'fragments/navbar.html.twig' %}
 <section class='section-content'>
 
-    <div class='Partie-Exemples-1 background-grey-waves'>
+    <div class='Partie-Exemples-1'>
 
         <div class="video-container">
             <div class="video-container-content">
-                <img class="photo-david" src="https://www.cjoint.com/doc/24_03/NCDbs5crcUI_IMG-1950-removebg-preview.png" style="width: 370px;height: auto;margin-right: 110px; display:none"/>
+                <img class="photo-david" src="{{asset('img/img-index.png')}}"/>
                 <div class="video-container-subcontent1">
                     <p></p>
                     <h1 id='LeTitre' class='video-container-content-titre'>Réalisation de visites virtuelles à 360°</h1>
                     <p class='video-container-content-text'>Offrez à vos clients une expérience unique qui les <br>transportera dans vos espaces, où qu'ils se trouvent.</p>
                     <div class="reserver-creneau">
-                        <input onclick="smoothScroll('part-form')" type='button' value='Prendre rendez-vous' class='btn-skin1'/>
+                        <input onclick="smoothScroll('part-contact')" type='button' value='Prendre rendez-vous' class='btn-skin1 btn-dark-bg'/>
                          <form method='post' action="{{ path('nosTarifs') }}" style="width: min-content;">
-                            <input type="submit" class='btn-skin2' value ="Nos tarifs"></input>
+                            <input type="submit" class='btn-skin2 btn-dark-bg' value ="Nos tarifs"></input>
                         </form>
                     </div>
                 </div>
@@ -58,8 +58,11 @@
             <iframe src="https://visite.lookaround.fr/18476802/?startscene=4&startlookat=-195.4,3.74,123.95,0.35,0;" scrolling="no" id="iframe-fullscreen" FRAMEBORDER="no" allowfullscreen></iframe>
         </div>
     </div>
+    <!--
+        background: #313131;
+    -->
 
-     <div class='part-element-container' style="background: #313131;width: 100%;color: white;">
+     <div class='part-element-container' style="width: 100%;color: white; background: url('/svg/waves-black.svg'); background-size: cover;">
      <div class='part-element'>
         <h2>Qu'apporterait une visite virtuelle à mon site ?</h2>
         <div class='line-2' style="margin-top:20px; grid-gap: 7px">
@@ -114,9 +117,7 @@
     </div>
     </div>
     </div>
-<!--
-style="background: url('https://www.cjoint.com/doc/24_03/NCCwqbeEgII_layered-waves-haikei-5-.png');background-size: auto;background-size: cover;color: white;"
--->
+
     <div class='part-element-container background-grey-waves'>
         <div class='part-element' >
 
@@ -129,6 +130,7 @@ style="background: url('https://www.cjoint.com/doc/24_03/NCCwqbeEgII_layered-wav
             </div>
         </div>
     </div>
+    <div class='part-element-container'  style="background-color:white">
      <div class='part-element'>
         <h2>Ils nous ont fait confiance</h2>
         
@@ -140,20 +142,23 @@ style="background: url('https://www.cjoint.com/doc/24_03/NCCwqbeEgII_layered-wav
 
         </div>
     </div>
-    <div class="part-element-container background-grey-waves">
+    </div>
+
+    <div class="part-element-container background-grey-waves-reverse">
         <div class="part-element line-2 no-margin" style="padding:0">
-        <!--
-style="background: url('https://www.cjoint.com/doc/24_03/NCCwqbeEgII_layered-waves-haikei-5-.png');background-size: auto;background-size: cover;color: white;"
--->
-            <div class="part-contact">
+
+        <h2 class="contactez-nous-h2">Contactez-nous !</h2>
             
+            <div class="part-contact" id="part-contact">
+
+      
                 <div class="contact-div">
                     <img src="{{ asset('img/telephone(1).png') }}" class="contact-img"/>
-                    <p contenteditable="true" class="contact-phone-number">06 51 45 01 06</p>
+                    <p class="contact-phone-number">06 51 45 01 06</p>
                 </div>
                     
                 <div class="contact-div">
-                    <img src="{{ asset('img/gmail.png') }}" class="contact-img" />
+                    <img src="{{ asset('img/gmail.png') }}" class="contact-img"  onclick=" ouvrirNouvelOnglet('mailto:contact@lookaround.fr')"/>
                     <p>contact@lookaround.fr</p>
                 </div>
 

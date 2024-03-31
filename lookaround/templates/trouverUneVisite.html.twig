@@ -4,12 +4,14 @@
 
 {% block body %}
 
+<script>document.querySelector("body").style.backgroundColor = "white";</script>
+
     <section class='body-background'>
         {% include 'fragments/navbar.html.twig' %}
         <section class='section-content  background-grey-waves'>
-            <div class='part-element'>
+            <div class='part-element trouver-visite-container' >
                 <h1 class="h1-titre-page" >Recherchez une visite virtuelle à l'aide d'un numéro de référence</h1>
-                <div style="text-align: center; margin-top: 75px; margin-bottom: 120px">
+                <div style="text-align: center; margin-top: 120px; margin-bottom: 160px">
                     <input class="input-search-visite" type="text" id="id" name="id" value="" minLength="8" maxlength="8" placeholder="Entrez votre numéro de référence"/><br>
                     <input type="button" value="Trouver une visite" id="go-visite" onclick="getVisitesListe(inputId.value)" class="reserver-creneau-btn3"  style="width: 200px; opacity: 0.55; pointer-events: none;"/>
                 </div>
@@ -56,7 +58,7 @@
                 if (data.exists)
                     window.open(data.url, '_blank');
                 else {
-                    tata.error("", "Visite inexistante ou introuvable", {
+                    tata.error("", "Visite introuvable ou inexistante ", {
                         duration: 3000,
                         closeBtn: false,
                         animate: "slide",       

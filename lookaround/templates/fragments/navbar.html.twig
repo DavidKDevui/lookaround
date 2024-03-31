@@ -19,7 +19,7 @@
         
     </div>
 </div>
-    <div style="width: 100%; {{lightBackgroundNav ? "" : 'background-color: #f6f6f6;'}}">
+    <div style="width: 100%; border-bottom: {{page == "index" ? '0' : '1px solid #8282821c;'}}  {{lightBackgroundNav ? "" : 'background-color: transparent'}}">
     <div class="topnav" id="myTopnav">
         <form method='post' id="formGoToIndex" action="{{ path('index') }}">
             <h1 onclick="goToIndex.submit()" class="logo-LA">look<span style="font-weight : 500; color: #219988;">around®</span></h1>
@@ -27,10 +27,10 @@
         <!--    <img class="biglogo" src='{{asset("img/biglogo.png")}}' /> -->
         </form> 
         
-        <a href="{{ path('notreHistoire') }}">Notre histoire</a>
-        <a href="{{ path('nosRealisations') }}">Nos réalisations</a>
-        <a href="{{ path('nosTarifs') }}">Nos tarifs</a>
-        <a href="{{ path('trouverUneVisite') }}"> Trouver une visite</a>
+        <a class="{{ page == 'index' ? '' : 'black-on-white' }}" href="{{ path('notreHistoire') }}" style="font-weight: {{ page == 'notreHistoire' ? '700' : '400' }}">Notre histoire</a>
+        <a href="{{ path('nosRealisations') }}" style="font-weight: {{ page == 'nosRealisations' ? '700' : '400' }}">Nos réalisations</a>
+        <a href="{{ path('nosTarifs') }}" style="font-weight: {{ page == 'nosTarifs' ? '700' : '400' }}">Nos tarifs</a>
+        <a href="{{ path('trouverUneVisite') }}" style="font-weight: {{ page == 'trouverUneVisite' ? '700' : '400' }}"> Trouver une visite</a>
         
     </div>
     </div>

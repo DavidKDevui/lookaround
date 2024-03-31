@@ -9,7 +9,7 @@
 }
 
 body {
-  background: #f9f9f9;
+  background: #9ed0cc;
 }
 
 .body-background{
@@ -149,8 +149,19 @@ body {
 
 
 
+.background-grey-waves-reverse{
+  background-image: url('../img/background-grey-reverse.png');
+  background-size: cover;
+}
 
-
+.copyright-p{
+ /* color: white;*/
+  font-size: 11.5px;
+  text-align: center;
+  padding: 5px;
+  margin-top: 20px;
+  
+}
 
 /*FOOTER*/
 .footer{
@@ -158,12 +169,19 @@ body {
   width: 100%;
   /*background: #f9f9f9;*/
   border-top: 1px solid #8282821c;
+ /* border-bottom: 1px solid #8282821c;*/
  /* background: #313131;*/
+
+/*
+  background: url('/svg/waves-black.svg');
+  background-size: auto;
+  background-size: cover;*/
+  background-color: white;
 }
 
 .footer-container{
   margin: 0 auto;
-  width: 100%;
+  width: 1200px;
   padding: 10px;
   height: 100%;
 }
@@ -182,7 +200,8 @@ body {
   font-weight: 400;
   text-decoration: none;
   color: rgb(0, 0, 0);
-  margin-top: 50px;
+  margin-top: 20px;
+  margin-bottom: 30px;
 }
 
 /*************************************/
@@ -205,6 +224,11 @@ body {
   line-height: 40px;
   padding: 9px 0px;
   font-size: 14.5px;
+  transition: font-weight 150ms; 
+}
+
+.topnav a:hover{
+  font-weight: 700 !important;
 }
 
 .topnav a.active {
@@ -246,8 +270,10 @@ body {
     padding: 25px;
     font-size: 27px;
     text-align: center;
-    margin-top: 40px;
+    padding-top: 40px;
     font-weight: 400;
+    background-color: #219988;
+    color: white;
   }
 }
 
@@ -272,6 +298,8 @@ body {
   width: 100%;
   margin: 0 auto;
 }
+
+
 
 
 .part-element{
@@ -667,8 +695,11 @@ body {
 }
 
 .photo-david{
-  -webkit-filter: drop-shadow(1px 1px 2px #222);
-
+  width: 380px;
+  height: auto;
+  margin-right: 120px;
+  margin-top: 0px;
+ /* -webkit-filter: drop-shadow(1px 1px 1px #222);*/
 }
 
 .container-descriptionTuto{
@@ -730,6 +761,10 @@ body {
   font-size: 16px !important;
 }
 */
+.btn-dark-bg{
+  box-shadow: 0 1px 1px 0 #515151 !important;
+}
+
 .btn-skin1 {
   z-index: 1;
   font-size: 15px;
@@ -747,7 +782,7 @@ body {
   height: fit-content;
 }
 
-
+/*
 
 .btn-skin2 {
   z-index: 1;
@@ -764,6 +799,27 @@ body {
   height: fit-content;
 }
 
+*/
+
+.btn-skin2 {
+  z-index: 1;
+  font-size: 15px;
+  background-color: #f0653c;
+  border: 0px solid;
+  color: rgb(255, 255, 255);
+  border-radius: 5px;
+  padding: 3px 15px;
+  font-weight: 400;
+  text-align: end;
+  cursor: pointer;
+  box-shadow: 0 2px 1px 0 #ccc;
+  border-bottom: 2px solid;
+  border-color: #032420;
+  height: fit-content;
+}
+
+
+
 
 .reserver-creneau-btn3 {
   z-index: 1;
@@ -771,7 +827,7 @@ body {
   background: linear-gradient(90deg, #219988 0%, #218e99 100%);
   border: 0px solid;
   color: rgb(255, 255, 255);
-  border-radius: 3px;
+  border-radius: 5px;
   padding: 3px 15px;
   font-weight: 400;
   cursor: pointer;
@@ -810,7 +866,10 @@ body {
   height: fit-content;
 }
 
-
+.black-on-white{
+  background-color: white;
+  color: black;
+}
 
 .btn-skin10 {
   z-index: 1;
@@ -1191,6 +1250,9 @@ body {
 }
 
 
+.contactez-nous-h2{
+  display: none;
+}
 
 .indicator2{
   display: inline-block;
@@ -1426,7 +1488,10 @@ input:checked + label{
   width: 1000px;
 }
 
-
+.photo-david{
+  width: 310px;
+  margin-right: 180px;
+}
 
 .btn-skin1, .btn-skin2{
   font-size: 13px;
@@ -1475,7 +1540,7 @@ input:checked + label{
 }
 
 .video-container-content-text {
-  font-size: 12.5px;
+  font-size: 14px;
 }
 
 .video-container-content-titre {
@@ -1485,7 +1550,7 @@ input:checked + label{
 }
 
 .video-container .video-container-subcontent1 {
-  width: 43%;
+  width: 45%;
 }
 
 
@@ -1660,17 +1725,23 @@ input:checked + label{
 }
 
 .photo-david{
-  display: none;
+ /* display: none;*/
+   position: absolute;
+    height: 100%;
+    width: auto;
+    margin: 0 auto;
+    left: 13%;
+    opacity: 0.2;
 }
   
-  .container-infos-pdv{
-      margin-top: 60px !important;
-      padding: 16px !important;
-      order : 2;
-  }
+.container-infos-pdv{
+  margin-top: 100px !important;
+  padding: 30px !important;
+  order : 2;
+}
 
   .input-search-visite {
-  font-size: 33px;
+  font-size: 38px;
   width: 700px !important;
 }
   
@@ -1680,7 +1751,7 @@ label {
 }
 
   .part-tarifs p {
-    font-size: 18px !important;
+    font-size: 19px !important;
   }
   
       
@@ -1698,7 +1769,21 @@ label {
   }
 
   .footer-container div a{
-    font-size: 18px;
+    font-size: 22px;
+    padding: 2px;
+  }
+
+  .footer-container div{
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 1fr 1fr !important;
+    text-align: left;
+    margin-top: 20px;
+  }
+
+
+  .copyright-p{
+    font-size: 23px;
+    padding: 10px;
   }
 
   .card-tarif{
@@ -1770,7 +1855,7 @@ label {
 
   .part-contact{
     margin-top: 0px;
-    padding: 100px 0;
+    padding: 20px 0px 110px;
   }
 
   .no-margin{
@@ -1789,6 +1874,7 @@ label {
   .reserver-creneau-btn3 {
     font-size: 30px;
     width: 500px !important;
+    border-radius: 7px;
   }
 
   .reference-p{
@@ -1802,6 +1888,11 @@ label {
     width: 95%;
     height: 1000px;
   }
+
+  
+.contactez-nous-h2{
+  display: block;
+}
 
   .argument-card {
     width: 95%;
@@ -1875,8 +1966,8 @@ label {
 }
 
 .video-container-content-text {
-  font-size: 32px;
-  font-weight: 400;
+  font-size: 32px !important;
+  font-weight: 500;
   text-align: center;
 }
 
@@ -1937,6 +2028,8 @@ label {
   cursor: default; 
   text-decoration: none; 
   color: black !important;
+  -webkit-touch-callout: none; /* Désactive la fonctionnalité sur les navigateurs WebKit (Safari, Chrome sur iOS) */
+  touch-callout: none;
 }
 
 
@@ -1948,8 +2041,8 @@ label {
 }
 
 .argument-img, .contact-img {
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   margin-top: 10px;
 }
 
@@ -1963,7 +2056,7 @@ label {
 
 .video-container-content-titre {
   font-size: 43px;
-  font-weight: 500;
+  font-weight: 600;
   text-align: center;
 }
 
@@ -1995,12 +2088,17 @@ label {
 }
 
 .part-element h2{
-  font-size: 35px;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  font-size: 32px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 .part-element, .footer-container{
   width: 100%;
+}
+
+
+.trouver-visite-container{
+  height: 1300px;
 }
 
 }
