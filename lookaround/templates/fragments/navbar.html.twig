@@ -8,9 +8,9 @@
 
  <div class="navbar2" style="display:none">
     <form method='post' id="formGoToIndex" action="{{ path('index') }}">
-        <h1 onclick="goToIndex.submit()" class="logo-LA">look<span style="font-weight : 500; color: #219988;">around®</span></h1>
+        <p onclick="goToIndex.submit()" class="logo-LA">look<span style="font-weight : 500; color: {{page == '#2b2b2b' ? 'black' : '#219988'}}" >around®</span></p>
         <span class="three-bar-navbar-mobile">≡</span>
-    <!--    <img class="biglogo" src='{{asset("img/biglogo.png")}}' /> -->
+    <!--    <img loading="lazy"   class="biglogo" src='{{asset("img/biglogo.png")}}' /> -->
     </form>    
 </div>
 
@@ -22,9 +22,9 @@
     <div style="width: 100%; border-bottom: {{page == "index" ? '0' : '1px solid #8282821c;'}}  {{lightBackgroundNav ? "" : 'background-color: transparent'}}">
     <div class="topnav" id="myTopnav">
         <form method='post' id="formGoToIndex" action="{{ path('index') }}">
-            <h1 onclick="goToIndex.submit()" class="logo-LA">look<span style="font-weight : 500; color: #219988;">around®</span></h1>
+            <p onclick="goToIndex.submit()" class="logo-LA">look<span style="font-weight : 500; color: {{page == 'index' ? '#2b2b2b' : '#219988'}}" >around®</span></p>
             <span class="three-bar-navbar-mobile">≡</span>
-        <!--    <img class="biglogo" src='{{asset("img/biglogo.png")}}' /> -->
+        <!--    <img loading="lazy"   class="biglogo" src='{{asset("img/biglogo.png")}}' /> -->
         </form> 
         
         <a class="{{ page == 'index' ? '' : 'black-on-white' }}" href="{{ path('notreHistoire') }}" style="font-weight: {{ page == 'notreHistoire' ? '700' : '400' }}">Notre histoire</a>
@@ -37,7 +37,7 @@
 
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
         <i class="fa fa-bars" id="three-bars" style=" font-size: 50px;margin-top: 6px; position: absolute;top: 20px;right: 40px; color: black; display:none; padding:10px"></i>
-        </a>
+    </a>
 
 <script>
 function myFunction() {
@@ -54,15 +54,15 @@ function myFunction() {
 <div class="navbar4">
     <div class="navbar4-container">
         <div>
-            <img src="{{asset('img/camera(1).png')}}" class="icon-trois-protein"/>
+            <img loading="lazy"  alt="icon-argument" src="{{asset('img/camera(1).png')}}" class="icon-trois-protein"/>
             <a>Une qualité visuelle d'une grande finesse</a>
         </div>
         <div>
-            <img src="{{asset('img/marque-de-localisation.png')}}" class="icon-trois-protein"/>
+            <img loading="lazy" alt="icon-argument" src="{{asset('img/marque-de-localisation.png')}}" class="icon-trois-protein"/>
             <a>France métropolitaine, Belgique et Genève</a>
         </div> 
         <div>
-            <img src="{{asset('../img/paquet.png')}}" class="icon-trois-protein"/>
+            <img loading="lazy" alt="icon-argument" src="{{asset('../img/paquet.png')}}" class="icon-trois-protein"/>
             <a>Livraison dans les 72h après les prises de vue</a>
         </div>
     </div>

@@ -1,9 +1,9 @@
 # process
 
 <p>
-<a href="https://coveralls.io/github/amphp/process?branch=master"><img src="https://img.shields.io/coveralls/amphp/process/master.svg?style=flat-square" alt="Code Coverage"/></a>
-<a href="https://github.com/amphp/process/releases"><img src="https://img.shields.io/github/release/amphp/process.svg?style=flat-square" alt="Release"/></a>
-<a href="https://github.com/amphp/process/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square" alt="License"/></a>
+<a href="https://coveralls.io/github/amphp/process?branch=master"><img loading="lazy"   src="https://img.shields.io/coveralls/amphp/process/master.svg?style=flat-square" alt="Code Coverage"/></a>
+<a href="https://github.com/amphp/process/releases"><img loading="lazy"   src="https://img.shields.io/github/release/amphp/process.svg?style=flat-square" alt="Release"/></a>
+<a href="https://github.com/amphp/process/blob/master/LICENSE"><img loading="lazy"   src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square" alt="License"/></a>
 </p>
 
 This package provides an asynchronous process dispatcher that works on all major platforms (including Windows).

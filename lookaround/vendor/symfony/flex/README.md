@@ -1,5 +1,5 @@
 <p align="center"><a href="https://symfony.com" target="_blank">
-    <img src="https://symfony.com/logos/symfony_black_02.svg">
+    <img loading="lazy"   src="https://symfony.com/logos/symfony_black_02.svg">
 </a></p>
 
 [Symfony Flex][1] helps developers create [Symfony][2] applications, from the most

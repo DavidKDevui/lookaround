@@ -44,7 +44,7 @@ echo (new SqlFormatter())->format($query);
 
 Output:
 
-<img src="examples/readme_format_html.svg" width="600" height="450" alt="formatted output with HTML Highlight">
+<img loading="lazy"   src="examples/readme_format_html.svg" width="600" height="450" alt="formatted output with HTML Highlight">
 
 When you run php under cli and instantiated `SqlFormatter` without argument, highlighted with `CliHighlighter`.
 
@@ -108,7 +108,7 @@ echo (new SqlFormatter())->highlight($query);
 
 Output:
 
-<img src="examples/readme_highlight_html.svg" width="800" height="150" alt="HTML Highlight output">
+<img loading="lazy"   src="examples/readme_highlight_html.svg" width="800" height="150" alt="HTML Highlight output">
 
 ### Compress Query
 

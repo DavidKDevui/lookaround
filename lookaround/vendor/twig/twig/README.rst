@@ -15,7 +15,7 @@ Sponsors
 .. raw:: html
 
     <a href="https://docs.blackfire.io/introduction?utm_source=twig&utm_medium=github_readme&utm_campaign=logo">
-        <img src="https://static.blackfire.io/assets/intemporals/logo/png/blackfire-io_secondary_horizontal_transparent.png?1" width="255px" alt="Blackfire.io">
+        <img loading="lazy"   src="https://static.blackfire.io/assets/intemporals/logo/png/blackfire-io_secondary_horizontal_transparent.png?1" width="255px" alt="Blackfire.io">
     </a>
 
 More Information

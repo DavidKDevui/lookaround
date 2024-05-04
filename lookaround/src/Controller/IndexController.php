@@ -43,7 +43,7 @@ class IndexController extends AbstractController
         return $this->render('notreHistoire.html.twig', ["lightBackgroundNav" => true, "page" => "notreHistoire"]);
     }
 
-    #[Route('/nos-réalisations', name: 'nosRealisations')]
+    #[Route('/nos-realisations', name: 'nosRealisations')]
     public function nosRealisations(DatabaseService $databaseService): Response
     {
         return $this->render('nosRealisations.html.twig', ["visites" => $databaseService->getListeVisites(), "lightBackgroundNav" => true, "page" => "nosRealisations"]);
@@ -61,7 +61,7 @@ class IndexController extends AbstractController
         return $this->render('trouverUneVisite.html.twig', ["lightBackgroundNav" => true, "page" => "trouverUneVisite"]);
     }
 
-    #[Route('/politique-confidentialité', name: 'politiqueConfidentialite')]
+    #[Route('/politique-confidentialite', name: 'politiqueConfidentialite')]
     public function politiqueConfidentialite(): Response
     {
         return $this->render('politiqueConfidentialite.html.twig', ["lightBackgroundNav" => true, "page" => "other"]);
